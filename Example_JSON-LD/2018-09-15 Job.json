@@ -52,9 +52,9 @@
         "incentiveCompensation": {"en": "Performance-based annual bonus plan, project-completion bonuses"},
         "occupationalType": {
             "@type": "DefinedTerm",
+            "@id": "https://www.onetonline.org/link/summary/15-1132.00",
             "termCode": "15-1132.00",
             "name": {"en": "Software Developers, Applications"},
-            "jdx:termDefined": "https://www.onetonline.org/link/summary/15-1132.00",
             "inDefinedTermSet": "https://www.onetonline.org" 
         },
         "jobBenefits": "...",
