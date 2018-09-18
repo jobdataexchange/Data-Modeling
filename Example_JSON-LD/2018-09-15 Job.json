@@ -89,12 +89,6 @@
             "program": "Computer Science",
             "programConcentration": "Software Development"
         },
-        "jdx:experienceRequirement": {
-            "@type": "DefinedTerm",
-            "name": "",
-            "jdx:termDefined": "https://hrOpen.../codelist/UnitCodeList/"
-            
-        },
         "industry": {
             "@type": "schema:DefinedTerm",
             "@id": "https://www.naics.com/naics-code-description/?code=541511",

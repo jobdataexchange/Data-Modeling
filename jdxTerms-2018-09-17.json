@@ -1,0 +1,413 @@
+{
+    "@context": {"schema": "http://schema.org/", "jdx": "http://jdxTest1.org/terms/"},
+    "@graph": [
+        {
+            "@type": "rdf:Class",
+            "@id": "schema:Certification",
+            "rdfs:label": {"en-US": "Certification"},
+            "rdfs:comment": {"en-US": "(HR Open) A document or confirmation certifying the status or acquirements of the bearer, or his fulfilment of conditions which authorize him to act or practise in a specified way; hence, often equal to a certificate."}
+        },
+        {
+            "@type": "rdf:Class",
+            "@id": "schema:ContactPoint",
+            "rdfs:label": {"en-US": "Contact Point"},
+            "rdfs:comment": {"en-US": "A contact point—for example, a Customer Complaints department.."}
+        },
+        {
+            "@type": "rdf:Class",
+            "@id": "schema:DefinedTerm",
+            "rdfs:label": {"en-US": "Defined Term"},
+            "rdfs:comment": {"en-US": "A word, name, acronym, phrase, etc. with a formal definition."},
+            "dct:description": [{"en-US": "Often used in the context of category or subject classification, glossaries or dictionaries, product or creative work types, etc. Use the name property for the term being defined, use termCode if the term has an alpha-numeric code allocated, use description to provide the definition of the term."}, {"en-US": "Closely related to SKOS concept."}]
+        },
+        {
+            "@type": "rdf:Class",
+            "@id": "jdx:Education",
+            "rdfs:label": {"en-US": "Education"},
+            "rdfs:comment": {"en-US": "Acquired knowledge, skills, values, beliefs and habits through systematic instruction and study, typically at a school or university."}
+        },
+        {
+            "@type": "rdf:Class",
+            "@id": "jdx:Evidence",
+            "rdfs:label": {"en-US": "Evidence"},
+            "rdfs:comment": {"en-US": "Entity describing an artifact or performance confirming or supporting an assertion."}
+        },
+        {
+            "@type": "rdf:Class",
+            "@id": "jdx:Experience",
+            "rdfs:label": {"en-US": "Experience"},
+            "rdfs:comment": {"en-US": "Entity describing past individual performance confirming or supporting qualification to engage in defined activities, perform certain tasks or to assume certain responsibilities."}
+        },
+        {
+            "@type": "rdf:Class",
+            "@id": "schema:GeoCoordinates",
+            "rdfs:label": {"en-US": "Geo Coordinates"},
+            "rdfs:comment": {"en-US": "Geographic coordinates of a place or event."}
+        },
+        {
+            "@type": "rdf:Class",
+            "@id": "jdx:JobMaster",
+            "rdfs:label": {"en-US": "Job Master"},
+            "rdfs:comment": {"en-US": "Entity describing the aggregate attributes of a job as found in a job analysis, job description and job posting"}
+        },
+        {
+            "@type": "rdf:Class",
+            "@id": "jdx:License",
+            "rdfs:label": {"en-US": "License"},
+            "rdfs:comment": {"en-US": "(HR Open) Authoritative permission to hold a certain status or to do certain things, e.g. to practise some trade or profession."},
+            "dct:description": {"en-US": "OED license: (a) A formal, usually a printed or written permission from a constituted authority to do something. (b) The document embodying such a permission."}
+        },
+        {
+            "@type": "rdf:Class",
+            "@id": "schema:MonetaryAmount",
+            "rdfs:label": {"en-US": "A monetary value or range."},
+            "rdfs:comment": {"en-US": "This type can be used to describe an amount of money such as $50 USD, or a range as in describing a bank account being suitable for a balance between £1,000 and £1,000,000 GBP, or the value of a salary, etc. "}
+        },
+        {
+            "@type": "rdf:Class",
+            "@id": "schema:Organization",
+            "rdfs:label": {"en-US": "Organization"},
+            "rdfs:comment": {"en-US": "An organization such as a school, NGO, corporation, club, etc."}
+        },
+        {
+            "@type": "rdf:Class",
+            "@id": "schema:Place",
+            "rdfs:label": {"en-US": "Place"},
+            "rdfs:comment": {"en-US": "Entities that have a somewhat fixed, physical extension."}
+        },
+        {
+            "@type": "rdf:Class",
+            "@id": "schema:PostalAddress",
+            "rdfs:label": {"en-US": "Postal Address"},
+            "rdfs:comment": {"en-US": "The mailing address."}
+        },
+                {
+            "@type": "rdf:Class",
+            "@id": "schema:QualitativeValueDistribution",
+            "rdfs:label": {"en-US": "Qualitative Value Distribution"},
+            "rdfs:comment": {"en-US": "A statistical distribution of values."}
+        },
+        {
+            "@type": "rdf:Class",
+            "@id": "jdx:ScaleAnnotation",
+            "rdfs:label": {"en-US": "Scale Annotation"},
+            "rdfs:comment": {"en-US": "Entity for identifying and applying a defined scale or rating to another entity."},
+            "dct:description": {"en-US": "For example, applying an importance scale to a competency."}
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "jdx:abilityType",
+            "rdfs:label": {"en-US": "@@@"},
+            "rdfs:comment": {"en-US": "@@@"},
+            "dct:description": {"en-US": "@@@"},
+            "rdfs:domain": "@@@",
+            "rdfs:range": "schema:DefinedTerm"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "jdx:activityType",
+            "rdfs:label": {"en-US": "@@@"},
+            "rdfs:comment": {"en-US": "@@@"},
+            "dct:description": {"en-US": "@@@"},
+            "rdfs:domain": "@@@",
+            "rdfs:range": "schema:DefinedTerm"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "schema:address",
+            "rdfs:label": {"en-US": "Address"},
+            "rdfs:comment": {"en-US": "Physical address of the item."},
+            "rdfs:domain": ["schema:Place", "schema:Organization"],
+            "rdfs:range": "schema:PostalAddress"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "schema:addressCountry",
+            "rdfs:label": {"en-US": "Address Country"},
+            "rdfs:comment": {"en-US": "The country. For example, USA."},
+            "dct:description": "You can also provide the two-letter ISO 3166-1 alpha-2 country code.",
+            "rdfs:domain": "schema:PostalAddress",
+            "rdfs:range": "xsd:string"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "schema:addressLocality",
+            "rdfs:label": {"en-US": "Address Locality"},
+            "rdfs:comment": {"en-US": "The locality. For example, Mountain View."},
+            "rdfs:domain": "schema:PostalAddress",
+            "rdfs:range": "xsd:string"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "schema:addressRegion",
+            "rdfs:label": {"en-US": "Address Region"},
+            "rdfs:comment": {"en-US": "The region. For example, CA."},
+            "rdfs:domain": "schema:PostalAddress",
+            "rdfs:range": "xsd:string"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "jdx:attitudeType",
+            "rdfs:label": {"en-US": "@@@"},
+            "rdfs:comment": {"en-US": "@@@"},
+            "dct:description": {"en-US": "@@@"},
+            "rdfs:domain": "@@@",
+            "rdfs:range": "schema:DefinedTerm"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "schema:baseSalary",
+            "rdfs:label": {"en-US": "Base Salary"},
+            "rdfs:comment": {"en-US": "The base salary of the job or of an employee in an EmployeeRole."},
+            "rdfs:domain": "@@@",
+            "rdfs:range": "@@@"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "jdx:careerLevelType",
+            "rdfs:label": {"en-US": "Career Level"},
+            "rdfs:comment": {"en-US": "(HR Open) A code classifying the level of a candidate based on career experience."},
+            "dct:description": {"en-US": "(HR Open) This may vary by jurisdiction or systems. e.g. Student, Entry Level, Recent Graduate, Mid-Career, Manager, Experienced Non-Manager, Senior Executive, etc."},
+            "rdfs:domain": "@@@",
+            "rdfs:range": "rdf:langString"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "schema:datePosted",
+            "rdfs:label": {"en-US": "Date Posted"},
+            "rdfs:comment": {"en-US": "Publication date for the job posting."},
+            "rdfs:domain": "@@@",
+            "rdfs:range": "@@@"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "schema:description",
+            "rdfs:label": {"en-US": "Description"},
+            "rdfs:comment": {"en-US": "A description of the item."},
+            "rdfs:domain": "@@@",
+            "rdfs:range": "rdf:langString"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "schema:duration",
+            "rdfs:label": {"en-US": "Duration"},
+            "rdfs:comment": {"en-US": "The duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format."},
+            "rdfs:domain": "jdx:License",
+            "rdfs:range": "xsd:string"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "schema:educationLevel",
+            "rdfs:label": {"en-US": "Education Level"},
+            "rdfs:comment": {"en-US": "@@@"},
+            "rdfs:domain": "jdx:Education",
+            "rdfs:range": "xsd:string"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "schema:educationLevelType",
+            "rdfs:label": {"en-US": "Education Level Type"},
+            "rdfs:comment": {"en-US": "@@@"},
+            "rdfs:domain": ["jdx:Education", "jdx:JobMaster"],
+            "rdfs:range": "schema:DefinedTerm",
+            "skos:note": "USE: https://hrOpen...codelist/IscedCodeList/"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "schema:educationRequirement",
+            "rdfs:label": {"en-US": "Education Requirement"},
+            "rdfs:comment": {"en-US": "Educational background needed for the position or Occupation."},
+            "rdfs:domain": "@@@",
+            "rdfs:range": "jdx:Education"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "schema:employmentType",
+            "rdfs:label": {"en-US": "Employment Type"},
+            "rdfs:comment": {"en-US": "Type of employment (e.g. full-time, part-time, contract, temporary, seasonal, internship)."},
+            "rdfs:domain": "@@@",
+            "rdfs:range": "@@@"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "jdx:employmentUnit",
+            "rdfs:label": {"en-US": "Employment Type"},
+            "rdfs:comment": {"en-US": "Department or unit of the employer where the employee reports and/or in which the job is to be performed."},
+            "rdfs:domain": "@@@",
+            "rdfs:range": "@@@"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "schema:estimatedSalary",
+            "rdfs:label": {"en-US": "Estimated Salary"},
+            "rdfs:comment": {"en-US": "A property describing the estimated salary for a job posting based on a variety of variables including, but not limited to industry, job title, and location."},
+            "dct:description": {"en-US": "The estimated salary is usually computed by outside organizations and therefore the hiring organization is not bound to this estimated salary."},
+            "rdfs:domain": "@@@",
+            "rdfs:range": "schema:QualityValueDistribution"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "jdx:evidence",
+            "rdfs:label": {"en-US": "Evidence"},
+            "rdfs:comment": {"en-US": "The referenced artifact or performance confirming or supporting an assertion."},
+            "dct:description": {"en-US": "@@@"},
+            "rdfs:domain": ["jdx:Education", "jdx:Experience", "jdx:License"],
+            "rdfs:range": "jdx:Evidence"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "schema:experienceRequirement",
+            "rdfs:label": {"en-US": "Experience Requirement"},
+            "rdfs:comment": {"en-US": "Description of the experience needed for the position or Occupation."},
+            "rdfs:domain": "@@@",
+            "rdfs:range": "jdx:Experience"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "schema:hiringOrganization",
+            "rdfs:label": {"en-US": "Hiring Organization"},
+            "rdfs:comment": {"en-US": "Organization offering the job position."},
+            "rdfs:domain": "@@@",
+            "rdfs:range": "schema:Organization"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "jdx:immediateStartIndicator",
+            "rdfs:label": {"en-US": "Immediate Start Indicator"},
+            "rdfs:comment": {"en-US": "An indicator as to whether a position is available for an immediate start."},
+            "rdfs:domain": "@@@",
+            "rdfs:range": "xsd:Boolean"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "schema:incentiveCompensation",
+            "rdfs:label": {"en-US": "Incentive Compensation"},
+            "rdfs:comment": {"en-US": "Description of bonus and commission compensation aspects of the job."},
+            "rdfs:domain": "@@@",
+            "rdfs:range": "rdf:langString"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "schema:industryType",
+            "rdfs:label": {"en-US": "Industry"},
+            "rdfs:comment": {"en-US": "The industry associated with the job position."},
+            "rdfs:domain": "@@@",
+            "rdfs:range": "schema:DefinedTerm"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "schema:jobBenefit",
+            "rdfs:label": {"en-US": "Job Benefit"},
+            "rdfs:comment": {"en-US": "Description of benefits associated with the job."},
+            "rdfs:domain": "@@@",
+            "rdfs:range": "rdf:langString"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "schema:jobLocation",
+            "rdfs:label": {"en-US": "Job Location"},
+            "rdfs:comment": {"en-US": "A (typically single) geographic location associated with the job position."},
+            "rdfs:domain": "@@@",
+            "rdfs:range": "schema:Place"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "jdx:knowledgeType",
+            "rdfs:label": {"en-US": "Knowledge"},
+            "rdfs:comment": {"en-US": "Theoretical or practical understanding of a subject."},
+            "rdfs:domain": "@@@",
+            "rdfs:range": "schema:DefinedTerm"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "schema:occupationCategory",
+            "rdfs:label": {"en-US": "Occupation Category"},
+            "rdfs:comment": {"en-US": "Category or categories describing the job."},
+            "rdfs:domain": "@@@",
+            "rdfs:range": "schema:DefinedTerm"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "jdx:positionID",
+            "rdfs:label": {"en-US": "Position Identifier"},
+            "rdfs:comment": {"en-US": "(HR Open) The identifier for the position that maybe be used externally in an advertisement."},
+            "rdfs:domain": "@@@",
+            "rdfs:range": "xsd:string"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "jdx:positionProfileID",
+            "rdfs:label": {"en-US": "Position Profile Identifier"},
+            "rdfs:comment": {"en-US": "(HR Open) The primary identifier of the position profile."},
+            "rdfs:domain": "@@@",
+            "rdfs:range": "xsd:string"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "schema:qualification",
+            "rdfs:label": {"en-US": "Qualification"},
+            "rdfs:comment": {"en-US": "Specific qualifications required for this role or Occupation."},
+            "skos:comment": {"en-US": "NOTE-- HR Open defines qualification as a competency of a person."},
+            "rdfs:domain": "@@@",
+            "rdfs:range": "xsd:string"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "schema:responsibility",
+            "rdfs:label": {"en-US": "Responsibility"},
+            "rdfs:comment": {"en-US": "Responsibilities associated with this role or Occupation."},
+            "rdfs:domain": "@@@",
+            "rdfs:range": "rdf:langString"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "schema:skillType",
+            "rdfs:label": {"en-US": "Skill"},
+            "rdfs:comment": {"en-US": "Skills required to fulfill this role."},
+            "dct:description": {"en-US": "Wikipedia: A skill is the ability to carry out a task with determined results often within a given amount of time, energy, or both."},
+            "rdfs:domain": "@@@",
+            "rdfs:range": "schema:DefinedTerm"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "schema:specialCommitment",
+            "rdfs:label": {"en-US": "Special Commitment"},
+            "rdfs:comment": {"en-US": "Any special commitments associated with this job posting."},
+            "dct:description": {"en-US": "Valid entries include VeteranCommit, MilitarySpouseCommit, etc."},
+            "rdfs:domain": "@@@",
+            "rdfs:range": "rdf:langString"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "jdx:taskType",
+            "rdfs:label": {"en-US": "Task"},
+            "rdfs:comment": {"en-US": "A piece or unit of work to be done or undertaken and accomplished within a defined period of time or by a deadline."},
+            "rdfs:domain": "@@@",
+            "rdfs:range": "schema:DefinedTerm"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "schema:title",
+            "rdfs:label": {"en-US": "Title"},
+            "rdfs:comment": {"en-US": "The title of the job."},
+            "rdfs:domain": "@@@",
+            "rdfs:range": "rdf:langString"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "schema:validThrough",
+            "rdfs:label": {"en-US": "Valid Through"},
+            "rdfs:comment": {"en-US": "The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours."},
+            "rdfs:domain": "@@@",
+            "rdfs:range": "xsd:dateTime"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "schema:workHours",
+            "rdfs:label": {"en-US": "Work Hours"},
+            "rdfs:comment": {"en-US": "The typical working hours for this job (e.g. 1st shift, night shift, 8am-5pm)."},
+            "rdfs:domain": "@@@",
+            "rdfs:range": "rdf:langString"
+        }
+    ]
+}
