@@ -1,22 +1,22 @@
 {
     "@context": [ "http://schema.org/" ,
-        {"jdx": "http://jdxTest.org/terms/"}
+        {"jdx": "http://jdx.org/terms/"}
     ],
     "@graph": [
     {
         "@id": "http://someRepository.org/jobPostings/0c4344d1-4864-4ea2-95ad-944a4e6d66a5" ,
         "@type": "http://jdxTest.org/terms/JobMaster",
-        "jdx:positionID": "0c4344d1-4864-4ea2-95ad-944a4e6d66a5" ,
+        "identifier": "0c4344d1-4864-4ea2-95ad-944a4e6d66a5",
         "jdx:profileID": "http://someRepository.org/jobProfiles/96b7f92e-0db1-4da8-a171-68960dde0fd5" ,
+        "description": {"en": "ABC Company Inc.,the leading developer of industry solftware solutions, seeks a full-time, mid-level software engineer to develop in-house tools. (NOTE: google says \"The full description of the job in HTML format.\")."},
         "datePosted": "2018-08-01" ,
         "jdx:validFrom": "2018-08-01" ,   
         "validThrough": "2018-09-01T23:59" ,
         "jdx:immediateStartIndicator": "True" ,
         "jdx:positionPeriodDescription": "Job starts 2018-09-05 ..." ,
         "title": {"en": "Software Engineer"} ,   
-        "description": {"en": "ABC Company Inc.,the leading developer of industry solftware solutions, seeks a full-time, mid-level software engineer to develop in-house tools."},
-        "workHours": "...",
-        "responsibility": "...",
+        "workHours": "8:30am-4:30pm",
+        "responsibility": [{"en": "Design and write specifications for tools for in-house customers."}, {"en": "Build tools according to specifications."}],
         "specialCommitments": {"en": "Veteran hiring commitment"},
         "jdx:reportsTo": {"en": "Product Manager, Software Solutions"},
         "jdx:employmentUnit": {"en": "Software Solutions Department"},
@@ -24,20 +24,22 @@
             "@type": "DefinedTerm",
             "termCode": "Fulltime",
             "name": {"en": "Full-Time"},
-            "inDefinedTermSet": "https://hrOpen.../codelist/PositionScheduleTypeCodeList/"  
-        },
+            "inDefinedTermSet": "https://hrOpen.../codelist/PositionScheduleTypeCodeList/",
         "jdx:careerLevel": {
             "@type": "DefinedTerm",
             "name": "MidCareer",
             "indefinedTermSet": "https://hrOpen.../codelist/CareerLevelCode/"
+            }
         },
         "baseSalary": {
             "@type": "MonetaryAmount" ,
-            "description": {"en": "Starting salary dependent on experience."} ,
-            "minValue": 58000 ,
-            "maxValue": 75000 ,
+            "value": 75000 ,
             "salaryCurrency": "USD",
-            "jdx:intervalCode": "TwoWeeks"          
+            "unitText": {
+                "@type": "DefinedTerm",
+                "termCode": "YEAR",
+                "inDefinedTermSet": "http://TBD.org/Year"
+            }      
         },
         "estimatedSalary": {
             "@type": "QualitativeValueDistribution" ,
@@ -57,7 +59,7 @@
             "name": {"en": "Software Developers, Applications"},
             "inDefinedTermSet": "https://www.onetonline.org" 
         },
-        "jobBenefits": "...",
+        "jobBenefits": "Full family medical and dental.",
         "experienceRequirements": {
             "@type": "jdx:Experience",
             "description": "Software Developer",
@@ -171,25 +173,8 @@
             "@type": "DefinedTerm" ,
             "@id": "https://www.onetonline.org/link/summary/...",
             "termCode": "nn-nnnn.nn",
-            "name": {"en": "...some qualification (what ever that means!)..."},
+            "name": {"en": "...some qualification (what ever that means in schema.org! In HR Open, qualification is a competency of a person, not a job)..."},
             "inDefinedTermSet": "https://www.onetonline.org/link/summary/"
-        },
-        "hiringOrganization": {
-            "@id": "http://someRepository.org/agent/d49f2e25-14ee-4cda-873a-d40a2eedbd0b" ,
-            "@type": "Organization" ,
-            "name": {"en": "ABC Company Inc." } ,
-            "address": {
-                "@type": "PostalAddress" ,
-                "streetAddress": "2275 Oak Valley Parkway" ,
-                "addressLocality": "Kirkland" ,
-                "addressRegion": "WA"
-            },
-            "contactPoint" : { 
-                "@type" : "ContactPoint",
-                "telephone" : "+1-877-746-0909",
-                "contactType" : "Personnel Services",
-                "contactOption" : "TollFree"
-            }      
         },
         "jobLocation": {
             "@type": "Place",
@@ -202,12 +187,17 @@
                 "addressCountry": "US",
                 "postalCode": "12345"     
             },
+            "additionalProperty": {
+                "@type": "PropertyValue",
+                "value": "TELECOMMUTE"
+            },
             "geo": {
                 "@type": "GeoCoordinates",
                 "latitude": "37.42242",
                 "longitude": "-122.08585"   
             }
-        }
+        },
+        "hiringOrganization": "http://someRepository.org/agent/d49f2e25-14ee-4cda-873a-d40a2eedbd0b"
     }
     ]
 }
