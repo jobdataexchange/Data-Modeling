@@ -54,7 +54,7 @@
         "incentiveCompensation": {"en": "Performance-based annual bonus plan, project-completion bonuses"},
         "occupationalType": {
             "@type": "DefinedTerm",
-            "@id": "https://www.onetonline.org/link/summary/15-1132.00",
+            "jdx:termDefined": "https://www.onetonline.org/link/summary/15-1132.00",
             "termCode": "15-1132.00",
             "name": {"en": "Software Developers, Applications"},
             "inDefinedTermSet": "https://www.onetonline.org" 
@@ -66,14 +66,14 @@
             "jdx:value": 3 ,
             "jdx:unitCode": {
                 "@type": "DefinedTerm",
-                "@id": "https://hrOpen.../codelist/UnitCodeList/ANN",
+                "jdx:termDefined": "https://hrOpen.../codelist/UnitCodeList/ANN",
                 "termCode": "ANN",
                 "name": {"en": "year" },
                 "inDefinedTermSet": "https://hrOpen.../codelist/UnitCodeList/"
             },
             "jdx:experienceType": {
                 "@type": "DefinedTerm",
-                "@id": "https://www.onetonline.org/link/summary/15-1132.00",
+                "jdx:termDefined": "https://www.onetonline.org/link/summary/15-1132.00",
                 "termCode": "15-1132.00",
                 "name": {"en": "Software Developers, Applications"},
                 "inDefinedTermSet": "https://www.onetonline.org"
@@ -93,14 +93,14 @@
         },
         "industry": {
             "@type": "schema:DefinedTerm",
-            "@id": "https://www.naics.com/naics-code-description/?code=541511",
+            "jdx:termDefined": "https://www.naics.com/naics-code-description/?code=541511",
             "termCode": "541511",
             "name": {"en": "Custom Computer Programming Services"},
             "inDefinedTermSet": "https://www.naics.com/naics-code-description/"
         },
         "jdx:ability": {
             "@type": "DefinedTerm" ,
-            "@id": "https://www.onetonline.org/link/summary/...",
+            "jdx:termDefined": "https://www.onetonline.org/link/summary/...",
             "termCode": "nn-nnnn.nn",
             "name": {"en": "...some ability..."},
             "inDefinedTermSet": "https://www.onetonline.org/link/summary/",
@@ -153,7 +153,7 @@
         },
         "jdx:skill": {
             "@type": "DefinedTerm" ,
-            "@id": "https://www.onetonline.org/link/summary/someJobSkill",
+            "jdx:termDefined": "https://www.onetonline.org/link/summary/someJobSkill",
             "termCode": "nn-nnnn.nn",
             "name": {"en": "...some job skill..."},
             "inDefinedTermSet": "https://www.onetonline.org/",
@@ -171,7 +171,7 @@
         },
         "jdx:qualification": {
             "@type": "DefinedTerm" ,
-            "@id": "https://www.onetonline.org/link/summary/...",
+            "jdx:termDefined": "https://www.onetonline.org/link/summary/...",
             "termCode": "nn-nnnn.nn",
             "name": {"en": "...some qualification (what ever that means in schema.org! In HR Open, qualification is a competency of a person, not a job)..."},
             "inDefinedTermSet": "https://www.onetonline.org/link/summary/"
