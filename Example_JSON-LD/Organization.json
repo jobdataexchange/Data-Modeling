@@ -19,7 +19,8 @@
                 "@type" : "ContactPoint",
                 "telephone" : "+1-877-746-0909",
                 "contactType" : "Personnel Services",
-                "contactOption" : "TollFree"
+                "email": "personnel@ABC.com",
+                "faxNumber": "+1-877-746-1000"
             },
             "email": "ABC@someMail.com",
             "telephone": "+1-877-746-0910",
