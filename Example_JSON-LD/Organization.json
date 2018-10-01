@@ -28,10 +28,10 @@
             "duns": "150483782",
             "leiCode": "548300TGFLH2QZV80T71",
             "isicV4": {
-                    "@type": "DefinedTerm" ,
-                    "termCode": "6201",
-                    "name": {"en": "Computer programming activities"},
-                    "inDefinedTermSet": "https://unstats.un.org/unsd/classifications/"
+                "@type": "DefinedTerm" ,
+                "termCode": "6201",
+                "name": {"en": "Computer programming activities"},
+                "inDefinedTermSet": "https://unstats.un.org/unsd/classifications/"
             },
             "parentOrganization": "http://someRepository.org/agent/aab560d4-d1b2-4c71-a11a-6f1b9bc65875",
             "subOrganization": "http://someRepository.org/agent/00596444-bea0-450a-b3af-a0ae3193ec33",
