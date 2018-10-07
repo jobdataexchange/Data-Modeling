@@ -175,7 +175,7 @@
             "@type": "rdf:Property",
             "@id": "jdx:applicationCloseDate",
             "rdfs:label": {"en-US": "Application Close Date"},
-            "rdfs:comment": {"en-US": "@@@"},
+            "rdfs:comment": {"en-US": "Closing date for accepting applications."},
             "rdfs:domain": "jdx:PostingInstructions",
             "rdfs:range": "xsd:dateTime"
         },
@@ -183,7 +183,7 @@
             "@type": "rdf:Property",
             "@id": "jdx:applicationInstructions",
             "rdfs:label": {"en-US": "ApplicationInstructions"},
-            "rdfs:comment": {"en-US": "@@@"},
+            "rdfs:comment": {"en-US": "Narrative instructions for applying for this position."},
             "rdfs:domain": "jdx:PostingInstructions",
             "rdfs:range": "rdf:langString"
         },
@@ -191,7 +191,7 @@
             "@type": "rdf:Property",
             "@id": "jdx:applicationLocation",
             "rdfs:label": {"en-US": "Application Location"},
-            "rdfs:comment": {"en-US": "@@@"},
+            "rdfs:comment": {"en-US": "The physical location where applications can be submitted."},
             "rdfs:domain": "schema:PostingInstruction",
             "rdfs:range": "schema:Place"
         },
