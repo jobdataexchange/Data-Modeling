@@ -176,15 +176,23 @@
             "@id": "jdx:applicationCloseDate",
             "rdfs:label": {"en-US": "Application Close Date"},
             "rdfs:comment": {"en-US": "Closing date for accepting applications."},
-            "rdfs:domain": "jdx:PostingInstructions",
+            "rdfs:domain": "jdx:PostingInstruction",
             "rdfs:range": "xsd:dateTime"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "jdx:applicationContact",
+            "rdfs:label": {"en-US": "Application Contact"},
+            "rdfs:comment": {"en-US": "A job position contact point for a person or organization."},
+            "rdfs:domain": "jdx:PostingInstruction",
+            "rdfs:range": "schema:ContactPoint"
         },
         {
             "@type": "rdf:Property",
             "@id": "jdx:applicationInstructions",
             "rdfs:label": {"en-US": "ApplicationInstructions"},
             "rdfs:comment": {"en-US": "Narrative instructions for applying for this position."},
-            "rdfs:domain": "jdx:PostingInstructions",
+            "rdfs:domain": "jdx:PostingInstruction",
             "rdfs:range": "rdf:langString"
         },
         {
@@ -194,30 +202,6 @@
             "rdfs:comment": {"en-US": "The physical location where applications can be submitted."},
             "rdfs:domain": "schema:PostingInstruction",
             "rdfs:range": "schema:Place"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:applicationPhone",
-            "rdfs:label": {"en-US": "Application Phone"},
-            "rdfs:comment": {"en-US": "@@@"},
-            "rdfs:domain": "schema:PostingInstruction",
-            "rdfs:range": "xsd:string"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:applicationSMS",
-            "rdfs:label": {"en-US": "Application SMS"},
-            "rdfs:comment": {"en-US": "@@@"},
-            "rdfs:domain": "schema:PostingInstruction",
-            "rdfs:range": "xsd:string"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:url",
-            "rdfs:label": {"en-US": "Application URL"},
-            "rdfs:comment": {"en-US": "@@@"},
-            "rdfs:domain": "schema:PostingInstruction",
-            "rdfs:range": "schema:URL"
         },
         {
             "@type": "rdf:Property",
@@ -254,6 +238,14 @@
             "rdfs:domain": "jdx:JobPositionOpening",
             "rdfs:range": "DefinedTerm",
             "skos:note": {"en-US": "USE VALUE FROM: career level type concept scheme (e.g., HR CareerLevelCodeList)"}
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "schema:contactPoint",
+            "rdfs:label": {"en-US": "Contact Point"},
+            "rdfs:comment": {"en-US": "A contact point for a person or organization."},
+            "rdfs:domain": ["schema:Organization", "jdx:PostingInstruction"],
+            "rdfs:range": "schema:ContactPoint"
         },
         {
             "@type": "rdf:Property",
@@ -419,6 +411,7 @@
             "@id": "schema:formattedDescription",
             "rdfs:label": {"en-US": "Formatted Description"},
             "rdfs:comment": {"en-US": "The descriptions for the job position. The descriptions may support HTML or other markup."},
+            "dct:description": "(Google) The [formatted] description should be a complete representation of the job, including job responsibilities, qualifications, skills, working hours, education requirements, and experience requirements.",
             "rdfs:domain": ["jdx:JobPositionOpening"],
             "rdfs:range": "rdf:langString"
         },
@@ -468,7 +461,7 @@
             "rdfs:label": {"en-US": "Posting Instructions"},
             "rdfs:comment": {"en-US": "Entity providing instructions for posting a job position opening to a job board or media channel and for submission of applications."},
             "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "jdx:PostingInstructions"
+            "rdfs:range": "jdx:PostingInstruction"
         },
         {
             "@type": "rdf:Property",
@@ -754,7 +747,7 @@
             "@id": "jdx:postingEndDate",
             "rdfs:label": {"en-US": "Posting End Date"},
             "rdfs:comment": {"en-US": "End date (time) for the posting"},
-            "rdfs:domain": "jdx:PostingInstructions",
+            "rdfs:domain": "jdx:PostingInstruction",
             "rdfs:range": "xsd:dateTime"
         },
         {
@@ -770,7 +763,7 @@
             "@id": "jdx:postingStartDate",
             "rdfs:label": {"en-US": "Posting Start date"},
             "rdfs:comment": {"en-US": "Start date (time) for the posting"},
-            "rdfs:domain": "jdx:PostingInstructions",
+            "rdfs:domain": "jdx:PostingInstruction",
             "rdfs:range": "xsd:dateTime"
         },
         {
