@@ -5,7 +5,7 @@
             "@type": "rdf:Class",
             "@id": "schema:ContactPoint",
             "rdfs:label": {"en-US": "Contact Point"},
-            "rdfs:comment": {"en-US": "A contact point—for example, a Customer Complaints department.."}
+            "rdfs:comment": {"en-US": "A contact point—for example, a Customer Complaints department."}
         },        
         {
             "@type": "rdf:Class",
