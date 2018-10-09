@@ -53,8 +53,8 @@
         {
             "@type": "rdf:Class",
             "@id": "jdx:JobPositionOpening",
-            "rdfs:label": {"en-US": "Position Opening"},
-            "rdfs:comment": {"en-US": "Entity describing an unfilled job posiiton that has been formally approved for filling; usually triggered by an aithorization to a supervising/hiring manager to increase the number of positions or fill a position opened by people leaving."}
+            "rdfs:label": {"en-US": "Job Position Opening"},
+            "rdfs:comment": {"en-US": "Entity describing an unfilled job position that has been formally approved for filling; usually triggered by an aithorization to a supervising/hiring manager to increase the number of positions or fill a position opened by people leaving."}
         },
         {
             "@type": "rdf:Class",
