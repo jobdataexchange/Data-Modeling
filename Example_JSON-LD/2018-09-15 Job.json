@@ -77,11 +77,13 @@
                 "termCode": "15-1132.00",
                 "name": {"en": "Software Developers, Applications"},
                 "inDefinedTermSet": "https://www.onetonline.org"
-            }
+            },
+            "jdx:levelCode": "Senior"
         },  
         "educationRequirements": {
             "@type": "Education",
             "description": {"en": "Bachelor Degree in Computer Science or equivalent"},
+            "institution": {"en": "Stanford"},
             "jdx:educationLevelType": {
                 "@type": "DefinedTerm",
                 "termCode": "6",

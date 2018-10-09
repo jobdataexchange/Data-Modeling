@@ -210,7 +210,7 @@
             "rdfs:comment": {"en-US": "Type of method used to conduct an assessment; select from an existing enumeration of such types."},
             "rdfs:domain": "jdx:ScaleAnnotation",
             "rdfs:range": "schema:DefinedTerm",
-            "skos:note": {"en-US": "USE VALUE FROM: Concept scheme such as http:\/\/purl.org\/ctdl\/terms\/AssessmentMethod" }
+            "skos:note": {"en-US": "USE VALUE FROM: Concept scheme such as http://purl.org/ctdl/terms/AssessmentMethod" }
         },
         {
             "@type": "rdf:Property",
