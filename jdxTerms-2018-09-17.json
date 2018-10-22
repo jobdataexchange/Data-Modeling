@@ -1,5 +1,5 @@
 {
-    "@context": {"schema": "http://schema.org/", "jdx": "http://jdxTest1.org/terms/", "dct": "http://purl.org/dc/terms/", "skos": "http://www.w3.org/2004/02/skos/core#"},
+    "@context": {"schema": "http://schema.org/", "jdx": "http://jobdescriptionexchange.org/terms/jsonldcontext.json", "dct": "http://purl.org/dc/terms/", "skos": "http://www.w3.org/2004/02/skos/core#"},
     "@graph": [
         {
             "@type": "rdf:Class",
