@@ -1,19 +1,19 @@
 {
-    "@context": {"jdx": "http://jobdescriptionexchange.org/terms/jdxcontext.json",
+    "@context": {"jdx": "http://jobdescriptionexchange.org/terms/jdxcontext.json"},
     "@graph": [
+        {
+            "@type": "rdf:Class",
+            "@id": "schema:AnnotatedDefinedTerm",
+            "rdfs:label": {"en-US": "Annotated Defined Term"},
+            "rdfs:comment": {"en-US": "A word, name, acronym, phrase, etc. with a formal definition."},
+            "description": {"en-US": "Often used in the context of category or subject classification, glossaries or dictionaries, product or creative work types, etc. Use the name property for the term being defined, use termCode if the term has an alpha-numeric code allocated, use description to provide the definition of the term."}
+        },        
         {
             "@type": "rdf:Class",
             "@id": "schema:ContactPoint",
             "rdfs:label": {"en-US": "Contact Point"},
             "rdfs:comment": {"en-US": "A contact point—for example, a Customer Complaints department."}
         },        
-        {
-            "@type": "rdf:Class",
-            "@id": "schema:DefinedTerm",
-            "rdfs:label": {"en-US": "Defined Term"},
-            "rdfs:comment": {"en-US": "A word, name, acronym, phrase, etc. with a formal definition."},
-            "description": {"en-US": "Often used in the context of category or subject classification, glossaries or dictionaries, product or creative work types, etc. Use the name property for the term being defined, use termCode if the term has an alpha-numeric code allocated, use description to provide the definition of the term."}
-        },
         {
             "@type": "rdf:Class",
             "@id": "jdx:Education",
@@ -118,7 +118,7 @@
             "rdfs:label": {"en-US": "Ability Type"},
             "rdfs:comment": {"en-US": "An aptitude, capacity or power to act physically, socially, mentally, legally, or morally at a level suitable to the work context."},
             "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "schema:DefinedTerm",
+            "rdfs:range": "jdx:AnnotatedDefinedTerm",
             "skos:note": "USE VALUE FROM: ability type concept scheme"
         },
         {
@@ -135,7 +135,7 @@
             "rdfs:label": {"en-US": "Activity Type"},
             "rdfs:comment": {"en-US": "Activities asssociated with the job."},
             "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "schema:DefinedTerm",
+            "rdfs:range": "jdx:AnnotatedDefinedTerm",
             "skos:note": {"en-US": "USE VALUE FROM: activity type concept scheme"}
         },
         {
@@ -209,7 +209,7 @@
             "rdfs:label": {"en-US": "Assessment Method"},
             "rdfs:comment": {"en-US": "Type of method used to conduct an assessment; select from an existing enumeration of such types."},
             "rdfs:domain": "jdx:ScaleAnnotation",
-            "rdfs:range": "schema:DefinedTerm",
+            "rdfs:range": "jdx:AnnotatedDefinedTerm",
             "skos:note": {"en-US": "USE VALUE FROM: Concept scheme such as http://purl.org/ctdl/terms/AssessmentMethod" }
         },
         {
@@ -218,7 +218,7 @@
             "rdfs:label": {"en-US": "Attitude Type"},
             "rdfs:comment": {"en-US": "Attitudes and ways of thinking necessary to successful performance of the job."},
             "rdfs:domain": "jdx:jobPositionOpening",
-            "rdfs:range": "schema:DefinedTerm",
+            "rdfs:range": "jdx:AnnotatedDefinedTerm",
             "skos:note": {"en-US": "USE VALUE FROM: attitude type concept scheme"}
         },
         {
@@ -253,7 +253,7 @@
             "rdfs:label": {"en-US": "Contact Type"},
             "rdfs:comment": {"en-US": "Specification of the type of contact point"},
             "rdfs:domain": "schema:ContactPoint",
-            "rdfs:range": "schema:DefinedTerm",
+            "rdfs:range": "jdx:AnnotatedDefinedTerm",
             "skos:note": {"en-US": "USE VALUE FROM: contact type concept scheme"}
         },
         {
@@ -277,7 +277,7 @@
             "@id": "schema:description",
             "rdfs:label": {"en-US": "Description"},
             "rdfs:comment": {"en-US": "A description of the item."},
-            "rdfs:domain": ["schema:DefinedTerm", "jdx:Education", "jdx:Experience", "jdx:JobAnalysis", "jdx:JobCompetencyProfile", "jdx:JobPositionDescription", "jdx:JobPositionOpening", "jdx:License", "schema:MonetaryAmount", "jdx:ScaleAnnotation"],
+            "rdfs:domain": ["jdx:AnnotatedDefinedTerm", "jdx:Education", "jdx:Experience", "jdx:JobAnalysis", "jdx:JobCompetencyProfile", "jdx:JobPositionDescription", "jdx:JobPositionOpening", "jdx:License", "schema:MonetaryAmount", "jdx:ScaleAnnotation"],
             "rdfs:range": "rdf:langString"
         },
         {
@@ -319,7 +319,7 @@
             "rdfs:label": {"en-US": "Education Level Type"},
             "rdfs:comment": {"en-US": "A concept identifying the location of the person in terms of his or her progression through an education or training context."},
             "rdfs:domain": ["jdx:Education", "jdx:JobMaster"],
-            "rdfs:range": "schema:DefinedTerm",
+            "rdfs:range": "jdx:AnnotatedDefinedTerm",
             "skos:note": {"en-US": "USE VALUE FROM: https://hrOpen...codelist/IscedCodeList/"}
         },
         {
@@ -344,7 +344,7 @@
             "rdfs:label": {"en-US": "Employment Type"},
             "rdfs:comment": {"en-US": "Type of employment (e.g. full-time, part-time, contract, temporary, seasonal, internship)."},
             "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "schema:DefinedTerm",
+            "rdfs:range": "jdx:AnnotatedDefinedTerm",
             "skos:note": {"en-US": "USE VALUE FROM: an employment type concept scheme."}
         },
         {
@@ -492,8 +492,8 @@
             "@id": "schema:inDefinedTermSet",
             "rdfs:label": {"en-US": "Term Set"},
             "rdfs:comment": {"en-US": "A defined term set that contains this term."},
-            "rdfs:domain": "schema:DefinedTerm",
-            "rdfs:range": "schema:DefinedTermSet"
+            "rdfs:domain": "jdx:AnnotatedDefinedTerm",
+            "rdfs:range": "jdx:AnnotatedDefinedTermSet"
         },
         {
             "@type": "rdf:Property",
@@ -501,7 +501,7 @@
             "rdfs:label": {"en-US": "Industry"},
             "rdfs:comment": {"en-US": "The industry associated with the job position."},
             "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "schema:DefinedTerm",
+            "rdfs:range": "jdx:AnnotatedDefinedTerm",
             "skos:note": {"en-US": "USE VALUE FROM: industry type concept scheme" }
         },
         {
@@ -558,7 +558,7 @@
             "rdfs:label": {"en-US": "Knowledge"},
             "rdfs:comment": {"en-US": "Theoretical or practical understanding of a subject."},
             "dct:description": {"en-US": "Frequently treated as an aspect of the notion of \"competency\" along with skills and abilities."},
-            "rdfs:range": "schema:DefinedTerm",
+            "rdfs:range": "jdx:AnnotatedDefinedTerm",
             "skos:note": {"en-US": "USE VALUE FROM: a competency framework"}
         },
         {
@@ -591,7 +591,7 @@
             "rdfs:label": {"en-US": "Level Code"},
             "rdfs:comment": {"en-US": "Level of experience required."},
             "rdfs:domain": "jdx:Experience",
-            "rdfs:range": "schema:DefinedTerm",
+            "rdfs:range": "jdx:AnnotatedDefinedTerm",
             "skos:note": {"en-US": "USE VALUE FROM: a level code concept scheme"}
         },
         {
@@ -608,7 +608,7 @@
             "rdfs:label": {"en-US": "License Type"},
             "rdfs:comment": {"en-US": "Type of license selected from a concept scheme of types."},
             "rdfs:domain": "jdx:License",
-            "rdfs:range": "schema:DefinedTerm",
+            "rdfs:range": "jdx:AnnotatedDefinedTerm",
             "skos:note": {"en-US": "USE VALUE FROM: a license type concept scheme" }
         },
         {
@@ -657,7 +657,7 @@
             "@id": "schema:name",
             "rdfs:label": {"en-US": "Name"},
             "rdfs:comment": {"en-US": "The name of the item."},
-            "rdfs:domain": ["schema:DefinedTerm", "jdx:License", "schema:Place", "schema:PostalAddress"],
+            "rdfs:domain": ["jdx:AnnotatedDefinedTerm", "jdx:License", "schema:Place", "schema:PostalAddress"],
             "rdfs:range": "rdf:langString"
         },
         {
@@ -674,7 +674,7 @@
             "rdfs:label": {"en-US": "Occupation Category"},
             "rdfs:comment": {"en-US": "Category or categories describing the job."},
             "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "schema:DefinedTerm",
+            "rdfs:range": "jdx:AnnotatedDefinedTerm",
             "skos:note": {"en-US": "USE VALUE FROM: an occupation type concept scheme."}
         },
         {
@@ -731,7 +731,7 @@
             "rdfs:label": {"en-US": "Position Schedule"},
             "rdfs:comment": {"en-US": "(HR Open) The working schedule of a position offered or a position sought."},
             "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "schema:DefinedTerm",
+            "rdfs:range": "jdx:AnnotatedDefinedTerm",
             "skos:note": {"en-US": "USE VALUE FROM: a position schedule type concept scheme; e.g. HR PositionScheduleTypeCodeList"}
         },
         {
@@ -852,7 +852,7 @@
             "rdfs:label": {"en-US": "Scale Type"},
             "rdfs:comment": {"en-US": "Type or category of scale or weighting to be applied to a specific competency (knowledge, skill, ability), task, responsibility, interest etc."},
             "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "schema:DefinedTerm",
+            "rdfs:range": "jdx:AnnotatedDefinedTerm",
             "skos:note": {"en-US": "Where logically applicable, previously defined scales can be applied to a range of previously defined controlled concepts and competencies."}
         },
         {
@@ -862,7 +862,7 @@
             "rdfs:comment": {"en-US": "Skills required to fulfill this role."},
             "dct:description": {"en-US": "Wikipedia: A skill is the ability to carry out a task with determined results often within a given amount of time, energy, or both."},
             "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "schema:DefinedTerm"
+            "rdfs:range": "jdx:AnnotatedDefinedTerm"
         },
         {
             "@type": "rdf:Property",
@@ -896,7 +896,7 @@
             "rdfs:label": {"en-US": "Task"},
             "rdfs:comment": {"en-US": "A piece or unit of work to be done or undertaken and accomplished within a defined period of time or by a deadline."},
             "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "schema:DefinedTerm",
+            "rdfs:range": "jdx:AnnotatedDefinedTerm",
             "skos:note": {"en-US": "USE VALUE FROM: a task type concept scheme"}
         },
         {
@@ -905,7 +905,7 @@
             "rdfs:label": {"en-US": "Technology Type"},
             "rdfs:comment": {"en-US": "Tool, application or other form of technology that requires knowledge, skill and ability to use effectively in executing the tasks and responsibilities of the job."},
             "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "schema:DefinedTerm",
+            "rdfs:range": "jdx:AnnotatedDefinedTerm",
             "skos:note": {"en-US": "USE VALUE FROM: tool and technology type of concept schemes"}
         },
         {
@@ -921,7 +921,7 @@
             "@id": "jdx:termAnnotation",
             "rdfs:label": {"en-US": "Term Annotation"},
             "rdfs:comment": {"en-US": "Entity for the application of scales and other weights to concepts and competencies identified through DefinedTerm."},
-            "rdfs:domain": "schema:DefinedTerm",
+            "rdfs:domain": "jdx:AnnotatedDefinedTerm",
             "rdfs:range": "jdx:ScaleAnnotation"
         },
         {
@@ -929,7 +929,7 @@
             "@id": "jdx:termCode",
             "rdfs:label": {"en-US": "Term Code"},
             "rdfs:comment": {"en-US": "A code that identifies this DefinedTerm within a DefinedTermSet"},
-            "rdfs:domain": "schema:DefinedTerm",
+            "rdfs:domain": "jdx:AnnotatedDefinedTerm",
             "rdfs:range": "xsd:string"
         },
         {
@@ -937,7 +937,7 @@
             "@id": "jdx:termDefined",
             "rdfs:label": {"en-US": "Term Defined"},
             "rdfs:comment": {"en-US": "Concept or competency node in a ConceptScheme or CompetencyFramework."},
-            "rdfs:domain": "schema:DefinedTerm",
+            "rdfs:domain": "jdx:AnnotatedDefinedTerm",
             "rdfs:range": ["skos:Concept", "ceasn:Competency"]
         },
         {
