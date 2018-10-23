@@ -808,14 +808,6 @@
         },
         {
             "@type": "rdf:Property",
-            "@id": "schema:responsibility",
-            "rdfs:label": {"en-US": "Responsibility"},
-            "rdfs:comment": {"en-US": "Responsibilities associated with this role or Occupation."},
-            "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "rdf:langString"
-        },
-        {
-            "@type": "rdf:Property",
             "@id": "schema:requiredAtHiring",
             "rdfs:label": {"en-US": "Required At Hiring"},
             "rdfs:comment": {"en-US": "Whether or not a particular requirement is expected at the time of hiring or may be subsequently obtained."},
