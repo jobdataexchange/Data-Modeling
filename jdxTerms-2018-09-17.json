@@ -1,5 +1,5 @@
 {
-    "@context": {"schema": "http://schema.org/", "jdx": "http://jobdescriptionexchange.org/terms/jsonldcontext.json", "dct": "http://purl.org/dc/terms/", "skos": "http://www.w3.org/2004/02/skos/core#"},
+    "@context": {"jdx": "http://jobdescriptionexchange.org/terms/jdxcontext.json",
     "@graph": [
         {
             "@type": "rdf:Class",
@@ -311,7 +311,7 @@
             "rdfs:label": {"en-US": "Education Level"},
             "rdfs:comment": {"en-US": "A word or phrase identifying the location of the person in terms of his or her progression through an education or training context."},
             "rdfs:domain": "jdx:Education",
-            "rdfs:range": "xsd:string"
+            "rdfs:range": "rdf:langString"
         },
         {
             "@type": "rdf:Property",
@@ -408,10 +408,10 @@
         },
         {
             "@type": "rdf:Property",
-            "@id": "schema:formattedDescription",
+            "@id": "jdx:formattedDescription",
             "rdfs:label": {"en-US": "Formatted Description"},
             "rdfs:comment": {"en-US": "The descriptions for the job position. The descriptions may support HTML or other markup."},
-            "dct:description": "(Google) The [formatted] description should be a complete representation of the job, including job responsibilities, qualifications, skills, working hours, education requirements, and experience requirements.",
+            "dct:description": "The [formatted] description should be a complete representation of the job, including job responsibilities, qualifications, skills, working hours, education requirements, and experience requirements.",
             "rdfs:domain": ["jdx:JobPositionOpening"],
             "rdfs:range": "rdf:langString"
         },
@@ -506,9 +506,9 @@
         },
         {
             "@type": "rdf:Property",
-            "@id": "jdx:inLanguage",
+            "@id": "schema:inLanguage",
             "rdfs:label": {"en-US": "Language"},
-            "rdfs:comment": {"en-US": "The primary language used in or by this resource."},
+            "rdfs:comment": {"en-US": "The language of the content or performance or used in an action. Please use one of the language codes from the IETF BCP 47 standard."},
             "rdfs:domain": "jdx:JobPositionOpening",
             "rdfs:range": "xsd:language"
         },
