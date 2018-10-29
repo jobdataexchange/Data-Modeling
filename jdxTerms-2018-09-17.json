@@ -848,6 +848,14 @@
         },
         {
             "@type": "rdf:Property",
+            "@id": "jdx:scaleAnnotation",
+            "rdfs:label": {"en-US": "Scale Annotation"},
+            "rdfs:comment": {"en-US": "Entity for the application of scales and other weights to concepts and competencies identified through DefinedTerm."},
+            "rdfs:domain": "jdx:AnnotatedDefinedTerm",
+            "rdfs:range": "jdx:ScaleAnnotation"
+        },
+        {
+            "@type": "rdf:Property",
             "@id": "jdx:scaleType",
             "rdfs:label": {"en-US": "Scale Type"},
             "rdfs:comment": {"en-US": "Type or category of scale or weighting to be applied to a specific competency (knowledge, skill, ability), task, responsibility, interest etc."},
@@ -915,14 +923,6 @@
             "rdfs:comment": {"en-US": "The title of the job."},
             "rdfs:domain": ["schema:Place", "schema:ContactPoint"],
             "rdfs:range": "xsd:string"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:termAnnotation",
-            "rdfs:label": {"en-US": "Term Annotation"},
-            "rdfs:comment": {"en-US": "Entity for the application of scales and other weights to concepts and competencies identified through DefinedTerm."},
-            "rdfs:domain": "jdx:AnnotatedDefinedTerm",
-            "rdfs:range": "jdx:ScaleAnnotation"
         },
         {
             "@type": "rdf:Property",
