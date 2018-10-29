@@ -173,6 +173,14 @@
         },
         {
             "@type": "rdf:Property",
+            "@id": "jdx:annotation",
+            "rdfs:label": {"en-US": "Annotation"},
+            "rdfs:comment": {"en-US": "Entity providing qualifying notations including application of scale annotations and other weights to concepts and competencies identified through AnnotatedDefinedTerm."},
+            "rdfs:domain": "jdx:AnnotatedDefinedTerm",
+            "rdfs:range": "jdx:ScaleAnnotation"
+        },
+        {
+            "@type": "rdf:Property",
             "@id": "jdx:applicationCloseDate",
             "rdfs:label": {"en-US": "Application Close Date"},
             "rdfs:comment": {"en-US": "Closing date for accepting applications."},
@@ -845,14 +853,6 @@
             "rdfs:comment": {"en-US": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website."},
             "rdfs:domain": "schema:Organization",
             "rdfs:range": "xsd:anyURI"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:scaleAnnotation",
-            "rdfs:label": {"en-US": "Scale Annotation"},
-            "rdfs:comment": {"en-US": "Entity for the application of scales and other weights to concepts and competencies identified through DefinedTerm."},
-            "rdfs:domain": "jdx:AnnotatedDefinedTerm",
-            "rdfs:range": "jdx:ScaleAnnotation"
         },
         {
             "@type": "rdf:Property",
