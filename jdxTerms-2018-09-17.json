@@ -662,6 +662,14 @@
         },
         {
             "@type": "rdf:Property",
+            "@id": "schema:naics",
+            "rdfs:label": {"en-US": "NAICS"},
+            "rdfs:comment": {"en-US": "The North American Industry Classification System (NAICS) code for a particular organization or business person.."},
+            "rdfs:domain": "schema:Organization",
+            "rdfs:range": "xsd:string"
+        },
+        {
+            "@type": "rdf:Property",
             "@id": "schema:name",
             "rdfs:label": {"en-US": "Name"},
             "rdfs:comment": {"en-US": "The name of the item."},
