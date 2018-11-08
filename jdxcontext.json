@@ -42,6 +42,7 @@
       "schema:experienceRequirement": {"@type": "@id"},
       "schema:experienceType": {"@type": "@id"},
       "schema:faxNumber": {"@type": "xsd:string"},
+      "jdx:fein": {"@type": "xsd:string"},
       "jdx:formattedDescription": {"@container": "@language"},
       "schema:geo": {"@type": "@id"},
       "jdx:hasCompetencyProfile": {"@type": "@id"},
@@ -81,7 +82,7 @@
       "schema:percentile75": {"@type": "xsd:float"},
       "schema:percentile90": {"@type": "xsd:float"},
       "jdx:positionID": {"@type": "xsd:string"},
-      "jdx:positionSchedule": {"@type": "@id"},
+      "jdx:positionScheduleType": {"@type": "@id"},
       "schema:postalCode": {"@type": "xsd:string"},
       "jdx:postingEndDate": {"@type": "xsd:dateTime"},
       "jdx:postingRequestor": {"@type": "@id"},
@@ -110,6 +111,7 @@
       "schema:travelRequirement": {"@container": "@language"},
       "schema:validThrough": {"@type": "xsd:dateTime"},
       "schema:value": {"@type": "xsd:float"},
+      "jdx:workLanguage": {"@type": "xsd:language"},
       "schema:workHours": {"@container": "@language"}  
   }
 }

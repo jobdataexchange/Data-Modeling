@@ -6,7 +6,7 @@
             "@id": "schema:AnnotatedDefinedTerm",
             "rdfs:label": {"en-US": "Annotated Defined Term"},
             "rdfs:comment": {"en-US": "A word, name, acronym, phrase, etc. with a formal definition."},
-            "description": {"en-US": "Often used in the context of category or subject classification, glossaries or dictionaries, product or creative work types, etc. Use the name property for the term being defined, use termCode if the term has an alpha-numeric code allocated, use description to provide the definition of the term."}
+            "schema:description": {"en-US": "Often used in the context of category or subject classification, glossaries or dictionaries, product or creative work types, etc. Use the name property for the term being defined, use termCode if the term has an alpha-numeric code allocated, use description to provide the definition of the term."}
         },        
         {
             "@type": "rdf:Class",
@@ -416,6 +416,15 @@
         },
         {
             "@type": "rdf:Property",
+            "@id": "jdx:fein",
+            "rdfs:label": {"en-US": "FEIN"},
+            "rdfs:comment": {"en-US": "Federal Employer Identification Number (FEIN) identifying organizations, persons, states, government agencies, corporations, and companies."},
+            "rdfs:domain": "Organization",
+            "rdfs:range": "xsd:string",
+            "owl:equivalentProperty": "http://purl.org/ctdl/terms/fein"
+        },
+        {
+            "@type": "rdf:Property",
             "@id": "jdx:formattedDescription",
             "rdfs:label": {"en-US": "Formatted Description"},
             "rdfs:comment": {"en-US": "The descriptions for the job position. The descriptions may support HTML or other markup."},
@@ -516,7 +525,7 @@
             "@type": "rdf:Property",
             "@id": "schema:inLanguage",
             "rdfs:label": {"en-US": "Language"},
-            "rdfs:comment": {"en-US": "The language of the content or performance or used in an action. Please use one of the language codes from the IETF BCP 47 standard."},
+            "rdfs:comment": {"en-US": "The language of the content or performance or used in an action."},
             "rdfs:domain": "jdx:JobPositionOpening",
             "rdfs:range": "xsd:language"
         },
@@ -743,8 +752,8 @@
         },
         {
             "@type": "rdf:Property",
-            "@id": "jdx:positionSchedule",
-            "rdfs:label": {"en-US": "Position Schedule"},
+            "@id": "jdx:positionScheduleType",
+            "rdfs:label": {"en-US": "Position ScheduleType"},
             "rdfs:comment": {"en-US": "(HR Open) The working schedule of a position offered or a position sought."},
             "rdfs:domain": "jdx:JobPositionOpening",
             "rdfs:range": "jdx:AnnotatedDefinedTerm",
@@ -979,6 +988,15 @@
             "rdfs:comment": {"en-US": "The value of the quantitative value or property value node."},
             "rdfs:domain": ["jdx:ScaleAnnotation", "schema:MonetaryAmount"],
             "rdfs:range": "xsd:float"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "jdx:workLanguage",
+            "rdfs:label": {"en-US": "Work Language"},
+            "rdfs:comment": {"en-US": "(HR) Information on the work languages used for the job or position opening."},
+            "schema:description": {"en-US": "Languages that an employee is expected to speak, read and understand in order to successful perform in the position"},
+            "rdfs:domain": "jdx:JonPositionOpening",
+            "rdfs:range": "xsd:language"
         },
         {
             "@type": "rdf:Property",
