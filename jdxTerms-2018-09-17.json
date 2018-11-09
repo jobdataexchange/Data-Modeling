@@ -1,6 +1,7 @@
 {
     "@context": {"jdx": "http://jobdescriptionexchange.org/terms/jdxcontext.json"},
     "@graph": [
+    
         {
             "@type": "rdf:Class",
             "@id": "schema:AnnotatedDefinedTerm",
