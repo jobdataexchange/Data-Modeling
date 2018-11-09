@@ -993,7 +993,7 @@
             "@type": "rdf:Property",
             "@id": "jdx:workLanguage",
             "rdfs:label": {"en-US": "Work Language"},
-            "rdfs:comment": {"en-US": "(HR) Information on the work languages used for the job or position opening."},
+            "rdfs:comment": {"en-US": "(HR) Information on the work languages used for the job."},
             "schema:description": {"en-US": "Languages that an employee is expected to speak, read and understand in order to successful perform in the position"},
             "rdfs:domain": "jdx:JonPositionOpening",
             "rdfs:range": "xsd:language"
