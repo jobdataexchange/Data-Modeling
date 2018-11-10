@@ -1,5 +1,5 @@
 {
-    "@context": {"jdx": "http://jobdescriptionexchange.org/terms/jdxcontext.json"},
+    "@context": {"jdx": "http://purl.org/jdx/terms/context/jdxcontext.json"},
     "@graph": [
         {
             "@type": "rdf:Class",
@@ -269,6 +269,7 @@
             "@id": "schema:datePosted",
             "rdfs:label": {"en-US": "Date Posted"},
             "rdfs:comment": {"en-US": "Publication date for the job posting."},
+            "dct:description": {"en-US": "The date of posting by a channel."},
             "rdfs:domain": "jdx:JobPositionOpening",
             "rdfs:range": "xsd:dateTime"
         },
@@ -427,8 +428,8 @@
             "@type": "rdf:Property",
             "@id": "jdx:formattedDescription",
             "rdfs:label": {"en-US": "Formatted Description"},
-            "rdfs:comment": {"en-US": "The descriptions for the job position. The descriptions may support HTML or other markup."},
-            "dct:description": "The [formatted] description should be a complete representation of the job, including job responsibilities, qualifications, skills, working hours, education requirements, and experience requirements.",
+            "rdfs:comment": {"en-US": "The description for the job position. The descriptions may support HTML or other markup."},
+            "dct:description": {"en-US": "(Google) The [formatted] description should be a complete representation of the job, including job responsibilities, qualifications, skills, working hours, education requirements, and experience requirements."},
             "rdfs:domain": ["jdx:JobPositionOpening"],
             "rdfs:range": "rdf:langString"
         },
@@ -657,7 +658,7 @@
             "@id": "schema:median",
             "rdfs:label": {"en-US": "Median"},
             "rdfs:comment": {"en-US": "The median value."},
-            "dct:description": "Value or quantity lying at the midpoint of a frequency distribution of observed values or quantities.",
+            "dct:description": {"en-US": "Value or quantity lying at the midpoint of a frequency distribution of observed values or quantities."},
             "rdfs:domain": "schema:QualitativeValueDistribution",
             "rdfs:range": "xsd:float"
         },
@@ -828,6 +829,7 @@
             "@id": "schema:qualificationSummary",
             "rdfs:label": {"en-US": "Qualification Summary"},
             "rdfs:comment": {"en-US": "Narrative description of a person's qualifications for a position"},
+            "dct:description": {"en-US": "Summary may include skills, experience, education, and licensing."},
             "rdfs:domain": "jdx:JobPositionOpening",
             "rdfs:range": "rdf:langString"
         },
@@ -851,7 +853,8 @@
             "@type": "rdf:Property",
             "@id": "schema:responsibility",
             "rdfs:label": {"en-US": "Responsibility"},
-            "rdfs:comment": {"en-US": "Responsibilities associated with this role or Occupation."},
+            "rdfs:comment": {"en-US": "Responsibilities associated with this role or occupation."},
+            "dct:description": {"en-US": "Tasks, activities or people over which the person exercises authority, control or leadership."},
             "rdfs:domain": "jdx:JobPositionOpening",
             "rdfs:range": "rdf:langString"
         },
@@ -882,9 +885,9 @@
         },
         {
             "@type": "rdf:Property",
-            "@id": "schema:skillType",
+            "@id": "jdx:skillType",
             "rdfs:label": {"en-US": "Skill Type"},
-            "rdfs:comment": {"en-US": "Skills required to fulfill this role."},
+            "rdfs:comment": {"en-US": "Type or category of skill required to fulfill a role."},
             "dct:description": {"en-US": "Wikipedia: A skill is the ability to carry out a task with determined results often within a given amount of time, energy, or both."},
             "rdfs:domain": "jdx:JobPositionOpening",
             "rdfs:range": "jdx:AnnotatedDefinedTerm"
@@ -978,6 +981,7 @@
             "@id": "schema:validThrough",
             "rdfs:label": {"en-US": "Valid Through"},
             "rdfs:comment": {"en-US": "The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours."},
+            "dct:description": {"en-US": "(Google) The date when the job posting will expire in ISO 8601 format. For example, \"2017-02-24\" or \"2017-02-24T19:33:17+00:00\"."},
             "rdfs:domain": "jdx:JobPositionOpening",
             "rdfs:range": "xsd:dateTime"
         },

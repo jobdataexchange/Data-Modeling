@@ -98,7 +98,7 @@
       "schema:salaryCurrency": {"@type": "xsd:string"},
       "schema:sameAs": {"@type": "xsd:anyURI"},
       "jdx:scaleType": {"@type": "@id"},
-      "schema:skillType": {"@type": "@id"},
+      "jdx:skillType": {"@type": "@id"},
       "schema:specialCommitment": {"@container": "@language"},
       "schema:streetAddress": {"@container": "@language"},
       "schema:subOrganization": {"@type": "@id"},
