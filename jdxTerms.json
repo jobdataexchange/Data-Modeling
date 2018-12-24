@@ -3,7 +3,7 @@
     "@graph": [
         {
             "@type": "rdf:Class",
-            "@id": "schema:AnnotatedDefinedTerm",
+            "@id": "jdx:AnnotatedDefinedTerm",
             "rdfs:label": {"en-US": "Annotated Defined Term"},
             "rdfs:comment": {"en-US": "A word, name, acronym, phrase, etc. with a formal definition."},
             "schema:description": {"en-US": "Often used in the context of category or subject classification, glossaries or dictionaries, product or creative work types, etc. Use the name property for the term being defined, use termCode if the term has an alpha-numeric code allocated, use description to provide the definition of the term."}
@@ -34,32 +34,26 @@
         },
         {
             "@type": "rdf:Class",
-            "@id": "jdx:JobAnalysis",
-            "rdfs:label": {"en-US": "Job Analysis"},
-            "rdfs:comment": {"en-US": "Entity providing documentation of a systematic study of a job position that identifies important work responsibilities and tasks and the knowledge, skills, and other qualifications needed to successfully perform those responsibilities and tasks."}
-        },
-        {
-            "@type": "rdf:Class",
             "@id": "jdx:JobCompetencyProfile",
             "rdfs:label": {"en-US": "Job Competency Profiles"},
             "rdfs:comment": {"en-US": "Entity listing major work tasks, knowledge, skills, and abilities requirements for carrying out those work tasks based on a job analysis that engages subject matter experts in defining and validating the importance, frequency, or other types of weightings of the enumerated competencies."}
         },
         {
             "@type": "rdf:Class",
-            "@id": "jdx:JobPositionDescription",
-            "rdfs:label": {"en-US": "Job Posiiton Description"},
+            "@id": "jdx:JobDescription",
+            "rdfs:label": {"en-US": "Job Position Description"},
             "rdfs:comment": {"en-US": "Entity providing a statement of a job position generally including the formal job title, duties, purpose, responsibilities, scope, reporting relationships and working conditions along with the knowledge, skills, abilities, education, qualifications, experience and other requirements for performing the job."}
         },        
         {
             "@type": "rdf:Class",
-            "@id": "jdx:JobPositionOpening",
+            "@id": "jdx:JobOpening",
             "rdfs:label": {"en-US": "Job Position Opening"},
             "rdfs:comment": {"en-US": "Entity describing an unfilled job position that has been formally approved for filling; usually triggered by an aithorization to a supervising/hiring manager to increase the number of positions or fill a position opened by people leaving."}
         },
         {
             "@type": "rdf:Class",
-            "@id": "jdx:License",
-            "rdfs:label": {"en-US": "License"},
+            "@id": "jdx:Credential",
+            "rdfs:label": {"en-US": "Credential"},
             "rdfs:comment": {"en-US": "(HR Open) Authoritative permission to hold a certain status or to do certain things, e.g. to practise some trade or profession."},
             "dct:description": {"en-US": "OED license: (a) A formal, usually a printed or written permission from a constituted authority to do something. (b) The document embodying such a permission."}
         },
@@ -117,7 +111,7 @@
             "@id": "jdx:abilityType",
             "rdfs:label": {"en-US": "Ability Type"},
             "rdfs:comment": {"en-US": "An aptitude, capacity or power to act physically, socially, mentally, legally, or morally at a level suitable to the work context."},
-            "rdfs:domain": "jdx:JobPositionOpening",
+            "rdfs:domain": "jdx:JobOpening",
             "rdfs:range": "jdx:AnnotatedDefinedTerm",
             "skos:note": "USE VALUE FROM: ability type concept scheme"
         },
@@ -225,7 +219,7 @@
             "@id": "jdx:attitudeType",
             "rdfs:label": {"en-US": "Attitude Type"},
             "rdfs:comment": {"en-US": "Attitudes and ways of thinking necessary to successful performance of the job."},
-            "rdfs:domain": "jdx:jobPositionOpening",
+            "rdfs:domain": "jdx:JobMaster",
             "rdfs:range": "jdx:AnnotatedDefinedTerm",
             "skos:note": {"en-US": "USE VALUE FROM: attitude type concept scheme"}
         },
@@ -234,7 +228,7 @@
             "@id": "schema:baseSalary",
             "rdfs:label": {"en-US": "Base Salary"},
             "rdfs:comment": {"en-US": "The base salary of the job or of an employee in an EmployeeRole."},
-            "rdfs:domain": "jdx:JobPositionOpening",
+            "rdfs:domain": "jdx:JobMaster",
             "rdfs:range": "schema:MonetaryAmount"
         },
         {
@@ -243,8 +237,8 @@
             "rdfs:label": {"en-US": "Career Level"},
             "rdfs:comment": {"en-US": "(HR Open) A code classifying the level of a candidate based on career experience."},
             "dct:description": {"en-US": "(HR Open) This may vary by jurisdiction or systems. e.g. Student, Entry Level, Recent Graduate, Mid-Career, Manager, Experienced Non-Manager, Senior Executive, etc."},
-            "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "DefinedTerm",
+            "rdfs:domain": "jdx:JobMaster",
+            "rdfs:range": "jdx:AnnotatedDefinedTerm",
             "skos:note": {"en-US": "USE VALUE FROM: career level type concept scheme (e.g., HR CareerLevelCodeList)"}
         },
         {
@@ -308,7 +302,7 @@
         },
         {
             "@type": "rdf:Property",
-            "@id": "schema:duration",
+            "@id": "schema:duration",         
             "rdfs:label": {"en-US": "Duration"},
             "rdfs:comment": {"en-US": "The duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format."},
             "rdfs:domain": "jdx:License",
@@ -445,32 +439,24 @@
             "@type": "rdf:Property",
             "@id": "jdx:hasCompetencyProfile",
             "rdfs:label": {"en-US": "Competency Profile"},
-            "rdfs:comment": {"en-US": "Entity describing a job competency profile based on this job analysis"},
-            "rdfs:domain": "jdx:JobAnalysis",
+            "rdfs:comment": {"en-US": "Entity describing a job competency profile based on a job analysis"},
+            "rdfs:domain": ["schema:Organization", "jdx:JobDescription"],
             "rdfs:range": "jdx:JobCompetencyProfile"
         },
         {
             "@type": "rdf:Property",
-            "@id": "jdx:hasJobAnalysis",
-            "rdfs:label": {"en-US": "Job Analysis"},
-            "rdfs:comment": {"en-US": "Job analysis entity on which this job competency profile is based."},
-            "rdfs:domain": "jdx:JobCompetencyProfile",
-            "rdfs:range": "jdx:JobAnalysis"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:hasPositionDescription",
-            "rdfs:label": {"en-US": "Job Position Description"},
+            "@id": "jdx:hasJobDescription",
+            "rdfs:label": {"en-US": "Has Job Description"},
             "rdfs:comment": {"en-US": "Job position description entity partially based on this entity."},
-            "rdfs:domain": ["jdx:JobAnalysis", "jdx:JobCompetencyProfile"],
-            "rdfs:range": "jdx:JobPositionDescription"
+            "rdfs:domain": ["schema:Organization", "jdx:JobOpening"],
+            "rdfs:range": "jdx:JobDescription"
         },
         {
             "@type": "rdf:Property",
-            "@id": "jdx:hasPositionOpening",
-            "rdfs:label": {"en-US": "Job Position Opening"},
-            "rdfs:comment": {"en-US": "Entity describing a job posiiton opening based on this job position description."},
-            "rdfs:domain": "jdx:JobPositionDescription",
+            "@id": "jdx:hasJobOpening",
+            "rdfs:label": {"en-US": "Has Job Opening"},
+            "rdfs:comment": {"en-US": "Entity describing a job position opening based on this job position description."},
+            "rdfs:domain": ["schema:Organization", "jdx:JobDescription"],
             "rdfs:range": "jdx:JobPositionOpening"
         },
         {
@@ -478,7 +464,7 @@
             "@id": "jdx:hasPostingInstructions",
             "rdfs:label": {"en-US": "Posting Instructions"},
             "rdfs:comment": {"en-US": "Entity providing instructions for posting a job position opening to a job board or media channel and for submission of applications."},
-            "rdfs:domain": "jdx:JobPositionOpening",
+            "rdfs:domain": ["jdx:JobMaster", "jdx:JobPosting"],
             "rdfs:range": "jdx:PostingInstruction"
         },
         {
@@ -486,7 +472,7 @@
             "@id": "schema:hiringOrganization",
             "rdfs:label": {"en-US": "Hiring Organization"},
             "rdfs:comment": {"en-US": "Organization offering the job position."},
-            "rdfs:domain": "jdx:JobPositionOpening",
+            "rdfs:domain": "jdx:JobMaster",
             "rdfs:range": "schema:Organization"
         },
         {
