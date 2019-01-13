@@ -1,1000 +1,3977 @@
 {
-    "@context": {"jdx": "http://purl.org/jdx/terms/context/jdxcontext.json"},
-    "@graph": [
-        {
-            "@type": "rdf:Class",
-            "@id": "jdx:AnnotatedDefinedTerm",
-            "rdfs:label": {"en-US": "Annotated Defined Term"},
-            "rdfs:comment": {"en-US": "A word, name, acronym, phrase, etc. with a formal definition."},
-            "schema:description": {"en-US": "Often used in the context of category or subject classification, glossaries or dictionaries, product or creative work types, etc. Use the name property for the term being defined, use termCode if the term has an alpha-numeric code allocated, use description to provide the definition of the term."}
-        },        
-        {
-            "@type": "rdf:Class",
-            "@id": "schema:ContactPoint",
-            "rdfs:label": {"en-US": "Contact Point"},
-            "rdfs:comment": {"en-US": "A contact point—for example, a Customer Complaints department."}
-        },        
-        {
-            "@type": "rdf:Class",
-            "@id": "jdx:Education",
-            "rdfs:label": {"en-US": "Education"},
-            "rdfs:comment": {"en-US": "Acquired knowledge, skills, values, beliefs and habits through systematic instruction and study, typically at a school or university."}
-        },
-        {
-            "@type": "rdf:Class",
-            "@id": "jdx:Experience",
-            "rdfs:label": {"en-US": "Experience"},
-            "rdfs:comment": {"en-US": "Entity describing past individual performance confirming or supporting qualification to engage in defined activities, perform certain tasks or to assume certain responsibilities."}
-        },
-        {
-            "@type": "rdf:Class",
-            "@id": "schema:GeoCoordinates",
-            "rdfs:label": {"en-US": "Geo Coordinates"},
-            "rdfs:comment": {"en-US": "Geographic coordinates of a place or event."}
-        },
-        {
-            "@type": "rdf:Class",
-            "@id": "jdx:JobCompetencyProfile",
-            "rdfs:label": {"en-US": "Job Competency Profiles"},
-            "rdfs:comment": {"en-US": "Entity listing major work tasks, knowledge, skills, and abilities requirements for carrying out those work tasks based on a job analysis that engages subject matter experts in defining and validating the importance, frequency, or other types of weightings of the enumerated competencies."}
-        },
-        {
-            "@type": "rdf:Class",
-            "@id": "jdx:JobDescription",
-            "rdfs:label": {"en-US": "Job Position Description"},
-            "rdfs:comment": {"en-US": "Entity providing a statement of a job position generally including the formal job title, duties, purpose, responsibilities, scope, reporting relationships and working conditions along with the knowledge, skills, abilities, education, qualifications, experience and other requirements for performing the job."}
-        },        
-        {
-            "@type": "rdf:Class",
-            "@id": "jdx:JobOpening",
-            "rdfs:label": {"en-US": "Job Position Opening"},
-            "rdfs:comment": {"en-US": "Entity describing an unfilled job position that has been formally approved for filling; usually triggered by an aithorization to a supervising/hiring manager to increase the number of positions or fill a position opened by people leaving."}
-        },
-        {
-            "@type": "rdf:Class",
-            "@id": "jdx:Credential",
-            "rdfs:label": {"en-US": "Credential"},
-            "rdfs:comment": {"en-US": "(HR Open) Authoritative permission to hold a certain status or to do certain things, e.g. to practise some trade or profession."},
-            "dct:description": {"en-US": "OED license: (a) A formal, usually a printed or written permission from a constituted authority to do something. (b) The document embodying such a permission."}
-        },
-        {
-            "@type": "rdf:Class",
-            "@id": "schema:MonetaryAmount",
-            "rdfs:label": {"en-US": "A monetary value or range."},
-            "rdfs:comment": {"en-US": "This type can be used to describe an amount of money such as $50 USD, or a range as in describing a bank account being suitable for a balance between £1,000 and £1,000,000 GBP, or the value of a salary, etc. "}
-        },
-        {
-            "@type": "rdf:Class",
-            "@id": "schema:Organization",
-            "rdfs:label": {"en-US": "Organization"},
-            "rdfs:comment": {"en-US": "An organization such as a school, NGO, corporation, club, etc."}
-        },
-        {
-            "@type": "rdf:Class",
-            "@id": "schema:Person",
-            "rdfs:label": {"en-US": "Person"},
-            "rdfs:comment": {"en-US": "A person (alive, dead, undead, or fictional)."}
-        },
-        {
-            "@type": "rdf:Class",
-            "@id": "schema:Place",
-            "rdfs:label": {"en-US": "schema:Place"},
-            "rdfs:comment": {"en-US": "Entities that have a somewhat fixed, physical extension."}
-        },
-        {
-            "@type": "rdf:Class",
-            "@id": "schema:PostalAddress",
-            "rdfs:label": {"en-US": "Postal Address"},
-            "rdfs:comment": {"en-US": "The mailing address."}
-        },
-        {
-            "@type": "rdf:Class",
-            "@id": "schema:PostingInstruction",
-            "rdfs:label": {"en-US": "Posting Instruction"},
-            "rdfs:comment": {"en-US": "The mailing address."}
-        },
-        {
-            "@type": "rdf:Class",
-            "@id": "schema:QuantitativeValueDistribution",
-            "rdfs:label": {"en-US": "Quantitative Value Distribution"},
-            "rdfs:comment": {"en-US": "A statistical distribution of values."}
-        },
-        {
-            "@type": "rdf:Class",
-            "@id": "jdx:ScaleAnnotation",
-            "rdfs:label": {"en-US": "Scale Annotation"},
-            "rdfs:comment": {"en-US": "Entity for identifying and applying a defined scale or rating to another entity."},
-            "dct:description": {"en-US": "For example, applying an importance scale to a competency."}
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:abilityType",
-            "rdfs:label": {"en-US": "Ability Type"},
-            "rdfs:comment": {"en-US": "An aptitude, capacity or power to act physically, socially, mentally, legally, or morally at a level suitable to the work context."},
-            "rdfs:domain": "jdx:JobOpening",
-            "rdfs:range": "jdx:AnnotatedDefinedTerm",
-            "skos:note": "USE VALUE FROM: ability type concept scheme"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:acquisitionDiffulty",
-            "rdfs:label": {"en-US": "Acquisition Difficulty"},
-            "rdfs:comment": {"en-US": "A rating or score representing the difficulty of the particular competency to acquire."},
-            "rdfs:domain": "jdx:ScaleAnnotation",
-            "rdfs:range": "xsd:float"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:activityType",
-            "rdfs:label": {"en-US": "Activity Type"},
-            "rdfs:comment": {"en-US": "Activities asssociated with the job."},
-            "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "jdx:AnnotatedDefinedTerm",
-            "skos:note": {"en-US": "USE VALUE FROM: activity type concept scheme"}
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:address",
-            "rdfs:label": {"en-US": "Address"},
-            "rdfs:comment": {"en-US": "Physical address of the item."},
-            "rdfs:domain": ["schema:Place", "schema:Organization"],
-            "rdfs:range": "schema:PostalAddress"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:addressCountry",
-            "rdfs:label": {"en-US": "Address Country"},
-            "rdfs:comment": {"en-US": "The country. For example, USA."},
-            "dct:description": "You can also provide the two-letter ISO 3166-1 alpha-2 country code.",
-            "rdfs:domain": "schema:PostalAddress",
-            "rdfs:range": "xsd:string"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:addressLocality",
-            "rdfs:label": {"en-US": "Address Locality"},
-            "rdfs:comment": {"en-US": "The locality. For example, Mountain View."},
-            "rdfs:domain": "schema:PostalAddress",
-            "rdfs:range": "xsd:string"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:addressRegion",
-            "rdfs:label": {"en-US": "Address Region"},
-            "rdfs:comment": {"en-US": "The region. For example, CA."},
-            "rdfs:domain": "schema:PostalAddress",
-            "rdfs:range": "xsd:string"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:annotation",
-            "rdfs:label": {"en-US": "Annotation"},
-            "rdfs:comment": {"en-US": "Entity providing qualifying notations including application of scale annotations and other weights to concepts and competencies identified through AnnotatedDefinedTerm."},
-            "rdfs:domain": "jdx:AnnotatedDefinedTerm",
-            "rdfs:range": "jdx:ScaleAnnotation"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:applicationCloseDate",
-            "rdfs:label": {"en-US": "Application Close Date"},
-            "rdfs:comment": {"en-US": "Closing date for accepting applications."},
-            "rdfs:domain": "jdx:PostingInstruction",
-            "rdfs:range": "xsd:dateTime"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:applicationContact",
-            "rdfs:label": {"en-US": "Application Contact"},
-            "rdfs:comment": {"en-US": "A job position contact point for a person or organization."},
-            "rdfs:domain": "jdx:PostingInstruction",
-            "rdfs:range": "schema:ContactPoint"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:applicationInstructions",
-            "rdfs:label": {"en-US": "ApplicationInstructions"},
-            "rdfs:comment": {"en-US": "Narrative instructions for applying for this position."},
-            "rdfs:domain": "jdx:PostingInstruction",
-            "rdfs:range": "rdf:langString"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:applicationLocation",
-            "rdfs:label": {"en-US": "Application Location"},
-            "rdfs:comment": {"en-US": "The physical location where applications can be submitted."},
-            "rdfs:domain": "schema:PostingInstruction",
-            "rdfs:range": "schema:Place"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:assessmentMethod",
-            "rdfs:label": {"en-US": "Assessment Method"},
-            "rdfs:comment": {"en-US": "Type of method used to conduct an assessment; select from an existing enumeration of such types."},
-            "rdfs:domain": "jdx:ScaleAnnotation",
-            "rdfs:range": "jdx:AnnotatedDefinedTerm",
-            "skos:note": {"en-US": "USE VALUE FROM: Concept scheme such as http://purl.org/ctdl/terms/AssessmentMethod" }
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:attitudeType",
-            "rdfs:label": {"en-US": "Attitude Type"},
-            "rdfs:comment": {"en-US": "Attitudes and ways of thinking necessary to successful performance of the job."},
-            "rdfs:domain": "jdx:JobMaster",
-            "rdfs:range": "jdx:AnnotatedDefinedTerm",
-            "skos:note": {"en-US": "USE VALUE FROM: attitude type concept scheme"}
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:baseSalary",
-            "rdfs:label": {"en-US": "Base Salary"},
-            "rdfs:comment": {"en-US": "The base salary of the job or of an employee in an EmployeeRole."},
-            "rdfs:domain": "jdx:JobMaster",
-            "rdfs:range": "schema:MonetaryAmount"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:careerLevelType",
-            "rdfs:label": {"en-US": "Career Level"},
-            "rdfs:comment": {"en-US": "(HR Open) A code classifying the level of a candidate based on career experience."},
-            "dct:description": {"en-US": "(HR Open) This may vary by jurisdiction or systems. e.g. Student, Entry Level, Recent Graduate, Mid-Career, Manager, Experienced Non-Manager, Senior Executive, etc."},
-            "rdfs:domain": "jdx:JobMaster",
-            "rdfs:range": "jdx:AnnotatedDefinedTerm",
-            "skos:note": {"en-US": "USE VALUE FROM: career level type concept scheme (e.g., HR CareerLevelCodeList)"}
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:contactPoint",
-            "rdfs:label": {"en-US": "Contact Point"},
-            "rdfs:comment": {"en-US": "A contact point for a person or organization."},
-            "rdfs:domain": ["schema:Organization", "jdx:PostingInstruction"],
-            "rdfs:range": "schema:ContactPoint"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:contactType",
-            "rdfs:label": {"en-US": "Contact Type"},
-            "rdfs:comment": {"en-US": "Specification of the type of contact point"},
-            "rdfs:domain": "schema:ContactPoint",
-            "rdfs:range": "jdx:AnnotatedDefinedTerm",
-            "skos:note": {"en-US": "USE VALUE FROM: contact type concept scheme"}
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:datePosted",
-            "rdfs:label": {"en-US": "Date Posted"},
-            "rdfs:comment": {"en-US": "Publication date for the job posting."},
-            "dct:description": {"en-US": "The date of posting by a channel."},
-            "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "xsd:dateTime"
-        },
-               {
-            "@type": "rdf:Property",
-            "@id": "schema:department",
-            "rdfs:label": {"en-US": "Department"},
-            "rdfs:comment": {"en-US": "A relationship between an organization and a department of that organization"},
-            "rdfs:domain": "Organization",
-            "rdfs:range": "Organization"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:description",
-            "rdfs:label": {"en-US": "Description"},
-            "rdfs:comment": {"en-US": "A description of the item."},
-            "rdfs:domain": ["jdx:AnnotatedDefinedTerm", "jdx:Education", "jdx:Experience", "jdx:JobAnalysis", "jdx:JobCompetencyProfile", "jdx:JobPositionDescription", "jdx:JobPositionOpening", "jdx:License", "schema:MonetaryAmount", "jdx:ScaleAnnotation"],
-            "rdfs:range": "rdf:langString"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:distributionChannel",
-            "rdfs:label": {"en-US": "Distribution Channel"},
-            "rdfs:comment": {"en-US": "Identifies a job board or media channel associated with a job posting."},
-            "rdfs:domain": "JobPositionDescription",
-            "rdfs:range": "xsd:anyURI"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:duns",
-            "rdfs:label": {"en-US": "DUNS"},
-            "rdfs:comment": {"en-US": "Dun & Bradstreet DUNS number for identifying an organization or business person."},
-            "rdfs:domain": "Organization",
-            "rdfs:range": "xsd:string",
-            "owl:equivalentProperty": "http://purl.org/ctdl/terms/duns"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:duration",         
-            "rdfs:label": {"en-US": "Duration"},
-            "rdfs:comment": {"en-US": "The duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format."},
-            "rdfs:domain": "jdx:License",
-            "rdfs:range": "xsd:string"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:educationLevel",
-            "rdfs:label": {"en-US": "Education Level"},
-            "rdfs:comment": {"en-US": "A word or phrase identifying the location of the person in terms of his or her progression through an education or training context."},
-            "rdfs:domain": "jdx:Education",
-            "rdfs:range": "rdf:langString"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:educationLevelType",
-            "rdfs:label": {"en-US": "Education Level Type"},
-            "rdfs:comment": {"en-US": "A concept identifying the location of the person in terms of his or her progression through an education or training context."},
-            "rdfs:domain": ["jdx:Education", "jdx:JobMaster"],
-            "rdfs:range": "jdx:AnnotatedDefinedTerm",
-            "skos:note": {"en-US": "USE VALUE FROM: https://hrOpen...codelist/IscedCodeList/"}
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:educationRequirement",
-            "rdfs:label": {"en-US": "Education Requirement"},
-            "rdfs:comment": {"en-US": "Educational background needed for the position or Occupation."},
-            "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "jdx:Education"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:email",
-            "rdfs:label": {"en-US": "Email"},
-            "rdfs:comment": {"en-US": "Email address."},
-            "rdfs:domain": ["Organization", "ContactPoint"],
-            "rdfs:range": "xsd:string"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:employmentType",
-            "rdfs:label": {"en-US": "Employment Type"},
-            "rdfs:comment": {"en-US": "Type of employment (e.g. full-time, part-time, contract, temporary, seasonal, internship)."},
-            "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "jdx:AnnotatedDefinedTerm",
-            "skos:note": {"en-US": "USE VALUE FROM: an employment type concept scheme."}
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:employmentUnit",
-            "rdfs:label": {"en-US": "Employment Type"},
-            "rdfs:comment": {"en-US": "Department or unit of the employer where the employee reports and/or in which the job is to be performed."},
-            "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": ["Organization", "Department"]
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:estimatedSalary",
-            "rdfs:label": {"en-US": "Estimated Salary"},
-            "rdfs:comment": {"en-US": "A property describing the estimated salary for a job posting based on a variety of variables including, but not limited to industry, job title, and location."},
-            "dct:description": {"en-US": "The estimated salary is usually computed by outside organizations and therefore the hiring organization is not bound to this estimated salary."},
-            "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "schema:QualityValueDistribution"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:evidence",
-            "rdfs:label": {"en-US": "Evidence"},
-            "rdfs:comment": {"en-US": "The referenced artifact or performance confirming or supporting an assertion."},
-            "rdfs:domain": ["jdx:Education", "jdx:Experience", "jdx:License"],
-            "rdfs:range": "xsd:anyURI"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:evidenceType",
-            "rdfs:label": {"en-US": "Evidence"},
-            "rdfs:comment": {"en-US": "The type of referenced artifact or performance confirming or supporting an assertion."},
-            "rdfs:domain": ["jdx:Education", "jdx:Experience", "jdx:ScaleAnnotation"],
-            "rdfs:range": "DefinedTerm",
-            "skos:note": {"en-US": "USE VALUE FROM: evidence type concept scheme"}
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:experienceRequirement",
-            "rdfs:label": {"en-US": "Experience Requirement"},
-            "rdfs:comment": {"en-US": "Description of the experience needed for the position or Occupation."},
-            "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "jdx:Experience"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:experienceType",
-            "rdfs:label": {"en-US": "Experience Type"},
-            "rdfs:comment": {"en-US": "Category of experience needed for the position or Occupation."},
-            "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "DefinedTerm",
-            "skos:note": {"en-US": "USE VALUE FROM: experience type concept scheme"}
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:faxNumber",
-            "rdfs:label": {"en-US": "Fax Number"},
-            "rdfs:comment": {"en-US": "The fax number."},
-            "rdfs:domain": ["Place", "Organization", "ContactPoint"],
-            "rdfs:range": "xsd:string"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:fein",
-            "rdfs:label": {"en-US": "FEIN"},
-            "rdfs:comment": {"en-US": "Federal Employer Identification Number (FEIN) identifying organizations, persons, states, government agencies, corporations, and companies."},
-            "rdfs:domain": "Organization",
-            "rdfs:range": "xsd:string",
-            "owl:equivalentProperty": "http://purl.org/ctdl/terms/fein"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:formattedDescription",
-            "rdfs:label": {"en-US": "Formatted Description"},
-            "rdfs:comment": {"en-US": "The description for the job position. The descriptions may support HTML or other markup."},
-            "dct:description": {"en-US": "(Google) The [formatted] description should be a complete representation of the job, including job responsibilities, qualifications, skills, working hours, education requirements, and experience requirements."},
-            "rdfs:domain": ["jdx:JobPositionOpening"],
-            "rdfs:range": "rdf:langString"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:geo",
-            "rdfs:label": {"en-US": "Geo Coordinates"},
-            "rdfs:comment": {"en-US": "The geo coordinates of the place."},
-            "rdfs:domain": ["schema:Organization", "schema:Place"],
-            "rdfs:range": "GeoCoordinates"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:hasCompetencyProfile",
-            "rdfs:label": {"en-US": "Competency Profile"},
-            "rdfs:comment": {"en-US": "Entity describing a job competency profile based on a job analysis"},
-            "rdfs:domain": ["schema:Organization", "jdx:JobDescription"],
-            "rdfs:range": "jdx:JobCompetencyProfile"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:hasJobDescription",
-            "rdfs:label": {"en-US": "Has Job Description"},
-            "rdfs:comment": {"en-US": "Job position description entity partially based on this entity."},
-            "rdfs:domain": ["schema:Organization", "jdx:JobOpening"],
-            "rdfs:range": "jdx:JobDescription"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:hasJobOpening",
-            "rdfs:label": {"en-US": "Has Job Opening"},
-            "rdfs:comment": {"en-US": "Entity describing a job position opening based on this job position description."},
-            "rdfs:domain": ["schema:Organization", "jdx:JobDescription"],
-            "rdfs:range": "jdx:JobPositionOpening"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:hasPostingInstructions",
-            "rdfs:label": {"en-US": "Posting Instructions"},
-            "rdfs:comment": {"en-US": "Entity providing instructions for posting a job position opening to a job board or media channel and for submission of applications."},
-            "rdfs:domain": ["jdx:JobMaster", "jdx:JobPosting"],
-            "rdfs:range": "jdx:PostingInstruction"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:hiringOrganization",
-            "rdfs:label": {"en-US": "Hiring Organization"},
-            "rdfs:comment": {"en-US": "Organization offering the job position."},
-            "rdfs:domain": "jdx:JobMaster",
-            "rdfs:range": "schema:Organization"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:immediateStartIndicator",
-            "rdfs:label": {"en-US": "Immediate Start Indicator"},
-            "rdfs:comment": {"en-US": "An indicator as to whether a position is available for an immediate start."},
-            "rdfs:domain": "jdx:jobPositionOpening",
-            "rdfs:range": "xsd:Boolean"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:incentiveCompensation",
-            "rdfs:label": {"en-US": "Incentive Compensation"},
-            "rdfs:comment": {"en-US": "Description of bonus and commission compensation aspects of the job."},
-            "rdfs:domain": "jdx:JobPostingOpening",
-            "rdfs:range": "rdf:langString"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:inDefinedTermSet",
-            "rdfs:label": {"en-US": "Term Set"},
-            "rdfs:comment": {"en-US": "A defined term set that contains this term."},
-            "rdfs:domain": "jdx:AnnotatedDefinedTerm",
-            "rdfs:range": "jdx:AnnotatedDefinedTermSet"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:industryType",
-            "rdfs:label": {"en-US": "Industry"},
-            "rdfs:comment": {"en-US": "The industry associated with the job position."},
-            "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "jdx:AnnotatedDefinedTerm",
-            "skos:note": {"en-US": "USE VALUE FROM: industry type concept scheme" }
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:inLanguage",
-            "rdfs:label": {"en-US": "Language"},
-            "rdfs:comment": {"en-US": "The language of the content or performance or used in an action."},
-            "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "xsd:language"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:intervalCode",
-            "rdfs:label": {"en-US": "Interval Code"},
-            "rdfs:comment": {"en-US": "(HR) An interval of time or other basis used to express a rate of pay or remuneration."},
-            "rdfs:domain": "schema:MonetaryAmount",
-            "rdfs:range": "rdf:langString"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:isicV4",
-            "rdfs:label": {"en-US": "SIC Code"},
-            "rdfs:comment": {"en-US": "International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place."},
-            "rdfs:domain": "schema:Organization",
-            "rdfs:range": "xsd:string"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:issuer",
-            "rdfs:label": {"en-US": "Issuer"},
-            "rdfs:comment": {"en-US": "Entity providing verification of the existance and validty of the entity being described."},
-            "rdfs:domain": ["jdx:Experience", "jdx:Education", "jdx:License"],
-            "rdfs:range": "schema:Organization"
-        },
-                {
-            "@type": "rdf:Property",
-            "@id": "schema:jobBenefit",
-            "rdfs:label": {"en-US": "Job Benefit"},
-            "rdfs:comment": {"en-US": "Description of benefits associated with the job."},
-            "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "rdf:langString"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:jobLocation",
-            "rdfs:label": {"en-US": "Job Location"},
-            "rdfs:comment": {"en-US": "A (typically single) geographic location associated with the job position."},
-            "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "schema:Place"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:knowledgeType",
-            "rdfs:label": {"en-US": "Knowledge"},
-            "rdfs:comment": {"en-US": "Theoretical or practical understanding of a subject."},
-            "dct:description": {"en-US": "Frequently treated as an aspect of the notion of \"competency\" along with skills and abilities."},
-            "rdfs:range": "jdx:AnnotatedDefinedTerm",
-            "skos:note": {"en-US": "USE VALUE FROM: a competency framework"}
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:latitude",
-            "rdfs:label": {"en-US": "Latitude"},
-            "rdfs:comment": {"en-US": "The latitude of a location. For example 37.42242."},
-            "rdfs:domain": "schema:GeoCoordinates",
-            "rdfs:range": "xsd:string"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:legalName",
-            "rdfs:label": {"en-US": "Legal Name"},
-            "rdfs:comment": {"en-US": "The official name of the organization, e.g. the registered company name."},
-            "rdfs:domain": "schema:Organization",
-            "rdfs:range": "rdf:langString"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:leiCode",
-            "rdfs:label": {"en-US": "LEI Code"},
-            "rdfs:comment": {"en-US": "An organization identifier that uniquely identifies a legal entity as defined in ISO 17442."},
-            "rdfs:domain": "schema:Organization",
-            "rdfs:range": "xsd:string"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:levelCode",
-            "rdfs:label": {"en-US": "Level Code"},
-            "rdfs:comment": {"en-US": "Level of experience required."},
-            "rdfs:domain": "jdx:Experience",
-            "rdfs:range": "jdx:AnnotatedDefinedTerm",
-            "skos:note": {"en-US": "USE VALUE FROM: a level code concept scheme"}
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:licenseRequirement",
-            "rdfs:label": {"en-US": "License Requirement"},
-            "rdfs:comment": {"en-US": "Description of license(s) needed for the position or occupation."},
-            "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "jdx:License"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:licenseType",
-            "rdfs:label": {"en-US": "License Type"},
-            "rdfs:comment": {"en-US": "Type of license selected from a concept scheme of types."},
-            "rdfs:domain": "jdx:License",
-            "rdfs:range": "jdx:AnnotatedDefinedTerm",
-            "skos:note": {"en-US": "USE VALUE FROM: a license type concept scheme" }
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:logo",
-            "rdfs:label": {"en-US": "Logo"},
-            "rdfs:comment": {"en-US": "An associated logo."},
-            "rdfs:domain": "schema:Organization",
-            "rdfs:range": "schema:image"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:longitude",
-            "rdfs:label": {"en-US": "Longitude"},
-            "rdfs:comment": {"en-US": "The longitude of a location. For example -122.08585."},
-            "rdfs:domain": "schema:GeoCoordinates",
-            "rdfs:range": "xsd:string"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:maxValue",
-            "rdfs:label": {"en-US": "Maximum Value"},
-            "rdfs:comment": {"en-US": "The upper value of some characteristic or property."},
-            "rdfs:domain": "schema:MonetaryAmount",
-            "rdfs:range": "xsd:float"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:median",
-            "rdfs:label": {"en-US": "Median"},
-            "rdfs:comment": {"en-US": "The median value."},
-            "dct:description": {"en-US": "Value or quantity lying at the midpoint of a frequency distribution of observed values or quantities."},
-            "rdfs:domain": "schema:QualitativeValueDistribution",
-            "rdfs:range": "xsd:float"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:minValue",
-            "rdfs:label": {"en-US": "Minimum Value"},
-            "rdfs:comment": {"en-US": "The lower value of some characteristic or property."},
-            "rdfs:domain": "schema:MonetaryAmount",
-            "rdfs:range": "xsd:float"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:naics",
-            "rdfs:label": {"en-US": "NAICS"},
-            "rdfs:comment": {"en-US": "The North American Industry Classification System (NAICS) code for a particular organization or business person.."},
-            "rdfs:domain": "schema:Organization",
-            "rdfs:range": "xsd:string"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:name",
-            "rdfs:label": {"en-US": "Name"},
-            "rdfs:comment": {"en-US": "The name of the item."},
-            "rdfs:domain": ["jdx:AnnotatedDefinedTerm", "jdx:License", "schema:Place", "schema:PostalAddress"],
-            "rdfs:range": "rdf:langString"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:numberOfEmployees",
-            "rdfs:label": {"en-US": "Number Of Employees"},
-            "rdfs:comment": {"en-US": "The number of employees in an organization e.g. business."},
-            "rdfs:domain": "schema:Organization",
-            "rdfs:range": "xsd:integer"
-        }, 
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:occupationCategory",
-            "rdfs:label": {"en-US": "Occupation Category"},
-            "rdfs:comment": {"en-US": "Category or categories describing the job."},
-            "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "jdx:AnnotatedDefinedTerm",
-            "skos:note": {"en-US": "USE VALUE FROM: an occupation type concept scheme."}
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:parentOrganization",
-            "rdfs:label": {"en-US": "Parent Organization"},
-            "rdfs:comment": {"en-US": "The larger organization that this organization is a subOrganization of, if any."},
-            "rdfs:domain": "schema:Organization",
-            "rdfs:range": "schema:Organization"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:percentile10",
-            "rdfs:label": {"en-US": "10th Percentile"},
-            "rdfs:comment": {"en-US": "The 10th percentile value."},
-            "rdfs:domain": "schema:QualitativeValueDistribution",
-            "rdfs:range": "xsd:float"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:percentile25",
-            "rdfs:label": {"en-US": "25th Percentile"},
-            "rdfs:comment": {"en-US": "The 25th percentile value."},
-            "rdfs:domain": "schema:QualitativeValueDistribution",
-            "rdfs:range": "xsd:float"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:percentile75",
-            "rdfs:label": {"en-US": "75th Percentile"},
-            "rdfs:comment": {"en-US": "The 75th percentile value."},
-            "rdfs:domain": "schema:QualitativeValueDistribution",
-            "rdfs:range": "xsd:float"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:percentile90",
-            "rdfs:label": {"en-US": "90th Percentile"},
-            "rdfs:comment": {"en-US": "The 90th percentile value."},
-            "rdfs:domain": "schema:QualitativeValueDistribution",
-            "rdfs:range": "xsd:float"
-        }, 
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:positionID",
-            "rdfs:label": {"en-US": "Position Identifier"},
-            "rdfs:comment": {"en-US": "(HR Open) The identifier for the position that maybe be used externally in an advertisement."},
-            "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "xsd:string"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:positionScheduleType",
-            "rdfs:label": {"en-US": "Position ScheduleType"},
-            "rdfs:comment": {"en-US": "(HR Open) The working schedule of a position offered or a position sought."},
-            "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "jdx:AnnotatedDefinedTerm",
-            "skos:note": {"en-US": "USE VALUE FROM: a position schedule type concept scheme; e.g. HR PositionScheduleTypeCodeList"}
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:postalCode",
-            "rdfs:label": {"en-US": "Postal Code"},
-            "rdfs:comment": {"en-US": "The postal code. For example, 94043."},
-            "rdfs:domain": "schema:PostalAddress",
-            "rdfs:range": "xsd:string"
-        },       
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:postingEndDate",
-            "rdfs:label": {"en-US": "Posting End Date"},
-            "rdfs:comment": {"en-US": "End date (time) for the posting"},
-            "rdfs:domain": "jdx:PostingInstruction",
-            "rdfs:range": "xsd:dateTime"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:postingRequestor",
-            "rdfs:label": {"en-US": "Posting Requestor"},
-            "rdfs:comment": {"en-US": "The agent requesting the posting."},
-            "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "schema:Organization"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:postingStartDate",
-            "rdfs:label": {"en-US": "Posting Start date"},
-            "rdfs:comment": {"en-US": "Start date (time) for the posting"},
-            "rdfs:domain": "jdx:PostingInstruction",
-            "rdfs:range": "xsd:dateTime"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:preferredValue",
-            "rdfs:label": {"en-US": "Preferred Value"},
-            "rdfs:comment": {"en-US": "The preferred value of some characteristic or property."},
-            "rdfs:domain": "jdx:ScaleAnnotation",
-            "rdfs:range": "xsd:float"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:program",
-            "rdfs:label": {"en-US": "Program"},
-            "rdfs:comment": {"en-US": "Degree program of study."},
-            "rdfs:domain": "jdx:Education",
-            "rdfs:range": "rdf:langString"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:programConcentration",
-            "rdfs:label": {"en-US": "Program Concentration"},
-            "rdfs:comment": {"en-US": "Focused plan of study within a college or university degree such as a concentration in Aerospace Engineering within an Engineering degree."},
-            "rdfs:domain": "jdx:Education",
-            "rdfs:range": "rdf:langString"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:provider",
-            "rdfs:label": {"en-US": "Provider"},
-            "rdfs:comment": {"en-US": "Agent who provides unverified evidence that supports the agent's assertion of qualification for a job position; e.g., submission of a résumé by a person."},
-            "rdfs:domain": "rdfs:Resource",
-            "rdfs:range": "schema:Person"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:qualificationSummary",
-            "rdfs:label": {"en-US": "Qualification Summary"},
-            "rdfs:comment": {"en-US": "Narrative description of a person's qualifications for a position"},
-            "dct:description": {"en-US": "Summary may include skills, experience, education, and licensing."},
-            "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "rdf:langString"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:requiredAtHiring",
-            "rdfs:label": {"en-US": "Required At Hiring"},
-            "rdfs:comment": {"en-US": "Whether or not a particular requirement is expected at the time of hiring or may be subsequently obtained."},
-            "rdfs:domain": "jdx:ScaleAnnotation",
-            "rdfs:range": "xsd:boolean"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:requiredValue",
-            "rdfs:label": {"en-US": "Required Value"},
-            "rdfs:comment": {"en-US": "The required value of some characteristic or property."},
-            "rdfs:domain": "jdx:ScaleAnnotation",
-            "rdfs:range": "xsd:float"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:responsibility",
-            "rdfs:label": {"en-US": "Responsibility"},
-            "rdfs:comment": {"en-US": "Responsibilities associated with this role or occupation."},
-            "dct:description": {"en-US": "Tasks, activities or people over which the person exercises authority, control or leadership."},
-            "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "rdf:langString"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:salaryCurrency",
-            "rdfs:label": {"en-US": "Salary Currency"},
-            "rdfs:comment": {"en-US": "The currency (coded using ISO 4217 ) used for the main salary information in this job posting or for this employee."},
-            "rdfs:domain": ["schema:QualitativeValueDistribution", "schema:MonetaryAmount"],
-            "rdfs:range": "xsd:string"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:sameAs",
-            "rdfs:label": {"en-US": "Same As"},
-            "rdfs:comment": {"en-US": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website."},
-            "rdfs:domain": "schema:Organization",
-            "rdfs:range": "xsd:anyURI"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:scaleType",
-            "rdfs:label": {"en-US": "Scale Type"},
-            "rdfs:comment": {"en-US": "Type or category of scale or weighting to be applied to a specific competency (knowledge, skill, ability), task, responsibility, interest etc."},
-            "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "jdx:AnnotatedDefinedTerm",
-            "skos:note": {"en-US": "Where logically applicable, previously defined scales can be applied to a range of previously defined controlled concepts and competencies."}
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:skillType",
-            "rdfs:label": {"en-US": "Skill Type"},
-            "rdfs:comment": {"en-US": "Type or category of skill required to fulfill a role."},
-            "dct:description": {"en-US": "Wikipedia: A skill is the ability to carry out a task with determined results often within a given amount of time, energy, or both."},
-            "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "jdx:AnnotatedDefinedTerm"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:specialCommitment",
-            "rdfs:label": {"en-US": "Special Commitment"},
-            "rdfs:comment": {"en-US": "Any special commitments associated with this job posting."},
-            "dct:description": {"en-US": "Valid entries include VeteranCommit, MilitarySpouseCommit, etc."},
-            "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "rdf:langString"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:streetAddress",
-            "rdfs:label": {"en-US": "Street Address"},
-            "rdfs:comment": {"en-US": "The street address. For example, 1600 Amphitheatre Pkwy."},
-            "rdfs:domain": "schema:PostalAddress",
-            "rdfs:range": "rdf:langString"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:subOrganization",
-            "rdfs:label": {"en-US": "Sub-Organization"},
-            "rdfs:comment": {"en-US": "A relationship between two organizations where the first includes the second, e.g., as a subsidiary."},
-            "rdfs:domain": "schema:Organization",
-            "rdfs:range": "schema:Organization",
-            "skos:note": {"en-US": "See also: the more specific 'department' property."}
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:taskType",
-            "rdfs:label": {"en-US": "Task"},
-            "rdfs:comment": {"en-US": "A piece or unit of work to be done or undertaken and accomplished within a defined period of time or by a deadline."},
-            "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "jdx:AnnotatedDefinedTerm",
-            "skos:note": {"en-US": "USE VALUE FROM: a task type concept scheme"}
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:technologyType",
-            "rdfs:label": {"en-US": "Technology Type"},
-            "rdfs:comment": {"en-US": "Tool, application or other form of technology that requires knowledge, skill and ability to use effectively in executing the tasks and responsibilities of the job."},
-            "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "jdx:AnnotatedDefinedTerm",
-            "skos:note": {"en-US": "USE VALUE FROM: tool and technology type of concept schemes"}
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:telephone",
-            "rdfs:label": {"en-US": "Telephone"},
-            "rdfs:comment": {"en-US": "The title of the job."},
-            "rdfs:domain": ["schema:Place", "schema:ContactPoint"],
-            "rdfs:range": "xsd:string"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:termCode",
-            "rdfs:label": {"en-US": "Term Code"},
-            "rdfs:comment": {"en-US": "A code that identifies this DefinedTerm within a DefinedTermSet"},
-            "rdfs:domain": "jdx:AnnotatedDefinedTerm",
-            "rdfs:range": "xsd:string"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:termDefined",
-            "rdfs:label": {"en-US": "Term Defined"},
-            "rdfs:comment": {"en-US": "Concept or competency node in a ConceptScheme or CompetencyFramework."},
-            "rdfs:domain": "jdx:AnnotatedDefinedTerm",
-            "rdfs:range": ["skos:Concept", "ceasn:Competency"]
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:title",
-            "rdfs:label": {"en-US": "Title"},
-            "rdfs:comment": {"en-US": "The title of the job."},
-            "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "rdf:langString"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:travelRequirement",
-            "rdfs:label": {"en-US": "Travel Requirement"},
-            "rdfs:comment": {"en-US": "Information about any required travel."},
-            "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "rdf:langString"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:validThrough",
-            "rdfs:label": {"en-US": "Valid Through"},
-            "rdfs:comment": {"en-US": "The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours."},
-            "dct:description": {"en-US": "(Google) The date when the job posting will expire in ISO 8601 format. For example, \"2017-02-24\" or \"2017-02-24T19:33:17+00:00\"."},
-            "rdfs:domain": "jdx:JobPositionOpening",
-            "rdfs:range": "xsd:dateTime"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:value",
-            "rdfs:label": {"en-US": "Value"},
-            "rdfs:comment": {"en-US": "The value of the quantitative value or property value node."},
-            "rdfs:domain": ["jdx:ScaleAnnotation", "schema:MonetaryAmount"],
-            "rdfs:range": "xsd:float"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "jdx:workLanguage",
-            "rdfs:label": {"en-US": "Work Language"},
-            "rdfs:comment": {"en-US": "(HR) Information on the work languages used for the job."},
-            "schema:description": {"en-US": "Languages that an employee is expected to speak, read and understand in order to successful perform in the position"},
-            "rdfs:domain": "jdx:JonPositionOpening",
-            "rdfs:range": "xsd:language"
-        },
-        {
-            "@type": "rdf:Property",
-            "@id": "schema:workHours",
-            "rdfs:label": {"en-US": "Work Hours"},
-            "rdfs:comment": {"en-US": "The typical working hours for this job (e.g. 1st shift, night shift, 8am-5pm)."},
-            "rdfs:domain": "jdx:JonPositionOpening",
-            "rdfs:range": "rdf:langString"
+  "@context": {
+    "ceasn": "http://purl.org/ctdlasn/terms/",
+    "ceterms": "http://purl.org/ctdl/terms/",
+    "dct": "http://purl.org/dc/terms/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "jdx": "http://purl.org/jdx/terms/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vann": "http://purl.org/vocab/vann/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "schema:postalCode",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:postalCode"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The postal code. For example, 94043."
+      },
+      "rdfs:domain": {
+        "@id": "schema:PostalAddress"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Postal Code"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[1] @@@"
+      }
+    },
+    {
+      "@id": "jdx:fein",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:fein"
+      },
+      "owl:equivalentProperty:": "http://purl.org/ctdl/terms/fein",
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Federal Employer Identification Number (FEIN) identifying organizations, persons, states, government agencies, corporations, and companies."
+      },
+      "rdfs:domain": {
+        "@id": "schema:Organization"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "FEIN"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[1] @@@"
+      }
+    },
+    {
+      "@id": "jdx:requiredValue",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:requiredValue"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The required value of some characteristic or property."
+      },
+      "rdfs:domain": {
+        "@id": "jdx:scaleAnnotation"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Required Value"
+      },
+      "rdfs:range": {
+        "@id": "xsd:float"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] @@@"
+      }
+    },
+    {
+      "@id": "jdx:positionScheduleType",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:positionScheduleType"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The working schedule of a position offered or a position sought. (HR)"
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobPosting"
+        },
+        {
+          "@id": "jdx:JobOpening"
         }
-    ]
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Position Schedule Type"
+      },
+      "rdfs:range": {
+        "@id": "skos:Concept"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0..n] Use a value selected from a controlled vocabulary of position schedule types; encode using the jdx:AnnotatedDefinedTerm entity."
+      }
+    },
+    {
+      "@id": "jdx:skillType",
+      "@type": "rdfs:Property",
+      "dct:description": {
+        "@language": "en-US",
+        "@value": "Wikipedia: A skill is the ability to carry out a task with determined results often within a given amount of time, energy, or both."
+      },
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:skillType"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Type or category of skill required to fulfill a role."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobPosting"
+        },
+        {
+          "@id": "jdx:JobMaster"
+        },
+        {
+          "@id": "jdx:JobOpening"
+        },
+        {
+          "@id": "jdx:JobDescription"
+        },
+        {
+          "@id": "jdx:JobCompetencyProfile"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Skill Type"
+      },
+      "rdfs:range": {
+        "@id": "skos:Concept"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0..n] Use a value selected from a controlled vocabulary of skill types; encode using the jdx:AnnotatedDefinedTerm entity."
+      }
+    },
+    {
+      "@id": "schema:Person",
+      "@type": "rdfs:Class",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:Person"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "A human being regarded as an individual. (Oxford)"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "schema:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Person"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "@@@"
+      }
+    },
+    {
+      "@id": "jdx:technologyType",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:technologyTyp"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Tool, application or other form of technology that requires knowledge, skill and ability to use effectively in executing the tasks and responsibilities of the job."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobOpening"
+        },
+        {
+          "@id": "jdx:JobPosting"
+        },
+        {
+          "@id": "jdx:JobMaster"
+        },
+        {
+          "@id": "jdx:JobDescription"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Technology Type"
+      },
+      "rdfs:range": {
+        "@id": "skos:Concept"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0..n] Use a value selected from a controlled vocabulary of technology types; encode using the jdx:AnnotatedDefinedTerm entity."
+      }
+    },
+    {
+      "@id": "schema:baseSalary",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:baseSalary"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The base salary of the job or of an employee in an employee role."
+      },
+      "rdfs:domain": {
+        "@id": "jdx:JobMaster"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "schema:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Base Salary@"
+      },
+      "rdfs:range": {
+        "@id": "schema:MonetaryAmount"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0...1]"
+      }
+    },
+    {
+      "@id": "schema:addressCountry",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:addressCountry"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The relavant country of the resource. For example, USA."
+      },
+      "rdfs:domain": {
+        "@id": "schema:PostalAddress"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "schema:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Country Code"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[1] Provide the two-letter ISO 3166-1 alpha-2 country code."
+      }
+    },
+    {
+      "@id": "jdx:hasPostingInstructions",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:hasPostingInstructions"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Entity providing instructions for posting a job position opening to a job board or media channel and for submission of applications."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:jobOpening"
+        },
+        {
+          "@id": "jdx:jobPosting"
+        },
+        {
+          "@id": "jdx:JobMaster"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Posting Insytructions"
+      },
+      "rdfs:range": {
+        "@id": "jdx:PostingInstructions"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] @@@"
+      }
+    },
+    {
+      "@id": "jdx:intervalCode",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:intervalCode"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "An interval of time or other basis used to express a rate of pay or remuneration. (HR)"
+      },
+      "rdfs:domain": {
+        "@id": "schema:MonetaryAmount"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Interval Code"
+      },
+      "rdfs:range": {
+        "@id": "rdf:langString"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] @@@"
+      }
+    },
+    {
+      "@id": "jdx:programConcentration",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:programConcentration"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Focused plan of study within a college or university degree such as a concentration in Aerospace Engineering within an Engineering degree."
+      },
+      "rdfs:domain": {
+        "@id": "jdx:Education"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Program Concentration"
+      },
+      "rdfs:range": {
+        "@id": "xsd:langString"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] @@@"
+      }
+    },
+    {
+      "@id": "schema:median",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:median"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The median value."
+      },
+      "rdfs:domain": {
+        "@id": "schema:QualitativeValueDistribution"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Median"
+      },
+      "rdfs:range": {
+        "@id": "xsd:float"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] @@@"
+      }
+    },
+    {
+      "@id": "schema:value",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:value"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The value of the quantitative value or property value node."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:ScaleAnnotation"
+        },
+        {
+          "@id": "schema:MonetaryAmount"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Value"
+      },
+      "rdfs:range": {
+        "@id": "xsd:float"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[1] @@@"
+      }
+    },
+    {
+      "@id": "jdx:acquisitionDiffulty",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:acquisitionDiffulty"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "A rating or score representing the difficulty of the particular entity to acquire."
+      },
+      "rdfs:domain": {
+        "@id": "jdx:ScaleAnnotation"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Acquisition Diffoculty"
+      },
+      "rdfs:range": {
+        "@id": "xsd:float"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0..1] The scale may be applied to any appropriate controlled voabulary concept such as knowledge, skill, and ability as identified in the associated jdx:AnnotationDefinedTerm."
+      }
+    },
+    {
+      "@id": "jdx:termCode",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:termCode"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "A code that identifies this DefinedTerm within a DefinedTermSet."
+      },
+      "rdfs:domain": {
+        "@id": "jdx:AnnotatedDefinedTerm"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Term Code"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] @@@"
+      }
+    },
+    {
+      "@id": "schema:GeoCoordinates",
+      "@type": "rdfs:Class",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:GeoCoordinates"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Geographic coordinates of a place or event."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "schema:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Location Geocoordinates"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "Use to identify a place using geo coordinates; preferably includes a URI for the location as well as longitude and latitude"
+      }
+    },
+    {
+      "@id": "jdx:Education",
+      "@type": "rdfs:Class",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:Education"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Entity describing acquired knowledge, skills, values, beliefs and habits through systematic instruction and study that is required or recommended for a job position."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Education"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "@@@"
+      }
+    },
+    {
+      "@id": "jdx:levelCode",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:levelCode"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Level of experience required."
+      },
+      "rdfs:domain": {
+        "@id": "jdx:Experience"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Level Code"
+      },
+      "rdfs:range": {
+        "@id": "skos:Concept"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0..n] Use a value selected from a controlled vocabulary of experience level types; encode using the jdx:AnnotatedDefinedTerm entity."
+      }
+    },
+    {
+      "@id": "schema:description",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:description"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "A description of the item."
+      },
+      "rdfs:domain": [
+        "jdx:Education",
+        "jdx:JobDescription",
+        "jdx:JobMaster",
+        "jdx:JobOpening",
+        "jdx:ScaleAnnotation",
+        {
+          "@id": "jdx:AnnotatedDefinedTerm"
+        },
+        "jdx:Credential",
+        "schema:MonetaryAmount",
+        "jdx:JobCompetencyProfile",
+        "jdx:Experience"
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Description"
+      },
+      "rdfs:range": {
+        "@id": "rdf:langString"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[1..n] @@@"
+      }
+    },
+    {
+      "@id": "schema:Percentile10",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:Percentile10"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The 10th percentile value."
+      },
+      "rdfs:domain": {
+        "@id": "schema:QualitativeValueDistribution"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "10th Percentile"
+      },
+      "rdfs:range": {
+        "@id": "xsd:float"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] "
+      }
+    },
+    {
+      "@id": "schema:faxNumber",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:faxNumber"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The fax number of an organization or person."
+      },
+      "rdfs:domain": {
+        "@id": "schema:Place"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Fax Number"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-n] @@@"
+      }
+    },
+    {
+      "@id": "jdx:evidence",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:evidence"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The referenced artifact or performance confirming or supporting an assertion."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:Education"
+        },
+        {
+          "@id": "jdx:Experience"
+        },
+        {
+          "@id": "jdx:Credential"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Evidence"
+      },
+      "rdfs:range": {
+        "@id": "xsd:anyUri"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-n] @@@"
+      }
+    },
+    {
+      "@id": "schema:isicV4",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:isicV4"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place."
+      },
+      "rdfs:domain": {
+        "@id": "schema:Organization"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "SIC Code"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] @@@"
+      }
+    },
+    {
+      "@id": "jdx:experienceType",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:experienceType"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Category of experience needed for the position or Occupation."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobPosting"
+        },
+        {
+          "@id": "jdx:JobMaster"
+        },
+        {
+          "@id": "jdx:JobPosition"
+        },
+        {
+          "@id": "jdx:JobDescription"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Experience Type"
+      },
+      "rdfs:range": {
+        "@id": "skos:Concept"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-n] Use a value selected from a controlled vocabulary of experience types; encode using the jdx:AnnotatedDefinedTerm entity."
+      }
+    },
+    {
+      "@id": "schema:ContactPoint",
+      "@type": "rdfs:Class",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:ContactPoint"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "A contact point—e.g., for information about a job opening or interview."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "schema:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Contact Point"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "@@@"
+      }
+    },
+    {
+      "@id": "schema:hiringOrganization",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:hiringOrganization"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Organization offering the job position."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobDescription"
+        },
+        {
+          "@id": "jdx:JobOpening"
+        },
+        {
+          "@id": "jdx:JobMaster"
+        },
+        {
+          "@id": "jdx:JobPosting"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Hiring Organization"
+      },
+      "rdfs:range": {
+        "@id": "schema:Organization"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[1] @@@"
+      }
+    },
+    {
+      "@id": "jdx:credentialRequirements",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:credentialRequirements"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "@@@"
+      },
+      "rdfs:domain": {
+        "@id": "schema:ContactPoint"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Credential Requirements"
+      },
+      "rdfs:range": {
+        "@id": "skos:Concept"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0..1] Use a value selected from a controlled vocabulary of contact types; encode using the jdx:AnnotatedDefinedTerm entity."
+      }
+    },
+    {
+      "@id": "schema:educationRequirement",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:educationRequirement"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Educational background needed for the position or Occupation."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobPosting"
+        },
+        {
+          "@id": "jdx:JobDescription"
+        },
+        {
+          "@id": "jdx:JobOpening"
+        },
+        {
+          "@id": "jdx:JobMaster"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Education Requirement"
+      },
+      "rdfs:range": {
+        "@id": "jdx:Education"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-n] @@@"
+      }
+    },
+    {
+      "@id": "jdx:Experience",
+      "@type": "rdfs:Class",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:Experience"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Entity describing past individual performance confirming or supporting qualification to engage in defined activities, perform certain tasks or to assume certain responsibilities required or recommended for a job position."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Experience"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "@@@"
+      }
+    },
+    {
+      "@id": "schema:address",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:address"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Physical address of the entity."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "schema:Organization"
+        },
+        {
+          "@id": "schema:Place"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "schema:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Address"
+      },
+      "rdfs:range": {
+        "@id": "schema:PostalAddress"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[1]"
+      }
+    },
+    {
+      "@id": "schema:experienceRequirement",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:experienceRequirement"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Description of the experience needed for the position or Occupation."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobPosition"
+        },
+        {
+          "@id": "jdx:JobDescription"
+        },
+        {
+          "@id": "jdx:jobPosting"
+        },
+        {
+          "@id": "jdx:JobMaster"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Experience Requirement"
+      },
+      "rdfs:range": {
+        "@id": "jdx:Experience"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-n] @@@"
+      }
+    },
+    {
+      "@id": "jdx:immediateStartIndicator",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:immediateStartIndicator"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "An indicator as to whether a position is available for an immediate start."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobPosting"
+        },
+        {
+          "@id": "jdx:JobOpening"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Immediate Start Indicator"
+      },
+      "rdfs:range": {
+        "@id": "xsd:boolean"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] @@@"
+      }
+    },
+    {
+      "@id": "jdx:JobDescription",
+      "@type": "rdfs:Class",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:JobDescription"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Entity providing a statement of a job position generally including the formal job title, duties, purpose, responsibilities, scope, reporting relationships and working conditions along with the knowledge, skills, abilities, education, qualifications, experience and other requirements for performing the job."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Job Description"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "@@@"
+      }
+    },
+    {
+      "@id": "schema:Place",
+      "@type": "rdfs:Class",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:Place"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "A fixed physical location."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "schema:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Location"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "@@@"
+      }
+    },
+    {
+      "@id": "schema:MonetaryAmount",
+      "@type": "rdfs:Class",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:MonetaryAmount"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "A monetary value or range."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "schema:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Monetary Amount"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "This type can be used to describe an amount of money such as $50 USD, or a range as in describing a bank account being suitable for a balance between £1,000 and £1,000,000 GBP, or the value of a salary, etc."
+      }
+    },
+    {
+      "@id": "jdx:taskType",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:taskType"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "A piece or unit of work to be done or undertaken and accomplished within a defined period of time or by a deadline."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobPosting"
+        },
+        {
+          "@id": "jdx:JobOpening"
+        },
+        {
+          "@id": "jdx:JobMaster"
+        },
+        {
+          "@id": "jdx:JobDescription"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Task Type"
+      },
+      "rdfs:range": {
+        "@id": "skos:Concept"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0..n] Use a value selected from a controlled vocabulary of task types; encode using the jdx:AnnotatedDefinedTerm entity."
+      }
+    },
+    {
+      "@id": "jdx:AnnotatedDefinedTerm",
+      "@type": "rdfs:Class",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:AnnotatedDefinedTerm"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "A word, name, acronym, phrase, defined in a controlled vocabulary (e.g., taxonomy, glossary, dictionary, tag list, and other forms of enumeration)."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Annotated Term"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "Used in the context of JDX to assign terms from occupation, industry and instructional program classifications, skills and abilities, and abstract concepts to JDX entities. Through the class' relationship with the jdx:ScaledAnnotation class, terms can be conditioned through applications of scales for attributes such as importance and frequency."
+      }
+    },
+    {
+      "@id": "jdx:postingRequestor",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:postingRequestor"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The agent requesting the posting."
+      },
+      "rdfs:domain": {
+        "@id": "jdx:JobOpening"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Posting Requestor"
+      },
+      "rdfs:range": {
+        "@id": "schema:Organization"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[1] "
+      }
+    },
+    {
+      "@id": "jdx:applicationContact",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:applicationContact"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "A job position contact point of a person or organization."
+      },
+      "rdfs:domain": {
+        "@id": "jdx:PostingInstruction"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Contact Point"
+      },
+      "rdfs:range": {
+        "@id": "schema:ContactPoint"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-n] @@@"
+      }
+    },
+    {
+      "@id": "schema:addressRegion",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:addressRegion"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The region; e.g., CA, TX."
+      },
+      "rdfs:domain": {
+        "@id": "schema:PostalAddress"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "schema:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Address Region"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[1] The relevant state, province, territory or other subdivision of a nation state."
+      }
+    },
+    {
+      "@id": "jdx:workLanguage",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:workLanguage"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Information on the work languages used for the job. (HR)"
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobPosting"
+        },
+        {
+          "@id": "jdx:JobMaster"
+        },
+        {
+          "@id": "jdx:JobOpening"
+        },
+        {
+          "@id": "jdx:JobDescription"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Work Language"
+      },
+      "rdfs:range": {
+        "@id": "xsd:language"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-n] @@@"
+      }
+    },
+    {
+      "@id": "schema:Percentile25",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:Percentile25"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The 25th percentile value."
+      },
+      "rdfs:domain": {
+        "@id": "schema:QualitativeValueDistribution"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "25th Percentile"
+      },
+      "rdfs:range": {
+        "@id": "xsd:float"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] "
+      }
+    },
+    {
+      "@id": "schema:specialCommitment",
+      "@type": "rdfs:Property",
+      "dct:description": {
+        "@language": "en-US",
+        "@value": "Valid entries include VeteranCommit, MilitarySpouseCommit, etc."
+      },
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:specialCommitment"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Any special commitments associated with this job posting."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobMaster"
+        },
+        {
+          "@id": "jdx:JobOpening"
+        },
+        {
+          "@id": "jdx:JobDescription"
+        },
+        {
+          "@id": "jdx:JobPosting"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Special Commitment"
+      },
+      "rdfs:range": {
+        "@id": "rdf:langString"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-n] @@@"
+      }
+    },
+    {
+      "@id": "jdx:employmentUnit",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:employmentUnit"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Department or unit of the employer where the employee reports and/or in which the job is to be performed."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobOpening"
+        },
+        {
+          "@id": "jdx:JobPosting"
+        },
+        {
+          "@id": "jdx:JobMaster"
+        },
+        {
+          "@id": "jdx:JobDescription"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Employment Unit"
+      },
+      "rdfs:range": [
+        {
+          "@id": "schema:Organization"
+        },
+        {
+          "@id": "schema:Department"
+        }
+      ],
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] @@@"
+      }
+    },
+    {
+      "@id": "jdx:hasJobDescription",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "hasJobDescription"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Description of a job position generally including the formal job title, duties, purpose, responsibilities, scope, reporting relationships and working conditions along with the knowledge, skills, abilities, education, qualifications, experience and other requirements for performing the job."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobOpening"
+        },
+        {
+          "@id": "schema:Organization"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Has Job Description"
+      },
+      "rdfs:range": {
+        "@id": "jdx:JobDescription"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[1] @@@"
+      }
+    },
+    {
+      "@id": "schema:salaryCurrency",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:salaryCurrency"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The currency (coded using ISO 4217 ) used for the main salary information in this job posting or for this employee."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "schema:MonetaryAmount"
+        },
+        {
+          "@id": "schema:QualitativeValueDistribution"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Salary Currency"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[1] @@@"
+      }
+    },
+    {
+      "@id": "schema:Percentile90",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:Percentile90"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The 90th percentile value."
+      },
+      "rdfs:domain": {
+        "@id": "schema:QualitativeValueDistribution"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "90th Percentile"
+      },
+      "rdfs:range": {
+        "@id": "xsd:float"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] "
+      }
+    },
+    {
+      "@id": "schema:contactType",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:contactType"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Specification of the type of contact point."
+      },
+      "rdfs:domain": {
+        "@id": "schema:ContactPoint"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "schema:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Contact Type"
+      },
+      "rdfs:range": {
+        "@id": "skos:Concept"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0..1] Use a value selected from a controlled vocabulary of contact types; encode using the jdx:AnnotatedDefinedTerm entity."
+      }
+    },
+    {
+      "@id": "jdx:evidenceType",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:evidenceType"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The type of referenced artifact or performance confirming or supporting an assertion."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:Experience"
+        },
+        {
+          "@id": "jdx:Education"
+        },
+        {
+          "@id": "jdx:ScaleAnnotation"
+        },
+        {
+          "@id": "jdx:Credential"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "EvidenceType"
+      },
+      "rdfs:range": {
+        "@id": "skos:Concept"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-n] Use a value selected from a controlled vocabulary of evidence types; encode using the jdx:AnnotatedDefinedTerm entity."
+      }
+    },
+    {
+      "@id": "jdx:postingStartDate",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:postingStartDate"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Start date (time) for the postin"
+      },
+      "rdfs:domain": {
+        "@id": "jdx:PostingInstructions"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Posting Start date"
+      },
+      "rdfs:range": {
+        "@id": "xsd:dateTime"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[1] @@@"
+      }
+    },
+    {
+      "@id": "jdx:JobPosting",
+      "@type": "rdfs:Class",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:JobPosting"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Entity describing an on-line advertisement for filling one or more job openings"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Job Posting"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "Entity that contains information on the employer and the job position based on a job description as well as how to apply for the job opening and how long the posting is valid."
+      }
+    },
+    {
+      "@id": "schema:maxValue",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:maxValue"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The upper value of some characteristic or property."
+      },
+      "rdfs:domain": {
+        "@id": "schema:MonetaryAmount"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Maximum Value"
+      },
+      "rdfs:range": {
+        "@id": "xsd:float"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] @@@"
+      }
+    },
+    {
+      "@id": "jdx:travelRequirement",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:travelRequirement"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Information about any required travel, systematic or occasional."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobPosting"
+        },
+        {
+          "@id": "jdx:JobMaster"
+        },
+        {
+          "@id": "jdx:JobOpening"
+        },
+        {
+          "@id": "jdx:JobDescription"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Work Travel Requirements"
+      },
+      "rdfs:range": {
+        "@id": "rdf:langString"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] @@@"
+      }
+    },
+    {
+      "@id": "jdx:knowledgeType",
+      "@type": "rdfs:Property",
+      "dct:description": {
+        "@language": "en-US",
+        "@value": "Frequently treated as an aspect of the notion of \"competency\" along with skills and abilities."
+      },
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:knowledgeType"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Theoretical or practical understanding of a subject."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobOpening"
+        },
+        {
+          "@id": "jdx:JobMaster"
+        },
+        {
+          "@id": "jdx:JobPosting"
+        },
+        {
+          "@id": "jdx:JobCompetencyProfile"
+        },
+        {
+          "@id": "jdx:JobDescription"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Knowledge Type"
+      },
+      "rdfs:range": {
+        "@id": "skos:Concept"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0..n] Use a value selected from a controlled vocabulary of knowledge types; encode using the jdx:AnnotatedDefinedTerm entity."
+      }
+    },
+    {
+      "@id": "schema:industryType",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:industryType"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "An industry associated with the job position."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobMaster"
+        },
+        {
+          "@id": "jdx:JobDescription"
+        },
+        {
+          "@id": "jdx:JobOpening"
+        },
+        {
+          "@id": "jdx:JobPosting"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Industry Type"
+      },
+      "rdfs:range": {
+        "@id": "skos:Concept"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0..n] Use a value selected from a controlled vocabulary of industry types; encode using the jdx:AnnotatedDefinedTerm entity."
+      }
+    },
+    {
+      "@id": "schema:jobLocation",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:jobLocation"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "A (typically single) geographic location associated with the job position."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobPosting"
+        },
+        {
+          "@id": "jdx:JobMaster"
+        },
+        {
+          "@id": "jdx:JobDescription"
+        },
+        {
+          "@id": "jdx:JobOpening"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Job Location"
+      },
+      "rdfs:range": {
+        "@id": "schema:Place"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[1-n] @@@"
+      }
+    },
+    {
+      "@id": "schema:Percentile75",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:Percentile75"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The 75th percentile value."
+      },
+      "rdfs:domain": {
+        "@id": "schema:QualitativeValueDistribution"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "75th Percentile"
+      },
+      "rdfs:range": {
+        "@id": "xsd:float"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] "
+      }
+    },
+    {
+      "@id": "schema:workHours",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:workHours"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The typical working hours for this job (e.g. 1st shift, night shift, 8am-5pm)."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobPosting"
+        },
+        {
+          "@id": "jdx:JobMaster"
+        },
+        {
+          "@id": "jdx:JobOpening"
+        },
+        {
+          "@id": "jdx:JobDescription"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Work Hours"
+      },
+      "rdfs:range": {
+        "@id": "rdf:langString"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-n] @@@"
+      }
+    },
+    {
+      "@id": "schema:geo",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:geo"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The geo coordinates of the place."
+      },
+      "rdfs:domain": {
+        "@id": "schema:Organization"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Geo Coordinates"
+      },
+      "rdfs:range": {
+        "@id": "schema:GeoCoordinates"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[1] @@@"
+      }
+    },
+    {
+      "@id": "jdx:credentialType",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:credentialRequirements"
+      },
+      "owl:equivalentProperty:": "http://purl.org/ctdl/terms/credentialType",
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Type of credential such as badge, certification, bachelor degree."
+      },
+      "rdfs:domain": {
+        "@id": "xsd:Credential"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Credential Type"
+      },
+      "rdfs:range": {
+        "@id": "skos:Concept"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0..1] Use a value selected from a controlled vocabulary of credential types; encode using the jdx:AnnotatedDefinedTerm entity."
+      }
+    },
+    {
+      "@id": "schema:legalName",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:legalName"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The official name of the organization, e.g. the registered company name."
+      },
+      "rdfs:domain": {
+        "@id": "schema:Organization"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Legal Name"
+      },
+      "rdfs:range": {
+        "@id": "rdf:langString"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "@@@"
+      }
+    },
+    {
+      "@id": "schema:sameAs",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:sameAs"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website."
+      },
+      "rdfs:domain": {
+        "@id": "schema:Organization"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Same As"
+      },
+      "rdfs:range": {
+        "@id": "xsd:anyURI"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-n] @@@"
+      }
+    },
+    {
+      "@id": "schema:Organization",
+      "@type": "rdfs:Class",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:Organization"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "An organization such as a corporate body, employer, distribution channel provider"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "schema:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Organization"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "@@@"
+      }
+    },
+    {
+      "@id": "schema:duns",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:duns"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Dun & Bradstreet DUNS number for identifying an organization or business person."
+      },
+      "rdfs:domain": {
+        "@id": "schema:Organization"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "DUNS"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] @@@"
+      }
+    },
+    {
+      "@id": "jdx:applicationLocation",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:applicationLocation"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The physical location where job applications can be submitted."
+      },
+      "rdfs:domain": {
+        "@id": "jdx:PostingInstruction"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Application Location"
+      },
+      "rdfs:range": {
+        "@id": "schema:Place"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[???]"
+      }
+    },
+    {
+      "@id": "jdx:JobCompetencyProfile",
+      "@type": "rdfs:Class",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:JobCompetencyProfile"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Entity listing major work tasks, knowledge, skills, and abilities requirements for carrying out those work tasks based on a job analysis that engages subject matter experts in defining and validating the importance, frequency, or other types of weightings of the enumerated competencies."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Job Competency Profile"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "@@@"
+      }
+    },
+    {
+      "@id": "jdx:issuer",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:issuer"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Entity providing verification of the existance and validty of the entity being described."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:Education"
+        },
+        {
+          "@id": "jdx:Credential"
+        },
+        {
+          "@id": "jdx:Experience"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Issuer"
+      },
+      "rdfs:range": {
+        "@id": "schema:Organization"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[1] @@@"
+      }
+    },
+    {
+      "@id": "schema:subOrganization",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:subOrganization"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "A relationship between two organizations where the first includes the second, e.g., as a subsidiary."
+      },
+      "rdfs:domain": {
+        "@id": "schema:Organization"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Sub-Organization"
+      },
+      "rdfs:range": {
+        "@id": "schema:Organization"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-n] @@@"
+      }
+    },
+    {
+      "@id": "jdx:preferredValue",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:preferredValue"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The preferred value of some characteristic or property."
+      },
+      "rdfs:domain": {
+        "@id": "jdx:ScaleAnnotation"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Preferred Value"
+      },
+      "rdfs:range": {
+        "@id": "xsd:float"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] @@@"
+      }
+    },
+    {
+      "@id": "jdx:requiredAtHiring",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:requiredAtHiring"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Whether or not a particular requirement is expected at the time of hiring or may be subsequently obtained."
+      },
+      "rdfs:domain": {
+        "@id": "jdx:ScaleAnnotation"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Required at Hiring"
+      },
+      "rdfs:range": {
+        "@id": "xsd:boolean"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] @@@"
+      }
+    },
+    {
+      "@id": "schema:responsibility",
+      "@type": "rdfs:Property",
+      "dct:description": {
+        "@language": "en-US",
+        "@value": "Tasks, activities or people over which the person exercises authority, control or leadership."
+      },
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:responsibility"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Responsibilities associated with this role or occupation."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobMaster"
+        },
+        {
+          "@id": "jdx:JobDescription"
+        },
+        {
+          "@id": "jdx:JobOpening"
+        },
+        {
+          "@id": "jdx:JobPosting"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Responsibility"
+      },
+      "rdfs:range": {
+        "@id": "rdf:langString"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-n] @@@"
+      }
+    },
+    {
+      "@id": "schema:telephone",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:telephone"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The telephone number of an organization or person."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "schema:ContactPoint"
+        },
+        {
+          "@id": "schema:Place"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Telephone"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-n] @@@"
+      }
+    },
+    {
+      "@id": "schema:title",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:title"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The title of the job."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobMaster"
+        },
+        {
+          "@id": "jdx:JobCompetencyProfile"
+        },
+        {
+          "@id": "jdx:JobDescription"
+        },
+        {
+          "@id": "jdx:JobOpening"
+        },
+        {
+          "@id": "jdx:JobPosting"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Title"
+      },
+      "rdfs:range": {
+        "@id": "rdf:langString"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[1] @@@"
+      }
+    },
+    {
+      "@id": "schema:latitude",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:latitude"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The latitude of a location. For example 37.42242."
+      },
+      "rdfs:domain": {
+        "@id": "schema:GeoCoordinates"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Latitude"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] @@@"
+      }
+    },
+    {
+      "@id": "schema:naics",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:naics"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The North American Industry Classification System (NAICS) code for a particular organization or business person."
+      },
+      "rdfs:domain": {
+        "@id": "schema:Organization"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "NAICS"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] @@@"
+      }
+    },
+    {
+      "@id": "jdx:attitudeType",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:attitudeType"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Attitudes and ways of thinking necessary to successful performance of the job."
+      },
+      "rdfs:domain": {
+        "@id": "jdx:JobMaster"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Attitude Type"
+      },
+      "rdfs:range": {
+        "@id": "skos:Concept"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0..n] Use a value selected from a controlled vocabulary of attitude types; encode using the jdx:AnnotatedDefinedTerm entity."
+      }
+    },
+    {
+      "@id": "schema:name",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:name"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The name of the item."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "schema:PostalAddress"
+        },
+        {
+          "@id": "jdx:Credential"
+        },
+        {
+          "@id": "schema:Place"
+        },
+        {
+          "@id": "jdx:AnnotatedDefinedTerm"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Name"
+      },
+      "rdfs:range": {
+        "@id": "rdf:langString"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] @@@"
+      }
+    },
+    {
+      "@id": "jdx:positionID",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:positionID"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The identifier for the position that maybe be used externally in an advertisement. (HR)"
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobOpening"
+        },
+        {
+          "@id": "jdx:JobPosting"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Position Identifier"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[1] @@@"
+      }
+    },
+    {
+      "@id": "schema:occupationCategory",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:occupationCategory"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Category or categories describing the job."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobPosting"
+        },
+        {
+          "@id": "jdx:JobMaster"
+        },
+        {
+          "@id": "jdx:JobOpening"
+        },
+        {
+          "@id": "jdx:JobDescription"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Occupation Category"
+      },
+      "rdfs:range": {
+        "@id": "skos:Concept"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0..n] Use a value selected from a controlled vocabulary of occupation categories; encode using the jdx:AnnotatedDefinedTerm entity."
+      }
+    },
+    {
+      "@id": "jdx:JobOpening",
+      "@type": "rdfs:Class",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:JobOpening"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Entity describing an unfilled job position that has been formally approved for filling; usually triggered by an authorization to a supervising/hiring manager to increase the number of positions or fill a position opened by people leaving."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Job Position Opening"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "@@@"
+      }
+    },
+    {
+      "@id": "jdx:assessmentMethod",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:assessmentMethod"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Type of method used to conduct an assessment; select from an existing enumeration of such types."
+      },
+      "rdfs:domain": {
+        "@id": "jdx:ScaleAnnotation"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Assessment Method"
+      },
+      "rdfs:range": {
+        "@id": "skos:Concept"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0..1] Use a value selected from a controlled vocabulary of assessment method types; encode using the jdx:AnnotatedDefinedTerm entity."
+      }
+    },
+    {
+      "@id": "jdx:abilityType",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:abilityType"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "An aptitude, capacity or power to act physically, socially, mentally, legally, or morally at a level suitable to the work context"
+      },
+      "rdfs:domain": {
+        "@id": "jdx:JobMaster"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Ability Type"
+      },
+      "rdfs:range": {
+        "@id": "skos:ConceptScheme"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0..n] Use a value selected from a controlled vocabulary of ability types; encode using the jdx:AnnotatedDefinedTerm entity."
+      }
+    },
+    {
+      "@id": "schema:longitude",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:longitude"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The longitude of a location. For example -122.08585."
+      },
+      "rdfs:domain": {
+        "@id": "schema:GeoCoordinates"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Longitude"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] @@@"
+      }
+    },
+    {
+      "@id": "jdx:activityType",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:activityType"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "An activity asssociated with the job."
+      },
+      "rdfs:domain": {
+        "@id": "jdx:JobMaster"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Activity Type"
+      },
+      "rdfs:range": {
+        "@id": "skos:ConceptScheme"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0..n] Use a value selected from a controlled vocabulary of activity types; encode using the jdx:AnnotatedDefinedTerm entity."
+      }
+    },
+    {
+      "@id": "jdx:scaleType",
+      "@type": "rdfs:Property",
+      "dct:description": {
+        "@language": "en-US",
+        "@value": "Where logically applicable, previously defined scales can be applied to a range of previously defined controlled concepts and competencies."
+      },
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:scaleType"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Type or category of scale or weighting to be applied to a specific competency (knowledge, skill, ability), task, responsibility, interest etc."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobPosting"
+        },
+        {
+          "@id": "jdx:JobMaster"
+        },
+        {
+          "@id": "jdx:JobCompetencyProfile"
+        },
+        {
+          "@id": "jdx:JobOpening"
+        },
+        {
+          "@id": "jdx:JobDescription"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Scale Type"
+      },
+      "rdfs:range": {
+        "@id": "skos:concept"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0..n] Use a value selected from a controlled vocabulary of scale types; encode using the jdx:AnnotatedDefinedTerm entity."
+      }
+    },
+    {
+      "@id": "schema:contactPoint",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:contactPoint"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "A contact point for a person or organization."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:PostingInstruction"
+        },
+        {
+          "@id": "schema:Organization"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "schema:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Contact Point"
+      },
+      "rdfs:range": {
+        "@id": "schema:ContactPoint"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-n]"
+      }
+    },
+    {
+      "@id": "jdx:Credential",
+      "@type": "rdfs:Class",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:Credential"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Authoritative permission to hold a certain status or to do certain things, e.g. to practise some trade or profession."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Credential"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "@@@"
+      }
+    },
+    {
+      "@id": "schema:jobBenefit",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:jobBenefit"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Description of benefits associated with the job."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobDescription"
+        },
+        {
+          "@id": "jdx:JobOpening"
+        },
+        {
+          "@id": "jdx:JobMaster"
+        },
+        {
+          "@id": "jdx:JobPosting"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Job Benefit"
+      },
+      "rdfs:range": {
+        "@id": "rdf:langString"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-n] @@@"
+      }
+    },
+    {
+      "@id": "schema:educationLevel",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:educationLevel"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "A word or phrase identifying the location of the person in terms of his or her progression through an education or training context."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:Education"
+        },
+        "jdx:JobMaster"
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Education Level"
+      },
+      "rdfs:range": {
+        "@id": "skos:Concept"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0..1] Use a value selected from a controlled vocabulary of education levels such as ceterms:AudienceLevel or HR Open IscedCodeList; encode using the jdx:AnnotatedDefinedTerm entity."
+      }
+    },
+    {
+      "@id": "jdx:annotation",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:annotation"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Entity providing qualifying notations including application of scales and other weights to concepts and competencies identified through a jdx:AnnotatedDefinedTerm."
+      },
+      "rdfs:domain": {
+        "@id": "jdx:AnnnotatedDefinedTerm"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Related Annotation"
+      },
+      "rdfs:range": {
+        "@id": "jdx:ScaleAnnotation"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-n] @@@"
+      }
+    },
+    {
+      "@id": "jdx:careerLevelType",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:careerLevelType"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "A code classifying the level of a candidate based on career experience. (HR)"
+      },
+      "rdfs:domain": {
+        "@id": "jdx:JobMaster"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Career Level Type"
+      },
+      "rdfs:range": {
+        "@id": "skos:Concept"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0..1] Use a value selected from a controlled vocabulary of career level types (e.g., HR Open's CareerLevelCodeList); encode using the jdx:AnnotatedDefinedTerm entity."
+      }
+    },
+    {
+      "@id": "jdx:hasJobOpening",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:hasJobOpening"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Description of an unfilled job position that has been formally approved for filling; usually triggered by an authorization to a supervising/hiring manager to increase the number of positions or fill a position opened by people leaving."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobPosting"
+        },
+        {
+          "@id": "schema:Organization"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Has Job Opening"
+      },
+      "rdfs:range": {
+        "@id": "jdx:JobOpening"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[1] @@@"
+      }
+    },
+    {
+      "@id": "schema:validThrough",
+      "@type": "rdfs:Property",
+      "dct:description:": {
+        "@language": "en-US",
+        "@value": "The date when the job posting will expire in ISO 8601 format. For example, \"2017-02-24\" or \"2017-02-24T19:33:17+00:00\" (Google) ."
+      },
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:validThrough"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobOpening"
+        },
+        {
+          "@id": "jdx:JobPosting"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Valid Through"
+      },
+      "rdfs:range": {
+        "@id": "xsd:dateTime"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[1] @@@"
+      }
+    },
+    {
+      "@id": "schema:QuantitativeValueDistribution",
+      "@type": "rdfs:Class",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:QuantitativeValueDistribution"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "A statistical distribution of values."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "schema:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Quantitative Value Distribution"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": ""
+      }
+    },
+    {
+      "@id": "schema:employmentType",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:employmentType"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Type of employment (e.g. full-time, part-time, contract, temporary, seasonal, internship)."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobPosting"
+        },
+        {
+          "@id": "jdx:JobMaster"
+        },
+        {
+          "@id": "jdx:JobOpening"
+        },
+        {
+          "@id": "jdx:JobDescription"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Emplyment Type"
+      },
+      "rdfs:range": {
+        "@id": "skos:Concept"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[1] Use a value selected from a controlled vocabulary of education types such as full-time, part-time, contract, temporary, seasonal, internship; encode using the jdx:AnnotatedDefinedTerm entity."
+      }
+    },
+    {
+      "@id": "jdx:postingEndDate",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:postingEndDate"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "End date (time) for the posting"
+      },
+      "rdfs:domain": {
+        "@id": "jdx:PostingInstructions"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Posting End Date"
+      },
+      "rdfs:range": {
+        "@id": "xsd:dateTime"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] @@@"
+      }
+    },
+    {
+      "@id": "schema:numberOfEmployees",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:numberOfEmployees"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The number of employees in an organization e.g. business."
+      },
+      "rdfs:domain": {
+        "@id": "schema:Organization"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Number of Employees"
+      },
+      "rdfs:range": {
+        "@id": "xsd:integer"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] @@@"
+      }
+    },
+    {
+      "@id": "jdx:formattedDescription",
+      "@type": "rdfs:Property",
+      "dct:description": {
+        "@language": "en-US",
+        "@value": "(Google) The [formatted] description should be a complete representation of the job, including job responsibilities, qualifications, skills, working hours, education requirements, and experience requirements."
+      },
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:formattedDescription"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The description for the job position. The descriptions may support HTML or other markup."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobMaster"
+        },
+        {
+          "@id": "jdx:JobOpening"
+        },
+        {
+          "@id": "jdx:JobDescription"
+        },
+        {
+          "@id": "jdx:JobPosting"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Formatted Description"
+      },
+      "rdfs:range": {
+        "@id": "rdf:langString"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[1] @@@"
+      }
+    },
+    {
+      "@id": "schema:email",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:email"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Email address of an orgaization or person."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "schema:Organization"
+        },
+        {
+          "@id": "schema:ContactPoint"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Email Address"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[1-n] @@@"
+      }
+    },
+    {
+      "@id": "jdx:hasCompetencyProfile",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:hasCompetencyProfile"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Listing of the major work tasks, knowledge, skills, and abilities requirements for carrying out those work tasks based on a job analysis that engages subject matter experts in defining and validating the importance, frequency, or other types of weightings of the enumerated competencies."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobDescription"
+        },
+        {
+          "@id": "schema:Organization"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Has Competency Profile@"
+      },
+      "rdfs:range": {
+        "@id": "jdx:JobCompetencyProfile"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[1] @@@"
+      }
+    },
+    {
+      "@id": "jdx:program",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:program"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Degree program of study."
+      },
+      "rdfs:domain": {
+        "@id": "jdx:Education"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Program of Study."
+      },
+      "rdfs:range": {
+        "@id": "xsd:langString"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] @@@"
+      }
+    },
+    {
+      "@id": "jdx:termDefined",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:termDefined"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Concept or competency node in a ConceptScheme or CompetencyFramework."
+      },
+      "rdfs:domain": {
+        "@id": "jdx:AnnotatedDefinedTerm"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Term Defined"
+      },
+      "rdfs:range": [
+        {
+          "@id": "ceasn:Competency"
+        },
+        {
+          "@id": "skos:Concept"
+        }
+      ],
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-n] @@@"
+      }
+    },
+    {
+      "@id": "schema:minValue",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:minValue"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The lower value of some characteristic or property."
+      },
+      "rdfs:domain": {
+        "@id": "schema:MonetaryAmoun"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Minimum Value"
+      },
+      "rdfs:range": {
+        "@id": "xsd:float"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] @@@"
+      }
+    },
+    {
+      "@id": "jdx:ScaleAnnotation",
+      "@type": "rdfs:Class",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:ScaleAnnotation"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Entity for identifying and applying a defined scale or rating to another entity."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Scale Annotation"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "Used, for example, when applying an importance scale to a competency identified in an instance of the AnnotatedDefinedTerm class."
+      }
+    },
+    {
+      "@id": "jdx:qualificationSummary",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:qualificationSummary"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Narrative description of a person's qualifications for a position."
+      },
+      "rdfs:domain": {
+        "@id": "jdx:JobOpening"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Qualification Summary"
+      },
+      "rdfs:range": {
+        "@id": "rdf:langString"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] @@@"
+      }
+    },
+    {
+      "@id": "schema:parentOrganization",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:parentOrganization"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The larger organization that this organization is a subOrganization of, if any."
+      },
+      "rdfs:domain": {
+        "@id": "schema:Organization"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Parent Organization"
+      },
+      "rdfs:range": {
+        "@id": "schema:Organization"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] @@@"
+      }
+    },
+    {
+      "@id": "schema:leiCode",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:leiCode"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "An organization identifier that uniquely identifies a legal entity as defined in ISO 17442."
+      },
+      "rdfs:domain": {
+        "@id": "schema:Organization"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "LEI Code"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] @@@"
+      }
+    },
+    {
+      "@id": "schema:estimatedSalary",
+      "@type": "rdfs:Property",
+      "dct:description": {
+        "@language": "en-US",
+        "@value": "The estimated salary is usually computed by outside organizations and therefore the hiring organization is not bound to this estimated salary."
+      },
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:estimatedSalary"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "A property describing the estimated salary for a job posting based on a variety of variables including, but not limited to industry, job title, and location."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobOpening"
+        },
+        {
+          "@id": "jdx:JobMaster"
+        },
+        {
+          "@id": "jdx:JobPosting"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Estimated Salary"
+      },
+      "rdfs:range": {
+        "@id": "schema:QualityValueDistribution"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] @@@"
+      }
+    },
+    {
+      "@id": "jdx:hasJobPosting",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:hasJobPosting"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "An online advertisement for filling one or more job position openings that contains information on the employer and the job position based on a job description as well as how and to apply for the job opening and how long the posting is valid for filling the job opening."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobOpening"
+        },
+        {
+          "@id": "schema:Organization"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Has Job Posting"
+      },
+      "rdfs:range": [
+        {
+          "@id": "jdx:JobPosting"
+        },
+        {
+          "@id": "schema:Organization"
+        }
+      ],
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[1..n] @@@"
+      }
+    },
+    {
+      "@id": "jdx:applicationCloseDate",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:applicationCloseDate"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Closing date for accepting applications."
+      },
+      "rdfs:domain": {
+        "@id": "jdx:PostingInstructions"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Application Close Data"
+      },
+      "rdfs:range": {
+        "@id": "xsd:dateTime"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[1] @@@"
+      }
+    },
+    {
+      "@id": "schema:incentiveCompensation",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:incentiveCompensation"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Description of bonus and commission compensation aspects of the job."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobMaster"
+        },
+        {
+          "@id": "jdx:JobDescription"
+        },
+        {
+          "@id": "jdx:JobOpening"
+        },
+        {
+          "@id": "jdx:JobPosting"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Incentive Compensation"
+      },
+      "rdfs:range": {
+        "@id": "rdf:langString"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] @@@"
+      }
+    },
+    {
+      "@id": "jdx:PostingInstruction",
+      "@type": "rdfs:Class",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:PostingInstruction"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "An entity providing information about where and how a posting should be communicated."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Posting Instructions"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "A posting channel usually would be a job board or other advertising medium (HR)."
+      }
+    },
+    {
+      "@id": "schema:datePosted",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:datePosted"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The date of posting by a channel."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobPosition"
+        },
+        {
+          "@id": "jdx:JobPosting"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "schema:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Date Posted"
+      },
+      "rdfs:range": {
+        "@id": "xsd:dateTime"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0..1] @@@"
+      }
+    },
+    {
+      "@id": "schema:inDefineTermSet",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:inDefineTermSet"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "A defined term set that contains this term."
+      },
+      "rdfs:domain": {
+        "@id": "jdx:AnnotatedDefinedTerm"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "In Defined Term Set"
+      },
+      "rdfs:range": {
+        "@id": "jdx:AnnotatedDefinedTermSet"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-n] @@@"
+      }
+    },
+    {
+      "@id": "schema:PostalAddress",
+      "@type": "rdfs:Class",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:PostalAddress"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The mailing address."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "schema:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Postal Address"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": ""
+      }
+    },
+    {
+      "@id": "schema:addressLocality",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:addressLocality"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The locality; e.g., Mountain View, London, Moscow."
+      },
+      "rdfs:domain": {
+        "@id": "schema:PostalAddress"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "schema:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "City"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[1] Name of the city, town, village, hamlet. "
+      }
+    },
+    {
+      "@id": "schema:streetAddress",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:streetAddress"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The street address. For example, 1600 Amphitheatre Pkwy."
+      },
+      "rdfs:domain": {
+        "@id": "schema:PostalAddress"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Street Address"
+      },
+      "rdfs:range": {
+        "@id": "rdf:langString"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[1] @@@"
+      }
+    },
+    {
+      "@id": "schema:department",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:department"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "A relationship between an organization and a department of that organization"
+      },
+      "rdfs:domain": {
+        "@id": "schema:Organization"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "schema:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Department"
+      },
+      "rdfs:range": {
+        "@id": "schema:Organization"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-n] @@@"
+      }
+    },
+    {
+      "@id": "jdx:applicationInstructions",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:applicationInstructions"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Narrative instructions for applying for this position."
+      },
+      "rdfs:domain": {
+        "@id": "jdx:PostingInstructions"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Application Instructions"
+      },
+      "rdfs:range": {
+        "@id": "rdf:langString"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[1]"
+      }
+    },
+    {
+      "@id": "schema:duration",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:duration"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format."
+      },
+      "rdfs:domain": {
+        "@id": "schema:QuantitativeValueDistribution"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Duration"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[1] Encode the duration value using the ISO 8601 data format."
+      }
+    },
+    {
+      "@id": "schema:logo",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:logo"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "An associated logo."
+      },
+      "rdfs:domain": {
+        "@id": "schema:Organization"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Logo"
+      },
+      "rdfs:range": {
+        "@id": "xsd:anyURI"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-1] @@@"
+      }
+    },
+    {
+      "@id": "jdx:distributionChannel",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "jdx:distributionChannel"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Identifies a job board or media channel associated with a job posting."
+      },
+      "rdfs:domain": {
+        "@id": "jdx:postingInstructions"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "jdx:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Distribution Channel@"
+      },
+      "rdfs:range": {
+        "@id": "xsd:anyURI"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[0-n] @@@"
+      }
+    },
+    {
+      "@id": "schema:inLanguage",
+      "@type": "rdfs:Property",
+      "dct:identifier": {
+        "@language": "en-US",
+        "@value": "schema:inLanguag"
+      },
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "The language of the content or performance or used in an action."
+      },
+      "rdfs:domain": [
+        {
+          "@id": "jdx:JobMaster"
+        },
+        {
+          "@id": "jdx:JobDescription"
+        },
+        {
+          "@id": "jdx:JobOpening"
+        },
+        {
+          "@id": "jdx:JobCompetencyProfile"
+        },
+        {
+          "@id": "jdx:JobPosting"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "https://schema.org"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "In Language"
+      },
+      "rdfs:range": {
+        "@id": "xsd:language"
+      },
+      "vann:usageNote": {
+        "@language": "en-US",
+        "@value": "[1-n] @@@"
+      }
+    }
+  ]
 }
