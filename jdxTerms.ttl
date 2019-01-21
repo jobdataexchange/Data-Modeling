@@ -76,7 +76,7 @@ jdx:JobOpening a rdfs:Class ;
     
 jdx:JobPosting a rdfs:Class ;
     dct:identifier "jdx:JobPosting"@en-US ;
-    rdfs:comment "Entity describing an on-line advertisement for filling one or more job openings"@en-US ;
+    rdfs:comment "Entity describing an on-line advertisement for filling one or more job openings."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:label "Job Posting"@en-US ;
     vann:usageNote "Entity that contains information on the employer and the job position based on a job description as well as how to apply for the job opening and how long the posting is valid."@en-US .
