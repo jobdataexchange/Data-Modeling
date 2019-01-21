@@ -22,6 +22,7 @@
       "jdx:attitudeType": {"@type": "@id"},
       "schema:baseSalary": {"@type": "@id"},
       "jdx:careerLevelType": {"@type": "@id"},
+      "jdx:credentialRequirement": {"@type": "@id"},
       "schema:contactPoint": {"@type": "@id"},
       "schema:contactType": {"@type": "@id"},
       "schema:datePosted": {"@type": "xsd:dateTime"},
