@@ -1150,9 +1150,7 @@ schema:telephone a rdfs:Property ;
     rdfs:label "Telephone"@en-US ;    
     rdfs:comment "The telephone number of an organization or person."@en-US ;
     rdfs:isDefinedBy <https://schema.org> ;
-    rdfs:domain schema:Place, 
-        schema:ContactPoint ,
-        schema:Organization ;
+    rdfs:domain schema:Place, schema:ContactPoint, schema:Organization ;
     rdfs:range xsd:string .
     
 schema:termCode a rdfs:Property ;
