@@ -152,6 +152,7 @@ jdx:abilityType a rdfs:Property ;
     rdfs:subPropertyOf jdx:Competency ;
     rdfs:domain jdx:JobMaster  ;
     rdfs:range skos:ConceptScheme  ;
+    rdfs:subClassOf jdx:Competency ;
     vann:usageNote "Use a value selected from a controlled vocabulary of ability types such as the O*NET cognitive, sensory, psychomotor and physical abilities; encode using the jdx:AnnotatedDefinedTerm entity."@en-US.
     
 jdx:activityType a rdfs:Property ;
@@ -316,8 +317,9 @@ jdx:attitudeType a rdfs:Property ;
     rdfs:comment "Attitudes and ways of thinking necessary to successful performance of the job; select from an existing enumeration of such types."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:label "Attitude Type"@en-US ;
-    rdfs:domain jdx:JobMaster  ;
-    rdfs:range skos:Concept  ;
+    rdfs:domain jdx:JobMaster ;
+    rdfs:range skos:Concept ;
+    rdfs:subClassOf jdx:Competency ;
     vann:usageNote "Use a value selected from a controlled vocabulary of attitude types; encode using the jdx:AnnotatedDefinedTerm entity."@en-US .
     
 schema:baseSalary a rdfs:Property ;
@@ -721,6 +723,7 @@ jdx:knowledgeType a rdfs:Property ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobMaster, jdx:JobCompetencyProfile, jdx:JobDescription, jdx:JobOpening, jdx:JobPosting ; 
     rdfs:range skos:Concept  ;
+    rdfs:subClassOf jdx:Competency ;
     vann:usageNote "Use a value selected from a controlled vocabulary of knowledge types such as the O*NET knowledge (https://www.onetonline.org/find/descriptor/browse/Knowledge/); encode using the jdx:AnnotatedDefinedTerm entity."@en-US .
     
 schema:latitude a rdfs:Property ;
@@ -1059,7 +1062,7 @@ schema:responsibility a rdfs:Property ;
     dct:identifier "schema:responsibility"@en-US ;
     rdfs:label "Responsibility"@en-US ;    
     rdfs:comment "Responsibilities associated with this role or occupation."@en-US ;
-    dct:description "Tasks, activities or people over which the person exercises authority, control or leadership."@en-US ;
+    dct:description "Key tasks, activities or people over which the person exercises authority, control or leadership."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobMaster, jdx:JobCompetencyProfile, jdx:JobDescription, jdx:JobPosting ; 
     rdfs:range rdf:langString ;
@@ -1098,7 +1101,8 @@ jdx:skillType a rdfs:Property ;
     dct:description "(Wikipedia) A skill is the ability to carry out a task with determined results often within a given amount of time, energy, or both."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobMaster, jdx:JobCompetencyProfile, jdx:JobDescription, jdx:JobPosting ;
-    rdfs:range skos:Concept  ;
+    rdfs:range skos:Concept ;
+    rdfs:subClassOf jdx:Competency ;
     vann:usageNote "Use a value selected from a controlled vocabulary of skill types such as the O*NET skills; encode using the jdx:AnnotatedDefinedTerm entity."@en-US .
     
 schema:specialCommitment a rdfs:Property ;
@@ -1132,7 +1136,8 @@ jdx:taskType a rdfs:Property ;
     rdfs:comment "A piece or unit of work to be done or undertaken and accomplished within a defined period of time or by a deadline; select from an existing enumeration of such types."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobCompetenctProfile, jdx:JobPosting ;
-    rdfs:range skos:Concept  ;
+    rdfs:range skos:Concept ;
+    rdfs:subClassOf jdx:Competency ;
     vann:usageNote "Use a value selected from a controlled vocabulary of task types such as O*NET tasks; encode using the jdx:AnnotatedDefinedTerm entity."@en-US .
     
 jdx:technologyType a rdfs:Property ;
