@@ -2,7 +2,6 @@
 @prefix jdx: <http://purl.org/jdx/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix ceasn: <http://purl.org/ctdlasn/terms/> .
 @prefix ceterms: <http://purl.org/ctdl/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix schema: <https://schema.org/> .
