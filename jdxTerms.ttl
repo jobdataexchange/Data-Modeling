@@ -149,10 +149,10 @@ jdx:abilityType a rdfs:Property ;
     rdfs:comment "An aptitude, capacity or power to act physically, socially, mentally, legally, or morally at a level suitable to the work context;select from an existing enumeration of such types."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:label "Ability Type"@en-US ;
-    rdfs:subPropertyOf jdx:Competency ;
+    rdfs:subPropertyOf jdx:competency ;
     rdfs:domain jdx:JobMaster  ;
     rdfs:range skos:ConceptScheme  ;
-    rdfs:subClassOf jdx:Competency ;
+    rdfs:subPropertyOf jdx:competency ;
     vann:usageNote "Use a value selected from a controlled vocabulary of ability types such as the O*NET cognitive, sensory, psychomotor and physical abilities; encode using the jdx:AnnotatedDefinedTerm entity."@en-US.
     
 jdx:activityType a rdfs:Property ;
@@ -319,14 +319,14 @@ jdx:attitudeType a rdfs:Property ;
     rdfs:label "Attitude Type"@en-US ;
     rdfs:domain jdx:JobMaster ;
     rdfs:range skos:Concept ;
-    rdfs:subClassOf jdx:Competency ;
+    rdfs:subPropertyOf jdx:competency ;
     vann:usageNote "Use a value selected from a controlled vocabulary of attitude types; encode using the jdx:AnnotatedDefinedTerm entity."@en-US .
     
 schema:baseSalary a rdfs:Property ;
     dct:identifier "schema:baseSalary"@en-US ;
     rdfs:comment "The base salary of the job or of an employee in an employee role."@en-US ;
     rdfs:isDefinedBy <https://schema.org/> ;
-    rdfs:label "Base Salary@"@en-US ;
+    rdfs:label "Base Salary"@en-US ;
     rdfs:domain jdx:JobMaster  ;
     rdfs:range schema:MonetaryAmount .
     
@@ -339,6 +339,15 @@ jdx:careerLevelType a rdfs:Property ;
     rdfs:range skos:Concept  ;
     vann:usageNote "Use a value selected from a controlled vocabulary of career level types (e.g., HR Open Standards CareerLevelCodeList.json); encode using the jdx:AnnotatedDefinedTerm entity."@en-US .
     
+jdx:competencyType a rdfs:Property ;
+    dct:identifier "jdx:competency"@en-US ;
+    rdfs:comment "Combination of observable and measurable knowledge, skills, abilities and personal attributes that contribute to enhanced employee performance; select from an existing enumeration of such types. (HR)"@en-US ;
+    rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
+    rdfs:label "Competency Type Type"@en-US ;
+    rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobPosting  ;
+    rdfs:range skos:Concept  ;
+    vann:usageNote "Use a value selected from a controlled vocabulary of competency types (knbowledge, skills, abilities, attitudes, tasks); encode using the jdx:AnnotatedDefinedTerm entity."@en-US .
+
 schema:contactPoint a rdfs:Property ;
     dct:identifier "schema:contactPoint"@en-US ;
     rdfs:comment "A contact point for a person or organization."@en-US ;
@@ -365,15 +374,6 @@ jdx:credentialType a rdfs:Property ;
     rdfs:range skos:Concept  ;
     owl:equivalentProperty: "http://purl.org/ctdl/terms/credentialType" ;
     vann:usageNote "Use a value selected from a controlled vocabulary of credential types; encode using the jdx:AnnotatedDefinedTerm entity."@en-US .
-
-jdx:credentialRequirements a rdfs:Property ;
-    dct:identifier "jdx:credentialRequirements"@en-US ;
-    rdfs:comment "A credential required for the position."@en-US ;
-    rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
-    rdfs:label "Credential Requirements"@en-US ;
-    rdfs:domain schema:ContactPoint  ;
-    rdfs:range skos:Concept  ;
-    vann:usageNote "[0..1] Use a value selected from a controlled vocabulary of contact types; encode using the jdx:AnnotatedDefinedTerm entity."@en-US .
 
 schema:datePosted a rdfs:Property ;
     dct:identifier "schema:datePosted"@en-US ;
@@ -440,14 +440,6 @@ schema:educationLevelType a rdfs:Property ;
     rdfs:range skos:Concept  ;
     vann:usageNote "Use a value selected from a controlled vocabulary of education levels such as ceterms:AudienceLevel or HR Open Standards IscedCodeList.json; encode using the jdx:AnnotatedDefinedTerm entity."@en-US .
     
-schema:educationRequirement a rdfs:Property ;
-    dct:identifier "schema:educationRequirement"@en-US ;
-    rdfs:label "Education Requirement"@en-US ;    
-    rdfs:comment "Educational background needed for the position or Occupation."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
-    rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobPosting  ;
-    rdfs:range jdx:Education  .
-    
 schema:email a rdfs:Property ;
     dct:identifier "schema:email"@en-US ;
     rdfs:label "Email Address"@en-US ;    
@@ -512,8 +504,7 @@ schema:estimatedSalary a rdfs:Property ;
     dct:description "The estimated salary is usually computed by outside organizations and therefore the hiring organization is not bound to this estimated salary."@en-US ;
     rdfs:isDefinedBy <https://schema.org> ;
     rdfs:domain jdx:JobMaster, jdx:JobMaster, jdx:JobOpening, jdx:JobPosting  ;
-    rdfs:range schema:QualityValueDistribution  ;
-    vann:usageNote "[0-1] @@@"@en-US .
+    rdfs:range schema:QualityValueDistribution .
     
 jdx:evidence a rdfs:Property ;
     dct:identifier "jdx:evidence"@en-US ;
@@ -723,7 +714,7 @@ jdx:knowledgeType a rdfs:Property ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobMaster, jdx:JobCompetencyProfile, jdx:JobDescription, jdx:JobOpening, jdx:JobPosting ; 
     rdfs:range skos:Concept  ;
-    rdfs:subClassOf jdx:Competency ;
+    rdfs:subPropertyOf jdx:competency ;
     vann:usageNote "Use a value selected from a controlled vocabulary of knowledge types such as the O*NET knowledge (https://www.onetonline.org/find/descriptor/browse/Knowledge/); encode using the jdx:AnnotatedDefinedTerm entity."@en-US .
     
 schema:latitude a rdfs:Property ;
@@ -858,21 +849,13 @@ schema:occupationCategory a rdfs:Property ;
     rdfs:range skos:Concept  ;
     vann:usageNote "Use a value selected from a controlled vocabulary of occupation categories such as the Standard Occupational Classification (SOC); encode using the jdx:AnnotatedDefinedTerm entity."@en-US .
     
-schema:numberOfEmployees a rdfs:Property ;
-    dct:identifier "schema:numberOfEmployees"@en-US ;
-    rdfs:label "Number of Employees"@en-US ;    
-    rdfs:comment "The number of employees in an organization e.g. business."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
-    rdfs:domain schema:Organization  ;
-    rdfs:range xsd:integer .
-    
 jdx:organization a rdfs:Property ;
     dct:identifier "jdx:organization"@en-US ;
     rdfs:label "Organization"@en-US ;    
-    rdfs:comment "Organization that issued or otherwise provided the resource or its related experience."@en-US ;
+    rdfs:comment "Organization that issued or otherwise provided the resource."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:Education, jdx:Experience, jdx:Credential  ;
-    rdfs:range xsd:integer .
+    rdfs:range schema:Organization .
     
 schema:parentOrganization a rdfs:Property ;
     dct:identifier "schema:parentOrganization"@en-US ;
@@ -1066,7 +1049,7 @@ schema:responsibility a rdfs:Property ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobMaster, jdx:JobCompetencyProfile, jdx:JobDescription, jdx:JobPosting ; 
     rdfs:range rdf:langString ;
-    rdfs:subPropertyOf jdx:Competency .
+    rdfs:subPropertyOf jdx:competency .
     
 schema:salaryCurrency a rdfs:Property ;
     dct:identifier "schema:salaryCurrency"@en-US ;
@@ -1097,12 +1080,12 @@ jdx:scaleType a rdfs:Property ;
 jdx:skillType a rdfs:Property ;
     dct:identifier "jdx:skillType"@en-US ;
     rdfs:label "Skill Type"@en-US ;    
-    rdfs:comment "Type or category of skill required to fulfill a role; select from an existing enumeration of such types."@en-US ;
+    rdfs:comment "Type or category of developed proficiency or dexterity in mental operations and physical processes required to fulfill a work role; select from an existing enumeration of such types."@en-US ;
     dct:description "(Wikipedia) A skill is the ability to carry out a task with determined results often within a given amount of time, energy, or both."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobMaster, jdx:JobCompetencyProfile, jdx:JobDescription, jdx:JobPosting ;
     rdfs:range skos:Concept ;
-    rdfs:subClassOf jdx:Competency ;
+    rdfs:subPropertyOf jdx:competency ;
     vann:usageNote "Use a value selected from a controlled vocabulary of skill types such as the O*NET skills; encode using the jdx:AnnotatedDefinedTerm entity."@en-US .
     
 schema:specialCommitment a rdfs:Property ;
@@ -1137,7 +1120,7 @@ jdx:taskType a rdfs:Property ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobCompetenctProfile, jdx:JobPosting ;
     rdfs:range skos:Concept ;
-    rdfs:subClassOf jdx:Competency ;
+    rdfs:subPropertyOf jdx:competency ;
     vann:usageNote "Use a value selected from a controlled vocabulary of task types such as O*NET tasks; encode using the jdx:AnnotatedDefinedTerm entity."@en-US .
     
 jdx:technologyType a rdfs:Property ;
