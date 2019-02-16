@@ -388,7 +388,7 @@ jdx:citizenshipRequirement a rdfs:Property ;
     rdfs:label "Country of Citizenship"@en-US ;
     rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobPosting ;
     rdfs:range skos:Concept  ;
-    vann:usageNote "Use a value selected from a country code list such as the Library of Congress' List of Countries (http://id.loc.gov/vocabulary/countries.html).":  
+    vann:usageNote "Use a value selected from a country code list such as the Library of Congress' List of Countries (http://id.loc.gov/vocabulary/countries.html).";  
     vann:usageNote "USE IN PILOT"@en-US .
 
 jdx:competencyType a rdfs:Property ;
@@ -1190,8 +1190,7 @@ schema:responsibility a rdfs:Property ;
 jdx:riskExposure a rdfs:Property ;
     dct:identifier "jdx:riskExposure"@en-US ;
     rdfs:label "Risk Exposure"@en-US ;
-    rdfs:comment "Description of any exposure to risks associated with the job including exposure to extreme noise or temperature, dust/particle matter, radiation, chemicals, airborne communicable diseases
-and bloodborne pathogens." ;     
+    rdfs:comment "Description of any exposure to risks associated with the job including exposure to extreme noise or temperature, dust/particle matter, radiation, chemicals, airborne communicable diseases and bloodborne pathogens."@en-US;     
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobMaster, jdx:jobCompetencyProfile, jdx:JobDescription, jdx:JobPosting ;
     rdfs:range rdf:langString ;
@@ -1200,8 +1199,7 @@ and bloodborne pathogens." ;
 jdx:riskExposureType a rdfs:Property ;
     dct:identifier "jdx:riskExposureType"@en-US ;
     rdfs:label "Risk Exposure Type"@en-US ;
-    rdfs:comment "Types or categories of risk exposure associated with the job including exposure to extreme noise or temperature, dust/particle matter, radiation, chemicals, airborne communicable diseases
-and bloodborne pathogens." ;     
+    rdfs:comment "Types or categories of risk exposure associated with the job including exposure to extreme noise or temperature, dust/particle matter, radiation, chemicals, airborne communicable diseases and bloodborne pathogens."@en-US;     
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobMaster, jdx:jobCompetencyProfile, jdx:JobDescription, jdx:JobPosting ;
     rdfs:range skos:concept  ;
