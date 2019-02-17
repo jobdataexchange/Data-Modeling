@@ -372,7 +372,7 @@ schema:baseSalaryValue a rdfs:Property ;
     rdfs:range schema:QuantitativeValue ;
     vann:usageNote "USE IN PILOT"@en-US .
     
-jdx:careerLevel a rdfs:Property ;
+jdx:careerLevelType a rdfs:Property ;
     dct:identifier "jdx:careerLevel"@en-US ;
     rdfs:comment "A code classifying the level of a candidate based on career experience; select from an existing enumeration of such types."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
@@ -638,37 +638,7 @@ schema:geo a rdfs:Property ;
     rdfs:domain schema:Organization, schema:Place  ;
     rdfs:range schema:GeoCoordinates ;
     vann:usageNote "USE IN PILOT"@en-US .
-    
-jdx:jobAgreementType a rdfs:Property ;
-    dct:identifier "jdx:jobAgreementType"@en-US ;
-    rdfs:label "Job Agreement Type"@en-US ;    
-    rdfs:comment "Type of employment contract agreement (e.g. employee, contract, temporary, seasonal, internship); select from an existing enumeration of such types."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
-    rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobPosting  ;
-    rdfs:range skos:Concept  ;
-    vann:usageNote "Use a value selected from a controlled vocabulary of employment contract agreements; select from an existing enumeration of such types."@en-US ;
-    vann:usageNote "USE IN PILOT"@en-US .
-    
-jdx:jobScheduleType a rdfs:Property ;
-    dct:identifier "jdx:jobScheduleType"@en-US ;
-    rdfs:label "Job Schedule Type"@en-US ;    
-    rdfs:comment "Type of employment schedule (e.g. full-time, part-time, flex-time, shared-time); select from an existing enumeration of such types."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
-    rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobPosting  ;
-    rdfs:range skos:Concept  ;
-    vann:usageNote "Use a value selected from a controlled vocabulary of employment schedule types; select from an existing enumeration of such types."@en-US ;
-    vann:usageNote "USE IN PILOT"@en-US .
-    
-jdx:jobTermType a rdfs:Property ;
-    dct:identifier "jdx:jobTermType"@en-US ;
-    rdfs:label "Job Term Type"@en-US ;    
-    rdfs:comment "Type of employment term (e.g. regular, temporary, seasonal, intern); select from an existing enumeration of such types."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
-    rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobPosting  ;
-    rdfs:range skos:Concept  ;
-    vann:usageNote "Use a value selected from a controlled vocabulary of employment term types; select from an existing enumeration of such types."@en-US ;
-    vann:usageNote "USE IN PILOT"@en-US .
-    
+       
 jdx:hasCompetencyProfile a rdfs:Property ;
     dct:identifier "jdx:hasCompetencyProfile"@en-US ;
     rdfs:label "Has Competency Profile@"@en-US ;    
@@ -769,6 +739,16 @@ schema:isicV4 a rdfs:Property ;
     rdfs:domain schema:Organization  ;
     rdfs:range xsd:string .
     
+jdx:jobAgreementType a rdfs:Property ;
+    dct:identifier "jdx:jobAgreementType"@en-US ;
+    rdfs:label "Job Agreement Type"@en-US ;    
+    rdfs:comment "Type of employment contract agreement (e.g. employee, contract, temporary, seasonal, internship); select from an existing enumeration of such types."@en-US ;
+    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobPosting  ;
+    rdfs:range skos:Concept  ;
+    vann:usageNote "Use a value selected from a controlled vocabulary of employment contract agreements; select from an existing enumeration of such types."@en-US ;
+    vann:usageNote "USE IN PILOT"@en-US .
+    
 schema:jobBenefit a rdfs:Property ;
     dct:identifier "schema:jobBenefit"@en-US ;
     rdfs:label "Job Benefit"@en-US ;    
@@ -799,11 +779,22 @@ schema:jobLocationType a rdfs:Property ;
 jdx:jobScheduleType a rdfs:Property ;
     dct:identifier "jdx:jobScheduleType"@en-US ;
     rdfs:label "Job Schedule Type"@en-US ;    
-    rdfs:comment "The working schedule of a position offered or a position sought; select from an existing enumeration of such types. (HR)"@en-US ;
-    rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
-    rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobPosting ;
+    rdfs:comment "Type of employment schedule (e.g. full-time, part-time, flex-time, shared-time); select from an existing enumeration of such types."@en-US ;
+    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobPosting  ;
     rdfs:range skos:Concept  ;
-    vann:usageNote "Use a value selected from a controlled vocabulary of job schedule types such as the HR Open Standards ShiftTypeCodeList.json; encode using the jdx:AnnotatedDefinedTerm entity."@en-US .    
+    vann:usageNote "Use a value selected from a controlled vocabulary of employment schedule types; select from an existing enumeration of such types."@en-US ;
+    vann:usageNote "USE IN PILOT"@en-US .
+    
+jdx:jobTermType a rdfs:Property ;
+    dct:identifier "jdx:jobTermType"@en-US ;
+    rdfs:label "Job Term Type"@en-US ;    
+    rdfs:comment "Type of employment term (e.g. regular, temporary, seasonal, intern); select from an existing enumeration of such types."@en-US ;
+    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobPosting  ;
+    rdfs:range skos:Concept  ;
+    vann:usageNote "Use a value selected from a controlled vocabulary of employment term types; select from an existing enumeration of such types."@en-US ;
+    vann:usageNote "USE IN PILOT"@en-US .
     
 jdx:knowledgeType a rdfs:Property ;
     dct:identifier "jdx:knowledgeType"@en-US ;
