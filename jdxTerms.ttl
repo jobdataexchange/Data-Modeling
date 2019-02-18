@@ -383,7 +383,7 @@ jdx:careerLevelType a rdfs:Property ;
     
 jdx:citizenshipRequirement a rdfs:Property ;
     dct:identifier "jdx:citizenshipRequirement"@en-US ;
-    rdfs:comment "Country of the applicants citizenship."@en-US ;
+    rdfs:comment "Country of the applicant's citizenship."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:label "Country of Citizenship"@en-US ;
     rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobPosting ;
@@ -1008,7 +1008,7 @@ jdx:physicalActivityType a rdfs:Property ;
 jdx:physicalRequirement a rdfs:Property ;
     dct:identifier "jdx:physicalRequirement"@en-US ;
     rdfs:label "Physical Requirement"@en-US ;
-    rdfs:comment "Description of the physical requirements of the job including activities, sensory requirements and their associated levels." ;     
+    rdfs:comment "Description of the physical requirements of the job including activities and their associated levels." ;     
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobMaster, jdx:jobCompetencyProfile, jdx:JobDescription, jdx:JobPosting ;
     rdfs:range rdf:langString ;
