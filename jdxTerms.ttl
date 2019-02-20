@@ -522,7 +522,17 @@ jdx:employmentUnit a rdfs:Property ;
     rdfs:comment "Department or unit where the employee reports and/or in which the job is to be performed."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobDescription, jdx:JobPosting, jdx:JobMaster ;
+    rdfs:range schema:Organization ;
+    vann:usageNote "USE IN PILOT"@en-US .
+    
+jdx:employmentUnitName a rdfs:Property ;
+    dct:identifier "jdx:employmentUnitName"@en-US ;
+    rdfs:label "Employment Unit Name"@en-US ;    
+    rdfs:comment "Name of department or unit where the employee reports and/or in which the job is to be performed."@en-US ;
+    rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
+    rdfs:domain schema:Organization ;
     rdfs:range rdf:langString ;
+    rdfs:subPropertyOf schema:name ;
     vann:usageNote "USE IN PILOT"@en-US .
         
 jdx:equivalentEducation a rdfs:Property ;

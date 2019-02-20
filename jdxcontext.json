@@ -47,6 +47,7 @@
       "schema:employmentType": {"@type": "@id"},
       "jdx:employerOverview": {"@container": "@language"},
       "jdx:employmentUnit": {"@container": "@language"},
+      "jdx:employmentUnitName": {"@container": "@language"},
       "jdx:equivalentCredential": {"@type": "@id"},
       "jdx:equivalentEducation": {"@type": "@id"},
       "jdx:equivalentExperience": {"@type": "@id"},
