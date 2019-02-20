@@ -141,6 +141,7 @@
       "schema:travelRequirement": {"@container": "@language"},
       "schema:validThrough": {"@type": "xsd:dateTime"},
       "schema:value": {"@type": "xsd:float"},
+      "jdx:weight": {"@type": "xsd:string"},
       "jdx:workLanguage": {"@type": "xsd:language"},
       "schema:workHours": {"@container": "@language"}  
   }

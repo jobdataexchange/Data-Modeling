@@ -3,6 +3,8 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ceterms: <http://purl.org/ctdl/terms/> .
+@prefix asn: <http://purl.org/asn/schema/core/> .
+@prefic ceasn: <http://purl.org/ctdlasn/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix schema: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -15,7 +17,8 @@ jdx:AnnotatedDefinedTerm a rdfs:Class ;
     rdfs:comment "A word, name, acronym, phrase, defined in a controlled vocabulary (e.g., taxonomy, glossary, dictionary, tag list, and other forms of enumeration)."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:label "Annotated Term"@en-US ;
-    vann:usageNote "Used in the context of JDX to assign terms from occupation, industry and instructional program classifications, skills and abilities, and abstract concepts to JDX entities. Through the class' relationship with the jdx:ScaledAnnotation class, terms can be conditioned through applications of scales for attributes such as importance and frequency."@en-US .  
+    vann:usageNote "Used in the context of JDX to assign terms from occupation, industry and instructional program classifications, skills and abilities, and abstract concepts to JDX entities. Through the class' relationship with the jdx:ScaledAnnotation class, terms can be conditioned through applications of scales for attributes such as importance and frequency."@en-US ;
+    vann:usageNote "USE IN PILOT"@en-US .  
 
 jdx:Condition a rdfs:Class ;
     dct:identifier "jdx:Condition"@en-US ;
@@ -39,38 +42,37 @@ jdx:Education a rdfs:Class ;
     dct:identifier "jdx:Education"@en-US ;
     rdfs:comment "Entity describing acquired knowledge, skills, values, beliefs and habits through systematic instruction and study that is required or recommended for a job position."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
-    rdfs:label "Education"@en-US .
+    rdfs:label "Education"@en-US ;
+    vann:usageNote "USE IN PILOT"@en-US .
     
 jdx:Experience a rdfs:Class ;
     dct:identifier "jdx:Experience"@en-US ;
     rdfs:comment "Entity describing past individual performance confirming or supporting qualification to engage in defined activities, perform certain tasks or to assume certain responsibilities required or recommended for a job position."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
-    rdfs:label "Experience"@en-US .    
+    rdfs:label "Experience"@en-US ;
+    vann:usageNote "USE IN PILOT"@en-US .    
   
 schema:GeoCoordinates a rdfs:Class ;
     dct:identifier "schema:GeoCoordinates"@en-US ;
     rdfs:comment "Geographic coordinates of a place or event."@en-US ;
     rdfs:isDefinedBy <http://schema.org/> ;
     rdfs:label "Location Geocoordinates"@en-US ;
-    vann:usageNote "Use to identify a place using geo coordinates; preferably includes a URI for the location as well as longitude and latitude from a service such as GeoNames (https://www.geonames.org/)."@en-US .
+    vann:usageNote "Use to identify a place using geo coordinates; preferably includes a URI for the location as well as longitude and latitude from a service such as GeoNames (https://www.geonames.org/)."@en-US ;
+    vann:usageNote "USE IN PILOT"@en-US .
     
 jdx:JobCompetencyProfile a rdfs:Class ;
     dct:identifier "jdx:JobCompetencyProfile"@en-US ;
     rdfs:comment "Entity listing major work tasks, knowledge, skills, and abilities requirements for carrying out those work tasks based on a job analysis that engages subject matter experts in defining and validating the importance, frequency, or other types of weightings of the enumerated competencies."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
-    rdfs:label "Job Competency Profile"@en-US .
+    rdfs:label "Job Competency Profile"@en-US ;
+    vann:usageNote "USE IN PILOT"@en-US .
     
 jdx:JobDescription a rdfs:Class ;
     dct:identifier "jdx:JobDescription"@en-US ;
     rdfs:comment "Entity providing a statement of a job position generally including the formal job title, duties, purpose, responsibilities, scope, reporting relationships and working conditions along with the knowledge, skills, abilities, education, qualifications, experience and other requirements for performing the job."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
-    rdfs:label "Job Description"@en-US .
-    
-jdx:JobOpening a rdfs:Class ;
-    dct:identifier "jdx:JobOpening"@en-US ;
-    rdfs:comment "Entity describing an unfilled job position that has been formally approved for filling; usually triggered by an authorization to a supervising/hiring manager to increase the number of positions or fill a position opened by people leaving."@en-US ;
-    rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
-    rdfs:label "Job Position Opening"@en-US .
+    rdfs:label "Job Description"@en-US ;
+    vann:usageNote "USE IN PILOT"@en-US .
     
 jdx:JobPosting a rdfs:Class ;
     dct:identifier "jdx:JobPosting"@en-US ;
@@ -84,8 +86,7 @@ schema:MonetaryAmount a rdfs:Class ;
     rdfs:comment "A monetary value or range."@en-US ;
     rdfs:isDefinedBy <http://schema.org/> ;
     rdfs:label "Monetary Amount"@en-US ;
-    vann:usageNote "This type can be used to describe an amount of money such as $50 USD, or a range as in describing a bank account being suitable for a balance between £1,000 and £1,000,000 GBP, or the value of a salary, etc."@en-US ;
-    vann:usageNote "USE IN PILOT"@en-US .
+    vann:usageNote "This type can be used to describe an amount of money such as $50 USD, or a range as in describing a bank account being suitable for a balance between £1,000 and £1,000,000 GBP, or the value of a salary, etc."@en-US .
     
 schema:Organization a rdfs:Class ;
     dct:identifier "schema:Organization"@en-US ;
@@ -132,12 +133,6 @@ schema:QuantitativeValueDistribution a rdfs:Class ;
     rdfs:isDefinedBy <http://schema.org/> ;
     rdfs:label "Quantitative Value Distribution"@en-US .
     
-schema:QuantitativeValueDistribution a rdfs:Class ;
-    dct:identifier "schema:QuantitativeValueDistribution"@en-US ;
-    rdfs:comment "A statistical distribution of values."@en-US ;
-    rdfs:isDefinedBy <http://schema.org/> ;
-    rdfs:label "Quantitative Value Distribution"@en-US .
-    
 jdx:Rubric a rdfs:Class ;
     dct:identifier "jdx:Rubric"@en-US ;
     rdfs:comment "Resosurce to define assessment criteria and their scoring"@en-US ;
@@ -160,7 +155,6 @@ jdx:abilityType a rdfs:Property ;
     rdfs:subPropertyOf jdx:competency ;
     rdfs:domain jdx:JobMaster  ;
     rdfs:range skos:ConceptScheme  ;
-    rdfs:subPropertyOf jdx:competency ;
     vann:usageNote "Use a value selected from a controlled vocabulary of ability types such as the O*NET cognitive, sensory, psychomotor and physical abilities; encode using the jdx:AnnotatedDefinedTerm entity."@en-US;
     vann:usageNote "USE IN PILOT"@en-US .
     
@@ -742,7 +736,7 @@ schema:isicV4 a rdfs:Property ;
 jdx:jobAgreementType a rdfs:Property ;
     dct:identifier "jdx:jobAgreementType"@en-US ;
     rdfs:label "Job Agreement Type"@en-US ;    
-    rdfs:comment "Type of employment contract agreement (e.g. employee, contract, temporary, seasonal, internship); select from an existing enumeration of such types."@en-US ;
+    rdfs:comment "Type of employment contract agreement (e.g. employee, contract, temporary, seasonal, internship, collectively bargained); select from an existing enumeration of such types."@en-US ;
     rdfs:isDefinedBy <https://schema.org> ;
     rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobPosting  ;
     rdfs:range skos:Concept  ;
@@ -945,7 +939,8 @@ schema:occupationCategory a rdfs:Property ;
     rdfs:isDefinedBy <https://schema.org> ;
     rdfs:domain jdx:JobMaster, jdx:Education, jdx:Experience, jdx:Credential;
     rdfs:range skos:Concept  ;
-    vann:usageNote "Use a value selected from a controlled vocabulary of occupation categories such as the Standard Occupational Classification (SOC); encode using the jdx:AnnotatedDefinedTerm entity."@en-US .
+    vann:usageNote "Use a value selected from a controlled vocabulary of occupation categories such as the Standard Occupational Classification (SOC); encode using the jdx:AnnotatedDefinedTerm entity."@en-US ;
+    vann:usageNote "USE IN PILOT"@en-US .
     
 jdx:organization a rdfs:Property ;
     dct:identifier "jdx:organization"@en-US ;
@@ -1373,6 +1368,16 @@ schema:value a rdfs:Property ;
     rdfs:isDefinedBy <https://schema.org> ;
     rdfs:domain schema:QuantitativeValue  ;
     rdfs:range xsd:float ;
+    vann:usageNote "USE IN PILOT"@en-US .
+    
+jdx:weight a rdfs:Property ;
+    dct:identifier "jdx:weight"@en-US ;
+    rdfs:label "weight"@en-US ;    
+    rdfs:comment "Measurement of the weight, degree, percent, or strength of a recommendation, requirement, or comparison."@en-US ;
+    rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
+    rdfs:domain jdx:ScaleAnnotation ;
+    rdfs:range xsd:string ;
+    owl:equivalentProperty: ceasn:weight; ceterms:weight, asn:weight ;
     vann:usageNote "USE IN PILOT"@en-US .
     
 jdx:workLanguage a rdfs:Property ;
