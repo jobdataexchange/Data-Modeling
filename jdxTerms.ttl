@@ -80,6 +80,12 @@ jdx:JobPosting a rdfs:Class ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:label "Job Posting"@en-US ;
     vann:usageNote "Entity that contains information on the employer and the job position based on a job description as well as how to apply for the job opening and how long the posting is valid."@en-US .
+            
+schema:MonetaryAmountDistribution a rdfs:Class ;
+    dct:identifier "schema:MonetaryAmountDistribution"@en-US ;
+    rdfs:comment "Statistical distribution of monetary amounts."@en-US ;
+    rdfs:isDefinedBy <http://schema.org/> ;
+    rdfs:label "Monetary Amount Distribution"@en-US .
         
 schema:MonetaryAmount a rdfs:Class ;
     dct:identifier "schema:MonetaryAmount"@en-US ;
@@ -126,12 +132,6 @@ schema:QuantitativeValue a rdfs:Class ;
     rdfs:comment "A point value or interval for product characteristics and other purposes."@en-US ;
     rdfs:isDefinedBy <http://schema.org/> ;
     rdfs:label "Quantitative Value"@en-US .
-    
-schema:QuantitativeValueDistribution a rdfs:Class ;
-    dct:identifier "schema:QuantitativeValueDistribution"@en-US ;
-    rdfs:comment "A statistical distribution of values."@en-US ;
-    rdfs:isDefinedBy <http://schema.org/> ;
-    rdfs:label "Quantitative Value Distribution"@en-US .
     
 jdx:Rubric a rdfs:Class ;
     dct:identifier "jdx:Rubric"@en-US ;
@@ -431,7 +431,16 @@ jdx:criminalRecordExclusion a rdfs:Property ;
     rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobPosting ;
     rdfs:range xsd:boolean ;
     vann:usageNote "USE IN PILOT"@en-US .
-
+    
+schema:currency a rdfs:Property ;
+    dct:identifier "schema:currency"@en-US ;
+    rdfs:label "Currency"@en-US ;    
+    rdfs:comment "The currency (coded using ISO 4217 ) used for the main salary information in this job posting or for this employee."@en-US ;
+    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:domain schema:MonetaryAmountDistribution, schema:MonetaryAmount  ;
+    rdfs:range xsd:string ;
+    vann:usageNote "USE IN PILOT"@en-US .
+    
 schema:datePosted a rdfs:Property ;
     dct:identifier "schema:datePosted"@en-US ;
     rdfs:comment "The date of posting by a channel."@en-US ;
@@ -877,7 +886,7 @@ schema:median a rdfs:Property ;
     rdfs:label "Median"@en-US ;    
     rdfs:comment "The median value."@en-US ;
     rdfs:isDefinedBy <https://schema.org> ;
-    rdfs:domain schema:QualitativeValueDistribution  ;
+    rdfs:domain schema:QuantitativeAmountDistribution  ;
     rdfs:range xsd:float .
     
 jdx:minimumExperience a rdfs:Property ;
@@ -973,7 +982,7 @@ schema:percentile10 a rdfs:Property ;
     rdfs:label "10th Percentile"@en-US ;    
     rdfs:comment "The 10th percentile value."@en-US ;
     rdfs:isDefinedBy <https://schema.org> ;
-    rdfs:domain schema:QualitativeValueDistribution  ;
+    rdfs:domain schema:MonetaryAmoungDistribution ;
     rdfs:range xsd:float .
     
 schema:percentile25 a rdfs:Property ;
@@ -981,7 +990,7 @@ schema:percentile25 a rdfs:Property ;
     rdfs:label "25th Percentile"@en-US ;    
     rdfs:comment "The 25th percentile value."@en-US ;
     rdfs:isDefinedBy <https://schema.org> ;
-    rdfs:domain schema:QualitativeValueDistribution  ;
+    rdfs:domain schema:MonetaryAmountDistribution  ;
     rdfs:range xsd:float .
     
 schema:percentile75 a rdfs:Property ;
@@ -989,7 +998,7 @@ schema:percentile75 a rdfs:Property ;
     rdfs:label "75th Percentile"@en-US ;    
     rdfs:comment "The 75th percentile value."@en-US ;
     rdfs:isDefinedBy <https://schema.org> ;
-    rdfs:domain schema:QualitativeValueDistribution  ;
+    rdfs:domain schema:MonetaryAmountDistribution  ;
     rdfs:range xsd:float .
     
 schema:percentile90 a rdfs:Property ;
@@ -997,7 +1006,7 @@ schema:percentile90 a rdfs:Property ;
     rdfs:label "90th Percentile"@en-US ;    
     rdfs:comment "The 90th percentile value."@en-US ;
     rdfs:isDefinedBy <https://schema.org> ;
-    rdfs:domain schema:QualitativeValueDistribution  ;
+    rdfs:domain schema:MonetaryAmountDistribution  ;
     rdfs:range xsd:float .
     
 jdx:physicalActivityType a rdfs:Property ;
@@ -1200,15 +1209,6 @@ jdx:riskExposureType a rdfs:Property ;
     rdfs:domain jdx:JobMaster, jdx:jobCompetencyProfile, jdx:JobDescription, jdx:JobPosting ;
     rdfs:range skos:concept  ;
     vann:usageNote "Use a value selected from a controlled vocabulary of risk exposure types; encode using the jdx:AnnotatedDefinedTerm entity."@en-US ;
-    vann:usageNote "USE IN PILOT"@en-US .
-    
-schema:salaryCurrency a rdfs:Property ;
-    dct:identifier "schema:salaryCurrency"@en-US ;
-    rdfs:label "Salary Currency"@en-US ;    
-    rdfs:comment "The currency (coded using ISO 4217 ) used for the main salary information in this job posting or for this employee."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
-    rdfs:domain schema:QualitativeValueDistribution, schema:MonetaryAmount  ;
-    rdfs:range xsd:string ;
     vann:usageNote "USE IN PILOT"@en-US .
    
 schema:sameAs a rdfs:Property ;
