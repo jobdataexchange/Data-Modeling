@@ -357,15 +357,6 @@ schema:baseSalary a rdfs:Property ;
     rdfs:range schema:MonetaryAmount ;
     vann:usageNote "USE IN PILOT"@en-US .
     
-schema:baseSalaryValue a rdfs:Property ;
-    dct:identifier "schema:baseSalaryValue"@en-US ;
-    rdfs:comment "The value of the base salary of the job or of an employee in an employee role."@en-US ;
-    rdfs:isDefinedBy <http://schema.org/> ;
-    rdfs:label "Base Salary Value"@en-US ;
-    rdfs:domain schema:MonetaryAmount  ;
-    rdfs:range schema:QuantitativeValue ;
-    vann:usageNote "USE IN PILOT"@en-US .
-    
 jdx:careerLevelType a rdfs:Property ;
     dct:identifier "jdx:careerLevel"@en-US ;
     rdfs:comment "A code classifying the level of a candidate based on career experience; select from an existing enumeration of such types."@en-US ;
@@ -587,7 +578,7 @@ schema:estimatedSalary a rdfs:Property ;
     dct:description "The estimated salary is usually computed by outside organizations and therefore the hiring organization is not bound to this estimated salary."@en-US ;
     rdfs:isDefinedBy <https://schema.org> ;
     rdfs:domain jdx:JobMaster, jdx:JobMaster, jdx:JobOpening, jdx:JobPosting  ;
-    rdfs:range schema:QuantitativeValueDistribution .
+    rdfs:range schema:MonetaryAmountDistribution .
     
 jdx:evidence a rdfs:Property ;
     dct:identifier "jdx:evidence"@en-US ;
@@ -1211,6 +1202,14 @@ jdx:riskExposureType a rdfs:Property ;
     vann:usageNote "Use a value selected from a controlled vocabulary of risk exposure types; encode using the jdx:AnnotatedDefinedTerm entity."@en-US ;
     vann:usageNote "USE IN PILOT"@en-US .
    
+jdx:salaryValue a rdfs:Property ;
+    dct:identifier "jdx:salaryValue"@en-US ;
+    rdfs:label "Salary Value"@en-US ;    
+    rdfs:comment "Amount and type of base salary."@en-US ;
+    rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
+    rdfs:domain schema:MonetaryAmount  ;
+    rdfs:range schema:QuantitativeValue .
+
 schema:sameAs a rdfs:Property ;
     dct:identifier "schema:sameAs"@en-US ;
     rdfs:label "Same As"@en-US ;    
@@ -1376,7 +1375,7 @@ schema:value a rdfs:Property ;
     rdfs:label "Value"@en-US ;    
     rdfs:comment "The value of the quantitative value or property value node. (node?)"@en-US ;
     rdfs:isDefinedBy <https://schema.org> ;
-    rdfs:domain schema:QuantitativeValue  ;
+    rdfs:domain schema:QuantitativeValue, schema:MonetaryAmount  ;
     rdfs:range xsd:float ;
     vann:usageNote "USE IN PILOT"@en-US .
     

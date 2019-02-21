@@ -125,6 +125,7 @@
       "schema:responsibility": {"@container": "@language"},
       "jdx:riskExposure": {"@container": "@language"},
       "jdx:riskExposureType": {"@type": "@id"},
+      "jdx:salaryValue": {"@type": "@id"},
       "schema:sameAs": {"@type": "xsd:anyURI"},
       "jdx:scaleType": {"@type": "@id"},
       "jdx:scaleValue": {"@type": "@id"},
