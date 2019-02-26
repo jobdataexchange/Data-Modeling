@@ -4,7 +4,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ceterms: <http://purl.org/ctdl/terms/> .
 @prefix asn: <http://purl.org/asn/schema/core/> .
-@prefic ceasn: <http://purl.org/ctdlasn/terms/> .
+@prefix ceasn: <http://purl.org/ctdlasn/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix schema: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -1386,7 +1386,7 @@ jdx:weight a rdfs:Property ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:ScaleAnnotation ;
     rdfs:range xsd:string ;
-    owl:equivalentProperty: ceasn:weight; ceterms:weight, asn:weight ;
+    owl:equivalentProperty ceasn:weight, ceterms:weight, asn:weight ;
     vann:usageNote "USE IN PILOT"@en-US .
     
 jdx:workLanguage a rdfs:Property ;
