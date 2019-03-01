@@ -13,6 +13,7 @@
       "schema:addressCountry": {"@type": "xsd:string"},
       "schema:addressLocality": {"@type": "xsd:string"},
       "schema:addressRegion": {"@type": "xsd:string"},
+      "jdx:alternativeCondition": {"@type": "@id"},
       "jdx:alternativeCredential": {"@type": "@id"},
       "jdx:alternativeEducation": {"@type": "@id"},
       "jdx:alternativeExperience": {"@type": "@id"},
