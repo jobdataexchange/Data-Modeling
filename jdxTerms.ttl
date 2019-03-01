@@ -34,7 +34,7 @@ schema:ContactPoint a rdfs:Class ;
     
 jdx:Credential a rdfs:Class ;
     dct:identifier "jdx:Credential"@en-US ;
-    rdfs:comment "Entity describing authoritative permission to hold a certain status or to do certain things, e.g. to practise some trade or profession."@en-US ;
+    rdfs:comment "Entity describing authoritative permission to hold a certain status or to do certain things, e.g. to practice some trade or profession."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:label "Credential"@en-US .
     
