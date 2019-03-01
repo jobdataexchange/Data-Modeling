@@ -212,6 +212,15 @@ schema:addressRegion a rdfs:Property ;
     rdfs:domain schema:PostalAddress  ;
     rdfs:range xsd:string  ;
     vann:usageNote "The relevant state, province, territory or other subdivision of a nation state."@en-US ;
+    vann:usageNote "USE IN PILOT"@en-US .   
+    
+jdx:alternativeCondition a rdfs:Property ;
+    dct:identifier "jdx:alternativeCondition"@en-US ;
+    rdfs:label "Alternative Condition"@en-US ;    
+    rdfs:comment "Resource referenced provides the means to make logical asserions about alternative conditions."@en-US ;
+    rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
+    rdfs:domain jdx:Condition ;
+    rdfs:range jdx:Condition ;
     vann:usageNote "USE IN PILOT"@en-US .
     
 jdx:alternativeEducation a rdfs:Property ;
@@ -530,7 +539,7 @@ jdx:employmentUnitName a rdfs:Property ;
     rdfs:label "Employment Unit Name"@en-US ;    
     rdfs:comment "Name of department or unit where the employee reports and/or in which the job is to be performed."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
-    rdfs:domain schema:Organization ;
+    rdfs:domain schema:Organization, schema:QuantitativeValue ;
     rdfs:range rdf:langString ;
     rdfs:subPropertyOf schema:name ;
     vann:usageNote "USE IN PILOT"@en-US .
@@ -597,6 +606,15 @@ jdx:evidenceType a rdfs:Property ;
     rdfs:range skos:Concept  ;
     vann:usageNote "Use a value selected from a controlled vocabulary of evidence types; encode using the jdx:AnnotatedDefinedTerm entity."@en-US ;
     vann:usageNote "USE IN PILOT"@en-US .
+    
+jdx:experienceDuration a rdfs:Property ;
+    dct:identifier "jdx:experienceDuration"@en-US ;
+    rdfs:label "Experience Duration"@en-US ;    
+    rdfs:comment "Length of time of an experience; select from an existing enumeration of such types."@en-US ;
+    rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
+    rdfs:domain jdx:Experience, jdx:Education, jdx:Credential ; 
+    rdfs:range skos:Concept ;
+    vann:usageNote "Use a value selected from a controlled vocabulary of experience types; encode using the jdx:AnnotatedDefinedTerm entity."@en-US .
     
 jdx:experienceType a rdfs:Property ;
     dct:identifier "jdx:experienceType"@en-US ;
@@ -1355,7 +1373,7 @@ schema:unitText a rdfs:Property ;
     rdfs:label "Unit Text"@en-US ;    
     rdfs:comment "Unit of measurement on which employee pay is based such as \"hour\", \"day\", \"week\", \"month\", \"year\"; select from an existing enumeration of such types."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
-    rdfs:domain schema:MonetaryAmount ;
+    rdfs:domain schema:QuantitativeValue ;
     rdfs:range skos:Concept  ;
     vann:usageNote "Google Jobs recommends using \"HOUR\", \"DAY\", \"WEEK\", \"MONTH\", \"YEAR\"; these values also appear in HR Open's PayCycleIntervalCodeList.json"@en-US ;
     vann:usageNote "USE IN PILOT"@en-US .
