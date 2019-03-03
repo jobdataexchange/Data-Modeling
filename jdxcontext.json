@@ -54,6 +54,7 @@
       "jdx:equivalentEducation": {"@type": "@id"},
       "jdx:equivalentExperience": {"@type": "@id"},
       "jdx:expectedStartDate": {"@type": "xsd:date"},
+      "jdx:experienceDuration": {"@type": "@id"},
       "schema:estimatedSalary": {"@type": "@id"},
       "jdx:evidence": {"@type": "xsd:anyURI"},
       "jdx:evidenceType": {"@type": "@id"},

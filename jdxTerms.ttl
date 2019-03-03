@@ -613,8 +613,8 @@ jdx:experienceDuration a rdfs:Property ;
     rdfs:comment "Length of time of an experience; select from an existing enumeration of such types."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:Experience, jdx:Education, jdx:Credential ; 
-    rdfs:range skos:Concept ;
-    vann:usageNote "Use a value selected from a controlled vocabulary of experience types; encode using the jdx:AnnotatedDefinedTerm entity."@en-US .
+    rdfs:range schema:QuantitativeValue ;
+    vann:usageNote "USE IN PILOT"@en-US .
     
 jdx:experienceType a rdfs:Property ;
     dct:identifier "jdx:experienceType"@en-US ;
