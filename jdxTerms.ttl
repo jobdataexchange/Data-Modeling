@@ -96,7 +96,7 @@ schema:MonetaryAmount a rdfs:Class ;
     
 schema:Organization a rdfs:Class ;
     dct:identifier "schema:Organization"@en-US ;
-    rdfs:comment "An organization such as a corporate body, employer, distribution channel provider"@en-US ;
+    rdfs:comment "An organization such as a corporate body, employer, distribution channel provider."@en-US ;
     rdfs:isDefinedBy <http://schema.org/> ;
     rdfs:label "Organization"@en-US .
     
@@ -764,7 +764,7 @@ schema:isicV4 a rdfs:Property ;
 jdx:jobAgreementType a rdfs:Property ;
     dct:identifier "jdx:jobAgreementType"@en-US ;
     rdfs:label "Job Agreement Type"@en-US ;    
-    rdfs:comment "Type of employment contract agreement (e.g. employee, contract, temporary, seasonal, internship, collectively bargained); select from an existing enumeration of such types."@en-US ;
+    rdfs:comment "Type of employment contract agreement (e.g. employee, contract, temporary, seasonal, internship, under collectively bargaining, eligible for overtime); select from an existing enumeration of such types."@en-US ;
     rdfs:isDefinedBy <https://schema.org> ;
     rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobPosting  ;
     rdfs:range skos:Concept  ;
@@ -961,7 +961,7 @@ schema:numberOfEmployees a rdfs:Property ;
     rdfs:range xsd:integer .
     
 schema:occupationCategory a rdfs:Property ;
-    dct:identifier "schema:occupationCategory"@en-US ;
+    dct:identifier "OrganCategory"@en-US ;
     rdfs:label "Occupation Category"@en-US ;    
     rdfs:comment "Category or categories describing the job; select from an existing enumeration of such types."@en-US ;
     rdfs:isDefinedBy <https://schema.org> ;
