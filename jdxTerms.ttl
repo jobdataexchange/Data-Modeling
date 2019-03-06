@@ -961,7 +961,7 @@ schema:numberOfEmployees a rdfs:Property ;
     rdfs:range xsd:integer .
     
 schema:occupationCategory a rdfs:Property ;
-    dct:identifier "OrganCategory"@en-US ;
+    dct:identifier "occupationCategory"@en-US ;
     rdfs:label "Occupation Category"@en-US ;    
     rdfs:comment "Category or categories describing the job; select from an existing enumeration of such types."@en-US ;
     rdfs:isDefinedBy <https://schema.org> ;
