@@ -696,7 +696,7 @@ jdx:hasPostingInstructions a rdfs:Property ;
 schema:hiringOrganization a rdfs:Property ;
     dct:identifier "schema:hiringOrganization"@en-US ;
     rdfs:label "Hiring Organization"@en-US ;    
-    rdfs:comment "Organization offering the job position."@en-US ;
+    rdfs:comment "Organization making the job offer."@en-US ;
     rdfs:isDefinedBy <https://schema.org> ;
     rdfs:domain jdx:JobMaster, jdx:JobCompetencyProfile, jdx:JobDescription, jdx:JobPosting ;
     rdfs:range schema:Organization ;
@@ -739,7 +739,9 @@ schema:inDefinedTermSet a rdfs:Property ;
 schema:industryType a rdfs:Property ;
     dct:identifier "schema:industryType"@en-US ;
     rdfs:label "Industry Type"@en-US ;    
-    rdfs:comment "An industry associated with the job position; select from an existing enumeration of such types."@en-US ;
+    rdfs:comment "Primary economic activity of an establishment defined as a single physical location where business is conducted or where services or industrial operations are performed (for example, a
+factory, mill, store, hotel, movie theater, mine, farm, airline terminal, sales office, warehouse, or
+central administrative office)."@en-US ;
     rdfs:isDefinedBy <https://schema.org> ;
     rdfs:domain jdx:Education, jdx:Experience, jdx:Credential, jdx:JobMaster, jdx:JobDescription;
     rdfs:range skos:Concept  ;
@@ -1265,9 +1267,9 @@ jdx:securityClearanceRequired a rdfs:Property ;
     rdfs:range xsd:boolean ;
     vann:usageNote "USE IN PILOT"@en-US .
 
-jdx:sensoryRequirements a rdfs:Property ;
-    dct:identifier "jdx:sensoryRequirements"@en-US ;
-    rdfs:label "Sensory Requirements"@en-US ;
+jdx:sensoryRequirement a rdfs:Property ;
+    dct:identifier "jdx:sensoryRequirement"@en-US ;
+    rdfs:label "Sensory Requirement"@en-US ;
     rdfs:comment "Description of sensory requirements and levels necessary to function on the job including hearing and vision." ;     
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobMaster, jdx:jobCompetencyProfile, jdx:JobDescription, jdx:JobPosting ;
