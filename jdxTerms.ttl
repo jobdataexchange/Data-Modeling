@@ -348,7 +348,7 @@ jdx:assessmentType a rdfs:Property ;
     
 jdx:attitudeType a rdfs:Property ;
     dct:identifier "jdx:attitudeType"@en-US ;
-    rdfs:comment "Motivators of performance including values, aspirations and priorities including ways of thinking necessary to successful performance of a job; select from an existing enumeration of such types."@en-US ;
+    rdfs:comment "Motivators of performance including values, aspirations, and priorities necessary to successful performance of task or job; select from an existing enumeration of such types."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:label "Attitude Type"@en-US ;
     rdfs:domain jdx:JobMaster ;
