@@ -1,0 +1,18 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<http://jdx.org/vocabs/scales/> a skos:ConceptScheme ;
+    dct:title "JDX Scale Types"@en-US ;
+    dct:description "Identification of the types of scales that can be applied to concepts defined in concept schemes and competencies defined in competency frameworks."@en-US ;
+    skos:hasTopConcept <http://jdx.org/vocabs/scales/importance>, <http://jdx.org/vocabs/scales/frequency>.
+
+<http://jdx.org/vocabs/scales/importance> a skos:Concept ;
+    skos:prefLabel "Importance"@en-US ;
+    skos:definition "This rating indicates the degree of importance a particular concept is to the job. The possible ratings range from \"Not Important\" (1) to \"Extremely Important\" (5)."@en-US ;
+    skos:inScheme <http://jdx.org/vocabs/scales/> .
+  
+<http://jdx.org/vocabs/scales/frequency> a skos:Concept ;
+    skos:prefLabel "Frequency"@en-US ;
+    skos:definition "Frequency refers to how often a task occurs within a given time period. Values of \"frequently\", \"occasionally\", and \"rarely\" are used to report the percentage of time job incumbents reported that a given task was performed."@en-US ;
+    dct:description "\"Frequently\" includes daily, several times a day, hourly or more; \"Occasionally\" includes more than once a month, more than once a week; and \"Rarely\" includes once a year or less, more than once a year."@en-US ;
+    skos:inScheme <http://jdx.org/vocabs/scales/> .

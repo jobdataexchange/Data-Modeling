@@ -1,0 +1,45 @@
+{
+  "@context": "http://jdx.org/terms/context/",
+  "@graph": [
+    {
+      "@id": "http://jdx.org/vocabs/scales/",
+      "@type": "skos:ConceptScheme",
+      "dcterms:description": {
+        "en-US": "Identification of the types of scales that can be applied to concepts defined in concept schemes and competencies defined in competency frameworks."
+      },
+      "dcterms:title": {
+        "@language": "en-US",
+        "@value": "JDX Scale Types"
+      },
+      "skos:hasTopConcept": [
+        "http://jdx.org/vocabs/scales/importance",
+        "http://jdx.org/vocabs/scales/frequency"
+      ]
+    },
+    {
+      "@id": "http://jdx.org/vocabs/scales/importance",
+      "@type": "skos:Concept",
+      "skos:definition": {
+        "en-US": "This rating indicates the degree of importance a particular concept is to the job. The possible ratings range from \"Not Important\" (1) to \"Extremely Important\" (5)."
+      },
+      "skos:inScheme": "http://jdx.org/vocabs/scales/",
+      "skos:prefLabel": {
+        "en-US": "Importance"
+      }
+    },
+    {
+      "@id": "http://jdx.org/vocabs/scales/frequency",
+      "@type": "skos:Concept",
+      "dcterms:description": {
+        "en-US": "\"Frequently\" includes daily, several times a day, hourly or more; \"Occasionally\" includes more than once a month, more than once a week; and \"Rarely\" includes once a year or less, more than once a year."
+      },
+      "skos:definition": {
+        "en-US": "Frequency refers to how often a task occurs within a given time period. Values of \"frequently\", \"occasionally\", and \"rarely\" are used to report the percentage of time job incumbents reported that a given task was performed."
+      },
+      "skos:inScheme": "http://jdx.org/vocabs/scales/",
+      "skos:prefLabel": {
+        "en-US": "Frequency"
+      }
+    }
+  ]
+}
