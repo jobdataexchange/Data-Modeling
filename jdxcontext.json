@@ -83,7 +83,7 @@
       "schema:jobLocationType": {"@container": "@language"},
       "jdx:jobOpeningNumber": {"@type": "xsd:float"},
       "jdx:jobSchedule": {"@type": "@id"},
-      "jdxjobTerm": {"@type": "@id"},
+      "jdx:jobTerm": {"@type": "@id"},
       "jdx:knowledge": {"@type": "@id"},
       "schema:latitude": {"@type": "xsd:string"},
       "schema:legalName": {"@container": "@language"},
