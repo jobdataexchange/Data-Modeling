@@ -750,19 +750,27 @@ schema:inDefinedTermSet a rdfs:Property ;
     rdfs:range jdx:AnnotatedDefinedTermSet .
     
 schema:industry a rdfs:Property ;
+    dct:identifier "schema:industryCategory"@en-US ;
+    rdfs:label "Industry Category"@en-US ;    
+    rdfs:comment "Description of the primary economic activity of an establishment defined as a single physical location where business is conducted or where services or industrial operations are performed."@en-US ;
+    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:domain jdx:Organization, jdx:JobMaster, jdx:JobDescription;
+    rdfs:range skos:Concept  ;
+    vann:usageNote "Use a value selected from a controlled vocabulary of industry types used in the country where the job is located; e.g., NAICS in the U.S. and ESCO in the European Union; encode using the jdx:AnnotatedDefinedTerm entity."@en-US ;
+    vann:usageNote "NOTE: In a JDX job description, there my be multiple levels ond locations for an organization identified and each may have different industry codes based on the kinds of work performed at those locations; the NAICS industry code applies SOLELY to the location where the work of the job being described will be performed."@en-US.
+    
+schema:industryCategory a rdfs:Property ;
     dct:identifier "schema:industryType"@en-US ;
     rdfs:label "Industry"@en-US ;    
-    rdfs:comment "Primary economic activity of an establishment defined as a single physical location where business is conducted or where services or industrial operations are performed (for example, a
-factory, mill, store, hotel, movie theater, mine, farm, airline terminal, sales office, warehouse, or
-central administrative office)."@en-US ;
+    rdfs:comment "Code for identifying the primary economic activity of an establishment defined as a single physical location where business is conducted or where services or industrial operations are performed."@en-US ;
     rdfs:isDefinedBy <https://schema.org> ;
-    rdfs:domain jdx:QualifyingExperience, jdx:Credential, jdx:JobMaster, jdx:JobDescription;
+    rdfs:domain jdx:Organization, jdx:JobMaster, jdx:JobDescription;
     rdfs:range skos:Concept  ;
     vann:usageNote "Use a value selected from a controlled vocabulary of industry types used in the country where the job is located; e.g., NAICS in the U.S. and ESCO in the European Union; encode using the jdx:AnnotatedDefinedTerm entity."@en-US ;
     vann:usageNote "NOTE: In a JDX job description, there my be multiple levels ond locations for an organization identified and each may have different industry codes based on the kinds of work performed at those locations; the NAICS industry code applies SOLELY to the location where the work of the job being described will be performed."@en-US.
     
 schema:inLanguage a rdfs:Property ;
-    dct:identifier "schema:inLanguag"@en-US ;
+    dct:identifier "schema:inLanguage"@en-US ;
     rdfs:label "In Language"@en-US ;    
     rdfs:comment "The language of the content or performance or used in an action."@en-US ;
     rdfs:isDefinedBy <https://schema.org> ;
