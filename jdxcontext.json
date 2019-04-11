@@ -45,6 +45,7 @@
       "schema:department": {"@type": "@id"},
       "jdx:derivedFom": {"@type": "@id"},
       "schema:description": {"@container": "@language"},
+      "schema:disclaimer": {"@container": "@language"},
       "jdx:distributionChannel": {"@type": "xsd:anyURI"},
       "schema:duns": {"@type": "xsd:string"},
       "schema:duration": {"@type": "xsd:string"},

@@ -496,6 +496,14 @@ schema:description a rdfs:Property ;
     rdfs:range rdf:langString ;
     vann:usageNote "USE IN PILOT"@en-US .
     
+schema:disclaimer a rdfs:Property ;
+    dct:identifier "schema:disclaimer"@en-US ;
+    rdfs:label "Description"@en-US ;    
+    rdfs:comment "Description of any necessary disclaimers for the posiiton or posting."@en-US ;
+    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobPosting ;
+    rdfs:range rdf:langString .
+    
 jdx:distributionChannel a rdfs:Property ;
     dct:identifier "jdx:distributionChannel"@en-US ;
     rdfs:label "Distribution Channel"@en-US ;    
