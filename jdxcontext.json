@@ -64,7 +64,7 @@
       "schema:experienceCategory": {"@type": "@id"},
       "schema:faxNumber": {"@type": "xsd:string"},
       "jdx:fein": {"@type": "xsd:string"},
-      "jdx:formattedDescription": {"@container": "@language"},
+      "jdx:formattedDescription": {"@type": "rdf:HTML"},
       "schema:geo": {"@type": "@id"},
       "jdx:hasCompetencyProfile": {"@type": "@id"},
       "jdx:hasJobDescription": {"@type": "@id"},
