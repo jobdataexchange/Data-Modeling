@@ -494,6 +494,7 @@ schema:description a rdfs:Property ;
     rdfs:isDefinedBy <https://schema.org> ;
     rdfs:domain jdx:AssessmentProfile, jdx:AnnotatedDefinedTerm, jdx:QualifyingExperience, jdx:JobMaster, jdx:JobCompetencyProfile, jdx:JobDescription, jdx:JobPosting, jdx:Credential, schema:MonetaryAmount, schema:ContactPoint, jdx:ScaleAnnotation,  schema:Organization;
     rdfs:range rdf:langString ;
+    vann:usageNote "Some online job boards and other services (e.g., Google Jobs) require the general description of a JobPosting to be HTML tagged; in such instances, use the jdx:formnattedDescription property instead of the schema:description."@en-US ;
     vann:usageNote "USE IN PILOT"@en-US .
     
 schema:disclaimer a rdfs:Property ;
@@ -666,10 +667,10 @@ jdx:fein a rdfs:Property ;
 jdx:formattedDescription a rdfs:Property ;
     dct:identifier "jdx:formattedDescription" ;
     rdfs:label "Formatted Description"@en-US ;    
-    rdfs:comment "Complete representation of the job, including job responsibilities, qualifications, skills, working hours, education requirements, and experience requirements."@en-US ;
+    rdfs:comment "HTML-tagged, complete representation of the job, including job responsibilities, qualifications, skills, working hours, education requirements, and experience requirements."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobMaster, jdx:JobPosting, jdx:jobCompetencyProfile, jdx:JobDescription  ;
-    vann:usageNote "The description should support HTML or other markup as well as plain text."@en-US 
+    vann:usageNote "The description needs to support use of HTML; for language-tagged descriptions without embedded markup, use the schema:description property."@en-US 
     rdfs:range rdf:HTML .
     
 schema:geo a rdfs:Property ;
@@ -1261,7 +1262,8 @@ schema:responsibility a rdfs:Property ;
     rdfs:comment "Key work tasks or activities over which this position exercises some degree of authority, control or leadership."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobMaster, jdx:JobCompetencyProfile, jdx:JobDescription, jdx:JobPosting ; 
-    rdfs:range rdf:langString ;
+    rdfs:range rdf:Concept ;
+    vann:usageNote "Use a value selected from a controlled vocabulary of responsibilities; encode using the jdx:AnnotatedDefinedTerm entity."@en-US ;
     vann:usageNote "USE IN PILOT"@en-US .
     
 jdx:riskExposure a rdfs:Property ;
