@@ -126,6 +126,12 @@ jdx:PostingInstruction a rdfs:Class ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:label "Posting Instructions"@en-US ;
     vann:usageNote "A posting channel usually would be a job board or other advertising medium (HR)."@en-US .
+    
+schema:PropertyValue a rdfs:Class ;
+    dct:identifier "schema:PropertyValue" ;
+    rdfs:comment "A property-value pair, e.g. representing a feature of a product or place."@en-US ;
+    rdfs:isDefinedBy <http://schema.org/> ;
+    rdfs:label "Property Value"@en-US .
         
 jdx:QualifyingExperience a rdfs:Class ;
     dct:identifier "jdx:QualifyingExperience" ;
@@ -461,10 +467,26 @@ schema:currency a rdfs:Property ;
     rdfs:domain schema:MonetaryAmountDistribution, schema:MonetaryAmount  ;
     rdfs:range xsd:string ;
     vann:usageNote "USE IN PILOT"@en-US .
+
+schema:dateCreated a rdfs:Property ;
+    dct:identifier "schema:dateCreated" ;
+    rdfs:comment "Date on which the position was created"@en-US ;
+    rdfs:isDefinedBy <http://schema.org/> ;
+    rdfs:label "Date Created"@en-US ;
+    rdfs:domain jdx:JobDescription  ;
+    rdfs:range xsd:dateTime .
     
+schema:dateModified a rdfs:Property ;
+    dct:identifier "schema:dateCreated" ;
+    rdfs:comment "Date on which the position was modified."@en-US ;
+    rdfs:isDefinedBy <http://schema.org/> ;
+    rdfs:label "Date Modified"@en-US ;
+    rdfs:domain jdx:JobDescription  ;
+    rdfs:range xsd:dateTime .
+        
 schema:datePosted a rdfs:Property ;
     dct:identifier "schema:datePosted" ;
-    rdfs:comment "The date of posting by a channel."@en-US ;
+    rdfs:comment "Date of posting by a channel."@en-US ;
     rdfs:isDefinedBy <http://schema.org/> ;
     rdfs:label "Date Posted"@en-US ;
     rdfs:domain jdx:JobPosting  ;
@@ -1179,6 +1201,14 @@ jdx:programConcentration a rdfs:Property ;
     rdfs:domain jdx:QualifyingExperience ;
     rdfs:range xsd:langString .
     
+schema:propertyID a rdfs:Property ;
+    dct:identifier "schema:propertyID" ;
+    rdfs:label "Property Identifier"@en-US ;    
+    rdfs:comment "URL indicating the type of the property, either pointing to an external vocabulary, or a Web resource that describes the property (e.g. a glossary entry)."@en-US ;
+    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:domain schema:PropertyValue ;
+    rdfs:range xsd:string .
+    
 jdx:qualificationSummary a rdfs:Property ;
     dct:identifier "jdx:qualificationSummary" ;
     rdfs:label "Qualification Summary"@en-US ;    
@@ -1468,8 +1498,8 @@ schema:value a rdfs:Property ;
     rdfs:label "Value"@en-US ;    
     rdfs:comment "The value of the quantitative value or property value node. (node?)"@en-US ;
     rdfs:isDefinedBy <https://schema.org> ;
-    rdfs:domain schema:QuantitativeValue, schema:MonetaryAmount  ;
-    rdfs:range xsd:float ;
+    rdfs:domain schema:PropertyValue, schema:MonetaryAmount, schema:QuantitativeValue  ;
+    rdfs:range xsd:string ;
     vann:usageNote "USE IN PILOT"@en-US .
     
 jdx:workActivity a rdfs:Property ;
