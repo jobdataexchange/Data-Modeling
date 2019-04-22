@@ -124,6 +124,7 @@
       "jdx:preferredExperience": {"@type": "@id"},
       "jdx:program": {"@container": "@language"},
       "jdx:programConcentration": {"@container": "@language"},
+      "schema:propertyID": {"@type": "xsd:anyURI"},
       "jdx:qualificationSummary": {"@container": "@language"},
       "jdx:reportingRelationship": {"@container": "@language"},
       "jdx:required": {"@type": "xsd:boolean"},
@@ -156,7 +157,7 @@
       "vann:usageNote": {"@container": "@language"},
       "schema:validFrom": {"@type": "xsd:dateTime"},
       "schema:validThrough": {"@type": "xsd:dateTime"},
-      "schema:value": {"@type": "xsd:float"},
+      "schema:value": {"@type": "xsd:string"},
       "jdx:workActivity": {"@type": "xsd:string"},
       "jdx:workLanguage": {"@type": "xsd:language"},
       "schema:workHours": {"@container": "@language"}  

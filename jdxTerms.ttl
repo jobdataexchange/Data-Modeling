@@ -129,9 +129,10 @@ jdx:PostingInstruction a rdfs:Class ;
     
 schema:PropertyValue a rdfs:Class ;
     dct:identifier "schema:PropertyValue" ;
-    rdfs:comment "A property-value pair, e.g. representing a feature of a product or place."@en-US ;
+    rdfs:comment "A property-value pair, e.g. representing a feature of an entity."@en-US ;
     rdfs:isDefinedBy <http://schema.org/> ;
-    rdfs:label "Property Value"@en-US .
+    rdfs:label "Property Value"@en-US ;
+    vann:usageNote "Use PropertyValue sparingly! Always use a specific property from a known namespace when they serve your purpose. Using PropertyValue as a substitute for such properties will not trigger the same linked data function as the predicate of an RDF triple as will a more specific property."@en-US .
         
 jdx:QualifyingExperience a rdfs:Class ;
     dct:identifier "jdx:QualifyingExperience" ;
@@ -793,6 +794,16 @@ schema:industry a rdfs:Property ;
 schema:industryCode a rdfs:Property ;
     dct:identifier "schema:industryCode" ;
     rdfs:label "Industry Code"@en-US ;    
+    rdfs:comment "Code from a controlled vocabulary of industry types identifying the primary economic activity of an establishment defined as a single physical location where business is conducted or where services or industrial operations are performed."@en-US ;
+    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:domain jdx:Organization, jdx:JobMaster, jdx:JobDescription;
+    rdfs:range skos:Concept  ;
+    vann:usageNote "Use a value selected from a controlled vocabulary of industry types used in the country where the job is located; e.g., NAICS in the U.S. and ESCO in the European Union; encode using the jdx:AnnotatedDefinedTerm entity."@en-US ;
+    vann:usageNote "NOTE: In a JDX job description, there my be multiple levels ond locations for an organization identified and each may have different industry codes based on the kinds of work performed at those locations; the NAICS industry code applies SOLELY to the location where the work of the job being described will be performed."@en-US.
+    
+schema:industryCode a rdfs:Property ;
+    dct:identifier "schema:industryCode" ;
+    rdfs:label "Industry Code"@en-US ;    
     rdfs:comment "Code from a controlled vocabulary of industry types identifying the primary economic activity of an establishment defined as a single physical location where business is conducted or where services or industrial operations are performed.
 "@en-US ;
     rdfs:isDefinedBy <https://schema.org> ;
@@ -1090,7 +1101,7 @@ schema:percentile90 a rdfs:Property ;
     rdfs:domain schema:MonetaryAmountDistribution  ;
     rdfs:range xsd:float .
     
-jdx:physicalActivityCategory a rdfs:Property ;
+jdx:physicalActivity a rdfs:Property ;
     dct:identifier "jdx:physicalActivityCategory" ;
     rdfs:label "Physical Activity Category"@en-US ;
     rdfs:comment "Resource identifying types of physical activity associated with a job." ;    
