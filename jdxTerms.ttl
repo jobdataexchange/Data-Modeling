@@ -580,7 +580,7 @@ jdx:employerOverview a rdfs:Property ;
 jdx:employmentUnit a rdfs:Property ;
     dct:identifier "jdx:employmentUnit" ;
     rdfs:label "Employment Unit"@en-US ;    
-    rdfs:comment "Department or unit where the employee reports and/or in which the job is to be performed."@en-US ;
+    rdfs:comment "Facility, department or unit within an establishment where the employee reports and/or in which the job is to be performed."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobDescription, jdx:JobPosting, jdx:JobMaster ;
     rdfs:range schema:Organization ;
@@ -751,7 +751,8 @@ schema:hiringOrganization a rdfs:Property ;
     rdfs:comment "The identifier for the position that may be used externally in an advertisement."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:jobMaster, jdx:JobCompetencyProfile, jdx:JobDescription, jdx:JobPosting ;
-    rdfs:range xsd:string ;
+    rdfs:range schema:PropertyValue ;
+    vann:usageNote "The identifier property in JDX has a constrained range of schema:PropertyValue. Best practice is to use name property to textually identify the type of identifier, value property to hold  the textual value of the identifier, and the properytID property to identify by URI the property from a JDX or other namespace."
     vann:usageNote "USE IN PILOT"@en-US .
     
 jdx:immediateStartIndicator a rdfs:Property ;
@@ -785,14 +786,15 @@ schema:industry a rdfs:Property ;
     rdfs:comment "Description of the primary economic activity of an establishment defined as a single physical location where business is conducted or where services or industrial operations are performed."@en-US ;
     rdfs:isDefinedBy <https://schema.org> ;
     rdfs:domain jdx:Organization, jdx:JobMaster, jdx:JobDescription;
-    rdfs:range skos:Concept  ;
+    rdfs:range  rdf:langString ;
     vann:usageNote "Use a value selected from a controlled vocabulary of industry types used in the country where the job is located; e.g., NAICS in the U.S. and ESCO in the European Union; encode using the jdx:AnnotatedDefinedTerm entity."@en-US ;
     vann:usageNote "NOTE: In a JDX job description, there my be multiple levels ond locations for an organization identified and each may have different industry codes based on the kinds of work performed at those locations; the NAICS industry code applies SOLELY to the location where the work of the job being described will be performed."@en-US.
     
-schema:industryCategory a rdfs:Property ;
-    dct:identifier "schema:industryType" ;
-    rdfs:label "Industry"@en-US ;    
-    rdfs:comment "Code for identifying the primary economic activity of an establishment defined as a single physical location where business is conducted or where services or industrial operations are performed."@en-US ;
+schema:industryCode a rdfs:Property ;
+    dct:identifier "schema:industryCode" ;
+    rdfs:label "Industry Code"@en-US ;    
+    rdfs:comment "Code from a controlled vocabulary of industry types identifying the primary economic activity of an establishment defined as a single physical location where business is conducted or where services or industrial operations are performed.
+"@en-US ;
     rdfs:isDefinedBy <https://schema.org> ;
     rdfs:domain jdx:Organization, jdx:JobMaster, jdx:JobDescription;
     rdfs:range skos:Concept  ;
