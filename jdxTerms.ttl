@@ -1033,6 +1033,14 @@ schema:longitude a rdfs:Property ;
     rdfs:range xsd:string  ;
     vann:usageNote "USE IN PILOT"@en-US .
     
+schema:mainEntityOfPage a rdfs:Property ;
+    dct:identifier "schema:mainEntityOfPage" ;
+    rdfs:label "Website"@en-US ;    
+    rdfs:comment "Indicates a page (or other CreativeWork) for which this thing is the main entity being described."@en-US ;
+    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:domain schema:Organization, jdx:JobMaster, jdx:JobDescription, jdx:jobPosting ;
+    rdfs:range schema:WebPage .
+
 schema:maxValue a rdfs:Property ;
     dct:identifier "schema:maxValue" ;
     rdfs:label "Maximum Value"@en-US ;    
