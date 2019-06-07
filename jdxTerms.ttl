@@ -11,6 +11,8 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+@@@
+
 jdx:AnnotatedDefinedTerm a rdfs:Class ;
     dct:identifier "jdx:AnnotatedDefinedTerm";
     rdfs:comment "A word, name, acronym, phrase, defined in a controlled value space (e.g., taxonomy, glossary, dictionary, tag list, and other forms of enumeration)."@en-US ;
