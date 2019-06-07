@@ -113,6 +113,7 @@
       "schema:occupationCategory": {"@type": "@id"},
       "jdx:oganization": {"@type": "@id"},
       "schema:parentOrganization": {"@type": "@id"},
+      "jdx:payCycleInterval": {"@type": "@id"},
       "schema:percentile10": {"@type": "xsd:float"},
       "schema:percentile25": {"@type": "xsd:float"},
       "schema:percentile75": {"@type": "xsd:float"},
