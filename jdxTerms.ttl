@@ -76,7 +76,7 @@ jdx:JobMaster a rdfs:Class ;
 jdx:JobPosting a rdfs:Class ;
     dct:identifier "jdx:JobPosting" ;
     rdfs:comment "Entity describing an on-line advertisement for filling one or more job openings."@en-US ;
-    dct:description "Entity that contains information on the employer and the job position based on a job description as well as how to apply for the job opening and how long the posting is valid."@en-US
+    dct:description "Entity that contains information on the employer and the job position based on a job description as well as how to apply for the job opening and how long the posting is valid."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:label "Job Posting"@en-US ;
     vann:usageNote "USE IN PILOT"@en-US .
@@ -675,7 +675,7 @@ jdx:formattedDescription a rdfs:Property ;
     rdfs:comment "HTML-tagged summary of the salient aspects of the job, including job responsibilities, qualifications, skills, working hours, education requirements, and experience requirements."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobMaster, jdx:JobPosting, jdx:jobCompetencyProfile, jdx:JobDescription  ;
-    vann:usageNote "For language-tagged descriptions without embedded HTML markup, use the schema:description property."@en-US 
+    vann:usageNote "For language-tagged descriptions without embedded HTML markup, use the schema:description property."@en-US ;
     rdfs:range rdf:HTML .
     
 schema:geo a rdfs:Property ;
@@ -783,7 +783,7 @@ schema:identifier a rdfs:Property ;
     rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain jdx:jobMaster, jdx:JobCompetencyProfile, jdx:JobDescription, jdx:JobPosting ;
     rdfs:range schema:PropertyValue ;
-    vann:usageNote "NOTE: Identifier in JDX has a constrained range of schema:PropertyValue. Best practice is to use schema:name property to textually identify the type of identifier, schema:value property to hold the textual value of the identifier, and the schema;properytID for a URI indicating the type of identifier."
+    vann:usageNote "NOTE: Identifier in JDX has a constrained range of schema:PropertyValue. Best practice is to use schema:name property to textually identify the type of identifier, schema:value property to hold the textual value of the identifier, and the schema;properytID for a URI indicating the type of identifier." ;
     vann:usageNote "NOTE: JDX defines subproperties called jdx:positionID and jdx:postingID to handle the employer's identifier for a particular position or posting."@en-US ;
     vann:usageNote "USE IN PILOT"@en-US .
     
@@ -792,7 +792,7 @@ dct:identifier a rdfs:Property ;
     rdfs:label "Identifier"@en-US ;    
     rdfs:comment "An unambiguous reference to the resource within a given context."@en-US ;
     rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
-    rdfs:domain as:Rubric  ;
+    rdfs:domain asn:Rubric  ;
     rdfs:range xsd:string .
     
 schema:incentiveCompensation a rdfs:Property ;
@@ -897,7 +897,7 @@ jdx:jobOpeningNumber a rdfs:Property ;
     rdfs:label "Job Opening Number"@en-US ;    
     rdfs:comment "Number of positions open at this location."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
-    rdfs:domain schema:Place, ;
+    rdfs:domain schema:Place ;
     rdfs:range xsd:float .
     
 jdx:jobSchedule a rdfs:Property ;
@@ -1122,7 +1122,7 @@ jdx:payCycleInterval a rdfs:Property ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain schema:MonetaryAmount  ;
     rdfs:range skos:Concept ;
-    vann:usageNote "Use a value selected from a controlled vocabulary of pay cycles (e.g., the HR Open PayCycleIntervalCodeList); encode using the jdx:AnnotatedDefinedTerm entity."@en-US ;
+    vann:usageNote "Use a value selected from a controlled vocabulary of pay cycles (e.g., the HR Open PayCycleIntervalCodeList); encode using the jdx:AnnotatedDefinedTerm entity."@en-US .
     
 schema:percentile10 a rdfs:Property ;
     dct:identifier "schema:Percentile10" ;
@@ -1209,8 +1209,8 @@ jdx:postingID a rdfs:Property ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:subPropertyOf schema:identifier ;
     rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobPosting  ;
-    rdfs:range xsd:string 
-    vann:usageNote "For the identifier of the position for this posting, use jdx:positionID."@en-US ..
+    rdfs:range xsd:string ;
+    vann:usageNote "For the identifier of the position for this posting, use jdx:positionID."@en-US .
     
 jdx:postingRequestor a rdfs:Property ;
     dct:identifier "jdx:postingRequestor" ;
@@ -1549,7 +1549,7 @@ jdx:totalJobOpenings a rdfs:Property ;
     rdfs:label "Total Job Openings"@en-US ;    
     rdfs:comment "Total number of positions open at all locations."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
-    rdfs:domain JobPosting ;
+    rdfs:domain jdx:JobPosting ;
     rdfs:range xsd:float .
     
 jdx:travelRequirement a rdfs:Property ;
@@ -1581,7 +1581,7 @@ schema:url a rdfs:Property ;
 schema:validFrom a rdfs:Property ;
     dct:identifier "schema:validThrough" ;
     rdfs:label "Valid Through"@en-US ;    
-    rdfs:comment "The date from which the job posting is valid in ISO 8601 format; for example, \"2017-02-24\" or \"2017-02-24T19:33:17+00:00\."@en-US ;
+    rdfs:comment "The date from which the job posting is valid in ISO 8601 format; for example, \"2017-02-24\" or \"2017-02-24T19:33:17+00:00\"."@en-US ;
     rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain jdx:JobPosting ;
     rdfs:range xsd:dateTime ;
