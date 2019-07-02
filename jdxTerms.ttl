@@ -13,7 +13,7 @@
 
 jdx:AnnotatedDefinedTerm a rdfs:Class ;
     dct:identifier "jdx:AnnotatedDefinedTerm";
-    rdfs:comment "A word, name, acronym, phrase, defined in a controlled value space (e.g., taxonomy, glossary, dictionary, tag list, and other forms of enumeration)."@en-US ;
+    rdfs:comment "Word, name, acronym, phrase, defined in a controlled value space (e.g., taxonomy, glossary, dictionary, tag list, and other forms of enumeration)."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:label "Annotated Defined Term"@en-US ;
     vann:usageNote "Used in the context of JDX to assign terms from occupation, industry and instructional program classifications, skills and abilities, and abstract concepts to JDX entities. Through the class' relationship with the jdx:ScaledAnnotation class, terms can be conditioned through applications of scales for attributes such as importance and frequency."@en-US ;
@@ -34,7 +34,7 @@ jdx:Condition a rdfs:Class ;
     
 schema:ContactPoint a rdfs:Class ;
     dct:identifier "schema:ContactPoint" ;
-    rdfs:comment "A contact point—e.g., for information about a job opening or interview."@en-US ;
+    rdfs:comment "Contact point—for example, for information about a job opening or interview."@en-US ;
     rdfs:isDefinedBy <http://schema.org/> ;
     rdfs:label "Contact Point"@en-US .
     
@@ -68,17 +68,17 @@ jdx:JobDescription a rdfs:Class ;
     
 jdx:JobMaster a rdfs:Class ;
     dct:identifier "jdx:JobMaster" ;
-    rdfs:comment "Entity used internally as rdfs:domain or \"master\" to which all properties used in JobDescription, JobPosting, and JobCompetencyProfile are applicable. "@en-US ;
+    rdfs:comment "Entity used internally as \"master\" to which all properties used in JobDescription, JobPosting, and JobCompetencyProfile are applicable."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:label "Job Master"@en-US ;
-    vann:usageNote "Do NOT use jdx:JobMaster in an entity in any public facing resource."@en-US .
+    vann:usageNote "The jdx:JobDescription, jdx:JobCompetencyProfile and jdx:JobPosting define windows into the content of the jdx:JobMaster. Do NOT use jdx:JobMaster as an entity in any public facing resource."@en-US .
     
 jdx:JobPosting a rdfs:Class ;
     dct:identifier "jdx:JobPosting" ;
     rdfs:comment "Entity describing an on-line advertisement for filling one or more job openings."@en-US ;
+    dct:description "Entity that contains information on the employer and the job position based on a job description as well as how to apply for the job opening and how long the posting is valid."@en-US
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:label "Job Posting"@en-US ;
-    vann:usageNote "Entity that contains information on the employer and the job position based on a job description as well as how to apply for the job opening and how long the posting is valid."@en-US ;
     vann:usageNote "USE IN PILOT"@en-US .
             
 schema:MonetaryAmountDistribution a rdfs:Class ;
@@ -89,47 +89,48 @@ schema:MonetaryAmountDistribution a rdfs:Class ;
         
 schema:MonetaryAmount a rdfs:Class ;
     dct:identifier "schema:MonetaryAmount" ;
-    rdfs:comment "A monetary value or range."@en-US ;
+    rdfs:comment "Monetary value or range."@en-US ;
     rdfs:isDefinedBy <http://schema.org/> ;
     rdfs:label "Monetary Amount"@en-US ;
     vann:usageNote "This type can be used to describe an amount of money such as $50 USD, or a range as in describing a bank account being suitable for a balance between £1,000 and £1,000,000 GBP, or the value of a salary, etc."@en-US .
     
 schema:Organization a rdfs:Class ;
     dct:identifier "schema:Organization" ;
-    rdfs:comment "An organization such as a corporate body, employer, distribution channel provider."@en-US ;
+    rdfs:comment "Organization such as a corporate body, employer, distribution channel provider."@en-US ;
     rdfs:isDefinedBy <http://schema.org/> ;
     rdfs:label "Organization"@en-US .
     
 schema:Person a rdfs:Class ;
     dct:identifier "schema:Person" ;
-    rdfs:comment "A human being regarded as an individual. (Oxford)"@en-US ;
+    rdfs:comment "Human being regarded as an individual."@en-US ;
     rdfs:isDefinedBy <http://schema.org/> ;
     rdfs:label "Person"@en-US .
     
 schema:Place a rdfs:Class ;
     dct:identifier "schema:Place" ;
-    rdfs:comment "A fixed physical location."@en-US ;
+    rdfs:comment "Fixed physical location."@en-US ;
     rdfs:isDefinedBy <http://schema.org/> ;
     rdfs:label "Location"@en-US ;
     vann:usageNote "USE IN PILOT"@en-US .
     
 schema:PostalAddress a rdfs:Class ;
     dct:identifier "schema:PostalAddress" ;
-    rdfs:comment "The mailing address of an entity."@en-US ;
+    rdfs:comment "Mailing address of an entity."@en-US ;
     rdfs:isDefinedBy <http://schema.org/> ;
     rdfs:label "Postal Address"@en-US ;
     vann:usageNote "USE IN PILOT"@en-US .
     
 jdx:PostingInstruction a rdfs:Class ;
     dct:identifier "jdx:PostingInstruction" ;
-    rdfs:comment "An entity providing information about where and how a posting should be communicated."@en-US ;
+    rdfs:comment "Entity providing information about where and how a posting should be communicated."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:label "Posting Instructions"@en-US ;
     vann:usageNote "A posting channel usually would be a job board or other advertising medium (HR)."@en-US .
     
 schema:PropertyValue a rdfs:Class ;
     dct:identifier "schema:PropertyValue" ;
-    rdfs:comment "A property-value pair, e.g. representing a feature of an entity."@en-US ;
+    rdfs:comment "Property-value pair, e.g. representing a feature of an entity."@en-US ;
+    dct:description "Entity provides the means to define a needed property not otherwise defined in the JDX schema or profile."@en-US ;
     rdfs:isDefinedBy <http://schema.org/> ;
     rdfs:label "Property Value"@en-US ;
     vann:usageNote "Use PropertyValue sparingly! Always use a specific property from a known namespace when they serve your purpose. Using PropertyValue as a substitute for such properties will not trigger the same linked data function as the predicate of an RDF triple as will a more specific property."@en-US .
@@ -139,18 +140,19 @@ jdx:QualifyingExperience a rdfs:Class ;
     rdfs:comment "Entity describing verifiable work, education or training experience supporting a person's qualification to perform the tasks and responsibilities of a position."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:label "QualifyingExperience"@en-US ;
+    vann:usageNote "A QualifyingExperience that results in the award of some form of credential should use the jdx:Credential class to describe that award." ;
     vann:usageNote "USE IN PILOT"@en-US .
     
 schema:QuantitativeValue a rdfs:Class ;
     dct:identifier "schema:QuantitativeValue" ;
-    rdfs:comment "A point value or interval for product characteristics and other purposes."@en-US ;
+    rdfs:comment "Point value or interval for product characteristics and other purposes."@en-US ;
     rdfs:isDefinedBy <http://schema.org/> ;
     rdfs:label "Quantitative Value"@en-US .
     
-jdx:Rubric a rdfs:Class ;
+asn:Rubric a rdfs:Class ;
     dct:identifier "jdx:Rubric" ;
-    rdfs:comment "Resosurce to define assessment criteria and their scoring"@en-US ;
-    rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
+    rdfs:comment "Resource for identifying assessment criteria and their scoring."@en-US ;
+    rdfs:isDefinedBy <http://purl.org/asn/schema/core/> ;
     rdfs:label "Rubric"@en-US .
     
 jdx:ScaleAnnotation a rdfs:Class ;
@@ -174,7 +176,7 @@ jdx:ability a rdfs:Property ;
     
 jdx:acquiredInternally a rdfs:Property ;
     dct:identifier "jdx:acquiredInternally" ;
-    rdfs:comment "Whether or not a requirement in a poosting may be acquired post-hire."@en-US ;
+    rdfs:comment "Whether or not a requirement in a posting may be acquired post-hire."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:label "Acquired Internally"@en-US ;
     rdfs:domain jdx:ScaleAnnotation ;
@@ -182,12 +184,12 @@ jdx:acquiredInternally a rdfs:Property ;
     
 jdx:acquisitionDifficulty a rdfs:Property ;
     dct:identifier "jdx:acquisitionDifficulty" ;
-    rdfs:comment "A rating or score representing the difficulty of the particular entity to acquire."@en-US ;
+    rdfs:comment "Rating or score representing the difficulty of the particular entity to acquire."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:label "Acquisition Difficulty"@en-US ;
     rdfs:domain jdx:ScaleAnnotation  ;
     rdfs:range xsd:float  ;
-    vann:usageNote "The scale may be applied to any appropriate controlled voabulary concept such as knowledge, skill, and ability as identified in the associated jdx:AnnotationDefinedTerm."@en-US ;
+    vann:usageNote "The scale may be applied to any appropriate controlled vocabulary concept such as knowledge, skill, and ability as identified in the associated jdx:AnnotationDefinedTerm."@en-US ;
     vann:usageNote "USE IN PILOT"@en-US .
     
 schema:address a rdfs:Property ;
@@ -201,9 +203,9 @@ schema:address a rdfs:Property ;
     
 schema:addressCountry a rdfs:Property ;
     dct:identifier "schema:addressCountry" ;
-    rdfs:comment "The relavant country of the resource. For example, USA."@en-US ;
+    rdfs:comment "The relevant country of the resource. For example, USA."@en-US ;
     rdfs:isDefinedBy <http://schema.org/> ;
-    rdfs:label "Country Code"@en-US ;
+    rdfs:label "Address Country"@en-US ;
     rdfs:domain schema:PostalAddress  ;
     rdfs:range xsd:string ;
     vann:usageNote "USE IN PILOT"@en-US .
@@ -224,7 +226,7 @@ schema:addressRegion a rdfs:Property ;
     rdfs:label "Address Region"@en-US ;
     rdfs:domain schema:PostalAddress  ;
     rdfs:range xsd:string  ;
-    vann:usageNote "The relevant state, province, territory or other subdivision of a nation state."@en-US ;
+    vann:usageNote "The relevant state, province, territory or other subdivision of a nation."@en-US ;
     vann:usageNote "USE IN PILOT"@en-US .   
     
 jdx:alternativeCondition a rdfs:Property ;
@@ -274,7 +276,7 @@ jdx:annotation a rdfs:Property ;
     
  jdx:annotatedTerm a rdfs:Property ;
     dct:identifier "jdx:annotatedTerm" ;
-    rdfs:comment "The canonical term identified by the AnnotatedDefinedTerm."@en-US ;
+    rdfs:comment "Concept"@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:label "Annotated Term"@en-US ;
     rdfs:domain jdx:ScaleAnnotation, jdx:JobMaster, jdx:CompetencyProfile, jdx:JobDescription, jdx:JobPosting ;
@@ -374,7 +376,7 @@ schema:baseSalary a rdfs:Property ;
     rdfs:comment "Base salary of the job or of an employee in an employee role including minimum and maximum salary and unit value (e.g., hour, day, week, month, or year)."@en-US ;
     rdfs:isDefinedBy <http://schema.org/> ;
     rdfs:label "Base Salary"@en-US ;
-    rdfs:domain jdx:JobMaster  ;
+    rdfs:domain jdx:JobMaster, jdx:JobPosting  ;
     rdfs:range schema:MonetaryAmount ;
     vann:usageNote "USE IN PILOT"@en-US .
     
@@ -420,7 +422,7 @@ jdx:conceptKeyword a rdfs:Property ;
     rdfs:comment "Word or phrase used to refine and describe significant aspects of the entity."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:label "Concept Keyword"@en-US ;
-    rdfs:domain xsd:AssessmentProfile  ;
+    rdfs:domain jdx:AssessmentProfile  ;
     rdfs:range rdf:langString .
 
 schema:contactPoint a rdfs:Property ;
@@ -445,10 +447,10 @@ jdx:credentialCategory a rdfs:Property ;
     rdfs:comment "Type of credential such as badge, certification, bachelor degree; select from an existing enumeration of such types."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:label "Credential Category"@en-US ;
-    rdfs:domain xsd:Credential  ;
+    rdfs:domain jdx:Credential  ;
     rdfs:range skos:Concept  ;
     owl:equivalentProperty: "http://purl.org/ctdl/terms/credentialType" ;
-    vann:usageNote "Use a value selected from a controlled vocabulary of credential types; encode using the jdx:AnnotatedDefinedTerm entity."@en-US .
+    vann:usageNote "Use a value selected from a controlled vocabulary of credential types (e.g., credential subclasses from CTDL); encode using the jdx:AnnotatedDefinedTerm entity."@en-US .
     
 asn:criterionFor a rdfs:Property ;
     dct:identifier "asn:criterionFor" ;
@@ -461,8 +463,8 @@ asn:criterionFor a rdfs:Property ;
 schema:currency a rdfs:Property ;
     dct:identifier "schema:currency" ;
     rdfs:label "Currency"@en-US ;    
-    rdfs:comment "The currency (e.g., USD) used for the main salary information in this job posting or for this employee."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:comment "Currency designation (e.g., USD)."@en-US ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain schema:MonetaryAmountDistribution, schema:MonetaryAmount  ;
     rdfs:range xsd:string ;
     vann:usageNote "USE IN PILOT"@en-US .
@@ -512,17 +514,17 @@ schema:description a rdfs:Property ;
     dct:identifier "schema:description" ;
     rdfs:label "Description"@en-US ;    
     rdfs:comment "A description of the item."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain jdx:AssessmentProfile, jdx:AnnotatedDefinedTerm, jdx:QualifyingExperience, jdx:JobMaster, jdx:JobCompetencyProfile, jdx:JobDescription, jdx:JobPosting, jdx:Credential, schema:MonetaryAmount, schema:ContactPoint, jdx:ScaleAnnotation,  schema:Organization;
     rdfs:range rdf:langString ;
-    vann:usageNote "Some online job boards and other services (e.g., Google Jobs) require the general description of a JobPosting to be HTML tagged; in such instances, use the jdx:formnattedDescription property instead of the schema:description."@en-US ;
+    vann:usageNote "Some online job boards and other services (e.g., Google Jobs) require the general description of a JobPosting to be HTML tagged; in such instances, use the jdx:formattedDescription property instead of the schema:description."@en-US ;
     vann:usageNote "USE IN PILOT"@en-US .
     
-schema:disclaimer a rdfs:Property ;
-    dct:identifier "schema:disclaimer" ;
+jdx:disclaimer a rdfs:Property ;
+    dct:identifier "jdx:disclaimer" ;
     rdfs:label "Description"@en-US ;    
-    rdfs:comment "Statement that denies something with regard to a statement made or omitted by the employing entity in the position or posting."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:comment "Statement that denies aspects of a statement made or omitted by the employing entity in the position or posting."@en-US ;
+    rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobPosting ;
     rdfs:range rdf:langString .
     
@@ -531,14 +533,14 @@ jdx:distributionChannel a rdfs:Property ;
     rdfs:label "Distribution Channel"@en-US ;    
     rdfs:comment "Identifies a job board or media channel associated with a job posting."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
-    rdfs:domain jdx:PostingInstructions  ;
+    rdfs:domain jdx:PostingInstruction  ;
     rdfs:range xsd:anyURI .
     
 schema:duns a rdfs:Property ;
     dct:identifier "schema:duns" ;
     rdfs:label "DUNS"@en-US ;    
     rdfs:comment "Dun & Bradstreet DUNS number for identifying an organization or business person."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain schema:Organization  ;
     rdfs:range xsd:string .
     
@@ -546,14 +548,14 @@ schema:duration a rdfs:Property ;
     dct:identifier "schema:duration" ;
     rdfs:label "Duration"@en-US ;    
     rdfs:comment "Duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain schema:MonetaryValueDistribution, jdx:QualifyingExperience, jdx:Credential ;
     rdfs:range xsd:string .
     
 jdx:educationLevel a rdfs:Property ;
     dct:identifier "schema:educationLevel" ;
     rdfs:label "Education Level"@en-US ;    
-    rdfs:comment "A word or phrase identifying the location of the person in terms of his or her progression through an education or training context; select from an existing enumeration of such types."@en-US ;
+    rdfs:comment "Word or phrase identifying the location of the person in terms of his or her progression through an education or training context; select from an existing enumeration of such types."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:QualifyingExperience, jdx:JobMaster, jdx:JobDescription, jdx:JobPosting  ;
     rdfs:range skos:Concept  ;
@@ -563,7 +565,7 @@ schema:email a rdfs:Property ;
     dct:identifier "schema:email" ;
     rdfs:label "Email Address"@en-US ;    
     rdfs:comment "Email address of an organization or person."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain schema:Organization, schema:ContactPoint  ;
     rdfs:range xsd:string .
      
@@ -571,7 +573,7 @@ jdx:employerOverview a rdfs:Property ;
     dct:identifier "jdx:employerOverview" ;
     rdfs:label "Employer Overview"@en-US ;    
     rdfs:comment "Description of the employer, career opportunities and work environment."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain jdx:JobMaster, jdx:JobPosting  ;
     rdfs:range rdf:langString ;
     vann:usageNote "USE IN PILOT"@en-US .
@@ -610,6 +612,7 @@ jdx:equivalentEducation a rdfs:Property ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:Condition, jdx:JobMaster, jdx:JobDescription, jdx:jobPosting ;
     rdfs:range jdx:QualifyingExperience ;
+    vann:usageNote "An educational experience <u>without</u> award of a credential should be recorded with a range of jdx:QualifyingExperience. An educational experience <u>with</u> award of a credential should be recoded with a range of jdxCredential, not jdx:QualifyingExperience." ;
     vann:usageNote "USE IN PILOT"@en-US .
     
 schema:estimatedSalary a rdfs:Property ;
@@ -617,14 +620,14 @@ schema:estimatedSalary a rdfs:Property ;
     rdfs:label "Estimated Salary"@en-US ;    
     rdfs:comment "Description of the estimated salary for a job posting based on a variety of variables including, but not limited to industry, job title, and location."@en-US ;
     dct:description "The estimated salary is usually computed by outside organizations and therefore the hiring organization is not bound to this estimated salary."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobPosting  ;
     rdfs:range schema:MonetaryAmountDistribution .
     
 jdx:evidence a rdfs:Property ;
     dct:identifier "jdx:evidence" ;
     rdfs:label "Evidence"@en-US ;    
-    rdfs:comment "The referenced artifact or performance confirming or supporting an assertion."@en-US ;
+    rdfs:comment "Referenced artifact or performance confirming or supporting an assertion."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:QualifyingExperience, jdx:Credential  ;
     rdfs:range xsd:anyUri .
@@ -651,8 +654,8 @@ jdx:experienceCategory a rdfs:Property ;
 schema:faxNumber a rdfs:Property ;
     dct:identifier "schema:faxNumber" ;
     rdfs:label "Fax Number"@en-US ;    
-    rdfs:comment "The fax number of an organization or person."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:comment "Fax number of an organization or person."@en-US ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain schema:Place, schema:Organization, schema:ContactPoint  ;
     rdfs:range xsd:string ;
     vann:usageNote "USE IN PILOT"@en-US .
@@ -669,17 +672,17 @@ jdx:fein a rdfs:Property ;
 jdx:formattedDescription a rdfs:Property ;
     dct:identifier "jdx:formattedDescription" ;
     rdfs:label "Formatted Description"@en-US ;    
-    rdfs:comment "HTML-tagged, complete representation of the job, including job responsibilities, qualifications, skills, working hours, education requirements, and experience requirements."@en-US ;
+    rdfs:comment "HTML-tagged summary of the salient aspects of the job, including job responsibilities, qualifications, skills, working hours, education requirements, and experience requirements."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobMaster, jdx:JobPosting, jdx:jobCompetencyProfile, jdx:JobDescription  ;
-    vann:usageNote "The description needs to support use of HTML; for language-tagged descriptions without embedded markup, use the schema:description property."@en-US 
+    vann:usageNote "For language-tagged descriptions without embedded HTML markup, use the schema:description property."@en-US 
     rdfs:range rdf:HTML .
     
 schema:geo a rdfs:Property ;
     dct:identifier "schema:geo" ;
     rdfs:label "Geo Coordinates"@en-US ;    
     rdfs:comment "The geo coordinates of the place."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain schema:Organization, schema:Place  ;
     rdfs:range schema:GeoCoordinates ;
     vann:usageNote "USE IN PILOT"@en-US .
@@ -687,7 +690,7 @@ schema:geo a rdfs:Property ;
 jdx:hasCompetencyProfile a rdfs:Property ;
     dct:identifier "jdx:hasCompetencyProfile" ;
     rdfs:label "Has Competency Profile"@en-US ;    
-    rdfs:comment "Listing of the major work tasks, knowledge, skills, and abilities requirements for carrying out those work tasks based on a job analysis that engages subject matter experts in defining and validating the importance, frequency, or other types of weightings of the enumerated competencies."@en-US ;
+    rdfs:comment "Referenced resource describes the major work tasks, knowledge, skills, and abilities requirements for carrying out those work tasks based on a job analysis that engages subject matter experts in defining and validating the importance, frequency, or other types of weightings of the enumerated competencies."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain schema:Organization, jdx:JobDescription  ;
     rdfs:range jdx:JobCompetencyProfile  .
@@ -727,7 +730,7 @@ jdx:hasJobPosting a rdfs:Property ;
 asn:hasLevel a rdfs:Property ;
     dct:identifier "asn:hasLevel" ;
     rdfs:label "Has Level"@en-US ;    
-    rdfs:comment "Resource description of a level of performance based on a Rubric Criterion."@en-US ;
+    rdfs:comment "Resource referenced describes of a level of performance based on a Rubric Criterion."@en-US ;
     rdfs:isDefinedBy <http://purl.org/asn/schema/core/> ;
     rdfs:domain asn:RubricCriterion  ;
     rdfs:range asn:CriterionLevel .
@@ -735,7 +738,7 @@ asn:hasLevel a rdfs:Property ;
 jdx:hasPostingInstructions a rdfs:Property ;
     dct:identifier "jdx:hasPostingInstructions" ;
     rdfs:label "Posting Instructions"@en-US ;    
-    rdfs:comment "Entity providing instructions for posting a job position opening to a job board or media channel and for submission of applications."@en-US ;
+    rdfs:comment "Resource providing instructions for posting a job position opening to a job board or media channel and for submission of applications."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobMaster, jdx:jobPosting ;
     rdfs:range jdx:PostingInstructions .
@@ -743,7 +746,7 @@ jdx:hasPostingInstructions a rdfs:Property ;
 asn:hasProgressionLevel a rdfs:Property ;
     dct:identifier "asn:hasProgressionLevel" ;
     rdfs:label "Has Progression Level"@en-US ;    
-    rdfs:comment "Reference to a specific point in the progression model used in the Rubric."@en-US ;
+    rdfs:comment "Reference to a specific level in a ProgressionModel."@en-US ;
     rdfs:isDefinedBy <http://purl.org/asn/schema/core/> ;
     rdfs:domain asn:CriterionLevel  ;
     rdfs:range skos:Concept .
@@ -751,7 +754,7 @@ asn:hasProgressionLevel a rdfs:Property ;
 asn:hasProgressionModel a rdfs:Property ;
     dct:identifier "asn:hasProgressionModel" ;
     rdfs:label "Has Progression Model"@en-US ;    
-    rdfs:comment "Reference to a progression model used in the rubric."@en-US ;
+    rdfs:comment "Reference to a ProgressionModel used."@en-US ;
     rdfs:isDefinedBy <http://purl.org/asn/schema/core/> ;
     rdfs:domain asn:Rubric  ;
     rdfs:range skos:ConceptScheme .
@@ -768,7 +771,7 @@ schema:hiringOrganization a rdfs:Property ;
     dct:identifier "schema:hiringOrganization" ;
     rdfs:label "Hiring Organization"@en-US ;    
     rdfs:comment "Organization offering the job position."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobPosting ;
     rdfs:range schema:Organization ;
     vann:usageNote "USE IN PILOT"@en-US .
@@ -777,11 +780,11 @@ schema:identifier a rdfs:Property ;
     dct:identifier "schema:identifier" ;
     rdfs:label "Position Identifier"@en-US ;    
     rdfs:comment "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc."@en-US ;
-    rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain jdx:jobMaster, jdx:JobCompetencyProfile, jdx:JobDescription, jdx:JobPosting ;
     rdfs:range schema:PropertyValue ;
-    vann:usageNote "NOTE: The identifier property in JDX has a constrained range of schema:PropertyValue. Best practice is to use name property to textually identify the type of identifier, value property to hold  the textual value of the identifier, and the properytID property to identify by URI the property from a JDX or other namespace."
-    vann:usageNote "NOTE: JDX defines a subproperty call positionID to handle the employer's identifier for a particular position."@en-US ;
+    vann:usageNote "NOTE: Identifier in JDX has a constrained range of schema:PropertyValue. Best practice is to use schema:name property to textually identify the type of identifier, schema:value property to hold the textual value of the identifier, and the schema;properytID for a URI indicating the type of identifier."
+    vann:usageNote "NOTE: JDX defines subproperties called jdx:positionID and jdx:postingID to handle the employer's identifier for a particular position or posting."@en-US ;
     vann:usageNote "USE IN PILOT"@en-US .
     
 dct:identifier a rdfs:Property ;
@@ -796,7 +799,7 @@ schema:incentiveCompensation a rdfs:Property ;
     dct:identifier "schema:incentiveCompensation" ;
     rdfs:label "Incentive Compensation"@en-US ;    
     rdfs:comment "Description of bonus and commission compensation aspects of the job."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:jobPosting ; 
     rdfs:range rdf:langString ;
     vann:usageNote "USE IN PILOT"@en-US .
@@ -805,7 +808,7 @@ schema:inDefinedTermSet a rdfs:Property ;
     dct:identifier "schema:inDefinedTermSet" ;
     rdfs:label "In Defined Term Set"@en-US ;    
     rdfs:comment "A defined term set that contains this term."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain jdx:AnnotatedDefinedTerm  ;
     rdfs:range jdx:AnnotatedDefinedTermSet .
     
@@ -813,26 +816,26 @@ schema:industry a rdfs:Property ;
     dct:identifier "schema:industry" ;
     rdfs:label "Industry"@en-US ;    
     rdfs:comment "Description of the most critical economic or work activities performed (e.g. software development, electronic manufacturing, motor vehicle production, or diagnostic and therapeutic services)."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain jdx:Organization, jdx:JobMaster, jdx:JobDescription, jdx:JobPosting;
     rdfs:range  rdf:langString ;
-    vann:usageNote "NOTE: To identify a formal industry code such as NAICS in the U.S., use the industryCode property"@en-US.
+    vann:usageNote "NOTE: The industry description expected here is a brief narrative of the most critical economic or work activities performed. To identify a formal industry code, such as NAICS in the U.S., use the industryCode property."@en-US.
     
-schema:industryCode a rdfs:Property ;
+jdx:industryCode a rdfs:Property ;
     dct:identifier "schema:industryCode" ;
     rdfs:label "Industry Code"@en-US ;    
     rdfs:comment "Code from a controlled vocabulary of industry types identifying the primary economic activity of an establishment defined as a single physical location where business is conducted or where services or industrial operations are performed."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:Organization, jdx:JobMaster, jdx:JobDescription, jdx:JobPosting;
     rdfs:range skos:Concept  ;
     vann:usageNote "NOTE: Use a value selected from a controlled vocabulary of industry types used in the country where the job is located; e.g., NAICS in the U.S. and ESCO in the European Union; encode using the jdx:AnnotatedDefinedTerm entity."@en-US ;
-    vann:usageNote "NOTE: In a JDX job description, there my be multiple levels ond locations for an organization identified and each may have different industry codes based on the kinds of work performed at those locations; the NAICS industry code here in JDX applies SOLELY to the location where the work of the job being described will be performed."@en-US.
+    vann:usageNote "NOTE: In a JDX job description, there my be multiple levels and locations for an organization identified and each may have different industry codes based on the kinds of work performed at those locations; the NAICS industry code here in JDX applies SOLELY to the location where the work of the job being described will be performed."@en-US.
     
 schema:inLanguage a rdfs:Property ;
     dct:identifier "schema:inLanguage" ;
     rdfs:label "In Language"@en-US ;    
     rdfs:comment "The language of the content or performance or used in an action."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain jdx:JobMaster, jdx:JobCompetencyProfile, jdx:JobDescription, jdx:JobPosting, jdx:QualifyingExperience, jdx:Credential;
     rdfs:range xsd:language .
     
@@ -840,15 +843,15 @@ schema:isicV4 a rdfs:Property ;
     dct:identifier "schema:isicV4";
     rdfs:label "SIC Code"@en-US ;    
     rdfs:comment "International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain schema:Organization  ;
     rdfs:range xsd:string .
     
 jdx:jobAgreement a rdfs:Property ;
     dct:identifier "jdx:jobAgreement" ;
     rdfs:label "Job Agreement"@en-US ;    
-    rdfs:comment "Type of employment agreement (e.g. employee, contract, temporary, seasonal, internship, under collectively bargaining, eligible for overtime); select from an existing enumeration of such types."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:comment "Type of employment agreement (e.g. \"employee\", \"contract-to-hire\", \"contract\", \"internship\", \"externship\", '\apprenticeship\", \"student\", \"volunteer\", \"under collective bargaining\", \"eligible for overtime\"; select from an existing enumeration of such types."@en-US ;
+    rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobPosting  ;
     rdfs:range skos:Concept  ;
     vann:usageNote "Use a value selected from a controlled vocabulary of employment contract agreements; select from an existing enumeration of such types."@en-US ;
@@ -857,48 +860,57 @@ jdx:jobAgreement a rdfs:Property ;
 schema:jobBenefit a rdfs:Property ;
     dct:identifier "schema:jobBenefit" ;
     rdfs:label "Job Benefit"@en-US ;    
-    rdfs:comment "Description of benefits associated with the job (e.g., \"employee discount\", \"health insurance\", \"401K plan\"."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:comment "Description of benefits associated with the job (e.g., \"employee discount\", \"health insurance\", \"401K plan\"); select from an existing enumeration of such types."@en-US ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain jdx:JobMaster, jdx:JobPosting ;
     rdfs:range rdf:langString ;
+    vann:usageNote "Use a value selected from a controlled vocabulary of benefit types; select from an existing enumeration of such types." ;
     vann:usageNote "USE IN PILOT"@en-US .
         
 jdx:jobImmediateStart a rdfs:Property ;
     dct:identifier "jdx:jobImmediateStart" ;
     rdfs:label "Job Immediate Start"@en-US ;    
-    rdfs:comment "An indicator as to whether a position is available for an immediate start."@en-US ;
+    rdfs:comment "Indicator as to whether a position is available for an immediate start."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobMaster, jdx:JobPosting ;
     rdfs:range xsd:boolean .
+    
+schema:jobLocation a rdfs:Property ;
+    dct:identifier "schema:jobLocation" ;
+    rdfs:label "Job Location Type"@en-US ;    
+    rdfs:comment "Typically single geographic location where the work is performed."@en-US ;
+    rdfs:isDefinedBy <https://schema.org/> ;
+    rdfs:domain schema:Organization, jdx:jobMaster, jdx:jobDescription, jdx:jobPosting ;
+    rdfs:range schema:Place  .
     
 schema:jobLocationType a rdfs:Property ;
     dct:identifier "schema:jobLocationType" ;
     rdfs:label "Job Location Type"@en-US ;    
     rdfs:comment "A description of the job location (e.g., TELECOMMUTE for telecommute jobs)."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain jdx:jobMaster, jdx:jobDescription, jdx:jobPosting ;
     rdfs:range rdf:langString ;
     vann:usageNote "USE IN PILOT"@en-US .
     
-schema:jobOpeningNumber a rdfs:Property ;
+jdx:jobOpeningNumber a rdfs:Property ;
     dct:identifier "schema:jobOpeningNumber" ;
     rdfs:label "Job Opening Number"@en-US ;    
     rdfs:comment "Number of positions open at this location."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
-    rdfs:domain jdx:Place, ;
+    rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
+    rdfs:domain schema:Place, ;
     rdfs:range xsd:float .
     
 jdx:jobSchedule a rdfs:Property ;
     dct:identifier "jdx:jobSchedule" ;
     rdfs:label "Job Schedule"@en-US ;    
-    rdfs:comment "Type of employment schedule (e.g. full-time, part-time, flex-time, shared-time); select from an existing enumeration of such types."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:comment "Schedule of the employment (e.g. \"full-time\", \"part-time\", \"flex-time\", \"hourly\", \"shared-time\"); select from an existing enumeration of such types."@en-US ;
+    rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobPosting  ;
     rdfs:range skos:Concept  ;
     vann:usageNote "Use a value selected from a controlled vocabulary of employment schedule types; select from an existing enumeration of such types."@en-US ;
     vann:usageNote "USE IN PILOT"@en-US .
     
-schema:jobStartDate a rdfs:Property ;
+jdx:jobStartDate a rdfs:Property ;
     dct:identifier "jdx:jobStartDate" ;
     rdfs:label "Job Start Date"@en-US ;    
     rdfs:comment "Expected date when the employment begins."@en-US ;
@@ -910,8 +922,8 @@ schema:jobStartDate a rdfs:Property ;
 jdx:jobTerm a rdfs:Property ;
     dct:identifier "jdx:jobTerm" ;
     rdfs:label "Job Term"@en-US ;    
-    rdfs:comment "Type of employment term (e.g. regular, temporary, seasonal); select from an existing enumeration of such types."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:comment "Type of employment term (e.g. \"regular\", \"temporary\", \"seasonal\"); select from an existing enumeration of such types."@en-US ;
+    rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobPosting  ;
     rdfs:range skos:Concept  ;
     vann:usageNote "Use a value selected from a controlled vocabulary of employment term types; select from an existing enumeration of such types."@en-US ;
@@ -921,15 +933,15 @@ jdx:knowledge a rdfs:Property ;
     dct:identifier "jdx:knowledge" ;
     rdfs:label "Knowledge"@en-US ;    
     rdfs:comment "Body of facts, principles, theories and practices that is related to a field of work or study; select from an existing enumeration of such types."@en-US ;
-    dct:description "Frequently treated as an aspect of the notion of \"competency\" along with skills and abilities."@en-US ;
+    dct:description "Frequently treated as an aspect of the notion of \"competency\" along with \"skills\" and \"abilities\"."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
-    rdfs:domain jdx:JobMaster, jdx:JobCompetencyProfile, jdx:JobDescription, jdx:JobOpening, jdx:JobPosting ; 
+    rdfs:domain jdx:JobMaster, jdx:JobCompetencyProfile, jdx:JobDescription, jdx:JobPosting ; 
     rdfs:range skos:Concept  ;
     rdfs:subPropertyOf jdx:competency ;
     vann:usageNote "Use a value selected from a controlled vocabulary of knowledge types such as the O*NET knowledge (https://www.onetonline.org/find/descriptor/browse/Knowledge/); encode using the jdx:AnnotatedDefinedTerm entity."@en-US ;
     vann:usageNote "USE IN PILOT"@en-US .
     
-dct:language:latitude a rdfs:Property ;
+dct:language a rdfs:Property ;
     dct:identifier "dct:language" ;
     rdfs:label "Languagee"@en-US ;    
     rdfs:comment "A language of the resource."@en-US ;
@@ -940,8 +952,8 @@ dct:language:latitude a rdfs:Property ;
 schema:latitude a rdfs:Property ;
     dct:identifier "schema:latitude" ;
     rdfs:label "Latitude"@en-US ;    
-    rdfs:comment "The latitude of a location. For example 37.42242."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:comment "Latitude of a location. For example 37.42242."@en-US ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain schema:GeoCoordinates  ;
     rdfs:range xsd:string ;
     vann:usageNote "USE IN PILOT"@en-US .
@@ -950,7 +962,7 @@ schema:legalName a rdfs:Property ;
     dct:identifier "schema:legalName" ;
     rdfs:label "Legal Name"@en-US ;    
     rdfs:comment "The official name of the organization, e.g. the registered company name."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:subPropertyOf schema:name ;
     rdfs:domain schema:Organization  ;
     rdfs:range rdf:langString .
@@ -959,7 +971,7 @@ schema:leiCode a rdfs:Property ;
     dct:identifier "schema:leiCode" ;
     rdfs:label "LEI Code"@en-US ;    
     rdfs:comment "An organization identifier that uniquely identifies a legal entity as defined in ISO 17442."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain schema:Organization  ;
     rdfs:range xsd:string .
     
@@ -975,7 +987,7 @@ jdx:levelCode a rdfs:Property ;
 asn:levelFor a rdfs:Property ;
     dct:identifier "asn:levelFor" ;
     rdfs:label "Level For"@en-US ;    
-    rdfs:comment "Reference to the Rubric Criterian to which the Criterion Level being described belongs."@en-US ;
+    rdfs:comment "Reference to the Rubric Criterion to which the Criterion Level being described belongs."@en-US ;
     rdfs:isDefinedBy <http://purl.org/asn/schema/core/> ;
     rdfs:domain asn:CriterionLevel  ;
     rdfs:range asn:RubricCriterion  .
@@ -984,32 +996,24 @@ schema:logo a rdfs:Property ;
     dct:identifier "schema:logo" ;
     rdfs:label "Logo"@en-US ;    
     rdfs:comment "An associated logo."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain schema:Organization ;
     rdfs:range xsd:anyURI .   
     
 schema:longitude a rdfs:Property ;
     dct:identifier "schema:longitude" ;
     rdfs:label "Longitude"@en-US ;    
-    rdfs:comment "The longitude of a location. For example -122.08585."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:comment "Longitude of a location. For example -122.08585."@en-US ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain schema:GeoCoordinates  ;
     rdfs:range xsd:string  ;
     vann:usageNote "USE IN PILOT"@en-US .
-    
-schema:mainEntityOfPage a rdfs:Property ;
-    dct:identifier "schema:mainEntityOfPage" ;
-    rdfs:label "Website"@en-US ;    
-    rdfs:comment "Indicates a page (or other CreativeWork) for which this thing is the main entity being described."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
-    rdfs:domain schema:Organization, jdx:JobMaster, jdx:JobDescription, jdx:jobPosting ;
-    rdfs:range schema:WebPage .
 
 schema:maxValue a rdfs:Property ;
     dct:identifier "schema:maxValue" ;
     rdfs:label "Maximum Value"@en-US ;    
     rdfs:comment "The upper value of some characteristic or property."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain schema:QuantitativeValue, schema:MonetaryAmount  ;
     rdfs:range xsd:float ;
     vann:usageNote "USE IN PILOT"@en-US .
@@ -1018,7 +1022,7 @@ schema:median a rdfs:Property ;
     dct:identifier "schema:median" ;
     rdfs:label "Median"@en-US ;    
     rdfs:comment "The median value."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain schema:MonetaryAmountDistribution  ;
     rdfs:range xsd:float .
         
@@ -1053,7 +1057,7 @@ schema:minValue a rdfs:Property ;
     dct:identifier "schema:minValue" ;
     rdfs:label "Minimum Value"@en-US ;    
     rdfs:comment "The lower value of some characteristic or property."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain schema:QuantitativeValue, schema:MonetaryAmount  ;
     rdfs:range xsd:float ;
     vann:usageNote "USE IN PILOT"@en-US .
@@ -1062,7 +1066,7 @@ schema:naics a rdfs:Property ;
     dct:identifier "schema:naics" ;
     rdfs:label "NAICS"@en-US ;    
     rdfs:comment "The North American Industry Classification System (NAICS) code for a particular organization or business person."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain schema:Organization  ;
     rdfs:range xsd:string  ;
     owl:equivalentProperty ceterms:naics .
@@ -1071,7 +1075,7 @@ schema:name a rdfs:Property ;
     dct:identifier "schema:name" ;
     rdfs:label "Name"@en-US ;    
     rdfs:comment "The name of the item."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain jdx:JobCompetencyProfile, jdx:JobDescription, jdx:JobPosting, jdx:AnnotatedDefinedTerm, schema:Place, schema:PostalAddress, schema:ContactPoint, schema:Organization, schema:GeoCoordinates ;
     rdfs:range rdf:langString ;
     vann:usageNote "NOTE: For the name of the hiring organization, use the subproperty legalName."@en-US ;
@@ -1080,16 +1084,16 @@ schema:name a rdfs:Property ;
 schema:numberOfEmployees a rdfs:Property ;
     dct:identifier "schema:numberOfEmployees" ;
     rdfs:label "Number of Employees"@en-US ;    
-    rdfs:comment "The number of employees in an organization e.g. business."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:comment "Number of employees in the hiring organization."@en-US ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain schema:Organization  ;
     rdfs:range xsd:integer .
     
-schema:occupationCategory a rdfs:Property ;
+schema:occupationalCategory a rdfs:Property ;
     dct:identifier "occupationCategory" ;
     rdfs:label "Occupation Category"@en-US ;    
     rdfs:comment "Category of the relevant occupation of the job used in the country of employment; select from an existing enumeration of such types."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain jdx:JobMaster, jdx:QualifyingExperience, jdx:Credential;
     rdfs:range skos:Concept  ;
     vann:usageNote "Use a value selected from a controlled vocabulary of occupation categories such as the Standard Occupational Classification (SOC); encode using the jdx:AnnotatedDefinedTerm entity."@en-US ;
@@ -1107,14 +1111,14 @@ schema:parentOrganization a rdfs:Property ;
     dct:identifier "schema:parentOrganization" ;
     rdfs:label "Parent Organization"@en-US ;    
     rdfs:comment "The larger organization that this organization is a subOrganization of, if any."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain schema:Organization  ;
     rdfs:range schema:Organization .
     
 jdx:payCycleInterval a rdfs:Property ;
     dct:identifier "jdx:payCycleInterval" ;
     rdfs:label "Pay Cycle Interval"@en-US ;    
-    rdfs:comment "Pay cycle interval specifies how often the pay cycle occurs or, in other words, how often a person is paid, e.g., daily, weekly, monthly, yearly, etc."@en-US ;
+    rdfs:comment "Pay cycle interval specifies how often the pay cycle occurs or, in other words, how often a person is paid, e.g., \"daily\", \"weekly\", \"monthly\", \"yearly\" etc.; select from an existing enumeration of such types."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain schema:MonetaryAmount  ;
     rdfs:range skos:Concept ;
@@ -1124,15 +1128,15 @@ schema:percentile10 a rdfs:Property ;
     dct:identifier "schema:Percentile10" ;
     rdfs:label "10th Percentile"@en-US ;    
     rdfs:comment "The 10th percentile value."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
-    rdfs:domain schema:MonetaryAmoungDistribution ;
+    rdfs:isDefinedBy <https://schema.org/> ;
+    rdfs:domain schema:MonetaryAmountDistribution ;
     rdfs:range xsd:float .
     
 schema:percentile25 a rdfs:Property ;
     dct:identifier "schema:Percentile25" ;
     rdfs:label "25th Percentile"@en-US ;    
     rdfs:comment "The 25th percentile value."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain schema:MonetaryAmountDistribution  ;
     rdfs:range xsd:float .
     
@@ -1140,7 +1144,7 @@ schema:percentile75 a rdfs:Property ;
     dct:identifier "schema:Percentile75" ;
     rdfs:label "75th Percentile"@en-US ;    
     rdfs:comment "The 75th percentile value."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain schema:MonetaryAmountDistribution  ;
     rdfs:range xsd:float .
     
@@ -1148,14 +1152,14 @@ schema:percentile90 a rdfs:Property ;
     dct:identifier "schema:Percentile90" ;
     rdfs:label "90th Percentile"@en-US ;    
     rdfs:comment "The 90th percentile value."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain schema:MonetaryAmountDistribution  ;
     rdfs:range xsd:float .
     
 jdx:physicalActivity a rdfs:Property ;
     dct:identifier "jdx:physicalActivity" ;
     rdfs:label "Physical Activity"@en-US ;
-    rdfs:comment "Resource identifying types of physical activity associated with a job." ;    
+    rdfs:comment "Resource identifying types of physical activity associated with a job; select from an existing enumeration of such types." ;    
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobMaster, jdx:jobCompetencyProfile, jdx:JobDescription, jdx:JobPosting ;
     rdfs:range skos:Concept ;
@@ -1184,8 +1188,8 @@ jdx:positionID a rdfs:Property ;
 schema:postalCode a rdfs:Property ;
     dct:identifier "schema:postalCode" ;
     rdfs:label "Postal Code"@en-US ;    
-    rdfs:comment "The postal code. For example, 94043."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:comment "Postal code; for example, 94043."@en-US ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain schema:PostalAddress  ;
     rdfs:range xsd:string ;
     vann:usageNote "USE IN PILOT"@en-US .
@@ -1195,7 +1199,7 @@ jdx:postingEndDate a rdfs:Property ;
     rdfs:label "Posting End Date"@en-US ;    
     rdfs:comment "End date (time) for the posting."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
-    rdfs:domain jdx:PostingInstructions  ;
+    rdfs:domain jdx:PostingInstruction  ;
     rdfs:range xsd:dateTime .
     
 jdx:postingID a rdfs:Property ;
@@ -1205,12 +1209,13 @@ jdx:postingID a rdfs:Property ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:subPropertyOf schema:identifier ;
     rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobPosting  ;
-    rdfs:range xsd:string .
+    rdfs:range xsd:string 
+    vann:usageNote "For the identifier of the position for this posting, use jdx:positionID."@en-US ..
     
 jdx:postingRequestor a rdfs:Property ;
     dct:identifier "jdx:postingRequestor" ;
     rdfs:label "Posting Requestor"@en-US ;    
-    rdfs:comment "The agent requesting the posting."@en-US ;
+    rdfs:comment "Agent requesting the posting."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobMaster  ;
     rdfs:range schema:Organization .
@@ -1220,7 +1225,7 @@ jdx:postingStartDate a rdfs:Property ;
     rdfs:label "Posting Start date"@en-US ;    
     rdfs:comment "Start date (time) for the posting."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
-    rdfs:domain jdx:PostingInstructions  ;
+    rdfs:domain jdx:PostingInstruction  ;
     rdfs:range xsd:dateTime .
      
 jdx:preferred a rdfs:Property ;
@@ -1271,9 +1276,9 @@ jdx:preferredCredential a rdfs:Property ;
 jdx:program a rdfs:Property ;
     dct:identifier "jdx:program" ;
     rdfs:label "Program of Study."@en-US ;    
-    rdfs:comment "Degree program of study."@en-US ;
+    rdfs:comment "Educational program of study."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
-    rdfs:domain jdx:QualifyingExperience ;
+    rdfs:domain jdx:QualifyingExperience, jdx:Credential ;
     rdfs:range xsd:langString .
     
 jdx:programConcentration a rdfs:Property ;
@@ -1281,14 +1286,14 @@ jdx:programConcentration a rdfs:Property ;
     rdfs:label "Program Concentration"@en-US ;    
     rdfs:comment "Focused plan of study within a college or university degree such as a concentration in Aerospace Engineering within an Engineering degree."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
-    rdfs:domain jdx:QualifyingExperience ;
+    rdfs:domain jdx:QualifyingExperience, jdx:Credential ;
     rdfs:range xsd:langString .
     
 schema:propertyID a rdfs:Property ;
     dct:identifier "schema:propertyID" ;
     rdfs:label "Property Identifier"@en-US ;    
-    rdfs:comment "URL indicating the type of the property, either pointing to an external vocabulary, or a Web resource that describes the property (e.g. a glossary entry)."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:comment "URL indicating the type of the property and pointing to an external vocabulary."@en-US ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain schema:PropertyValue ;
     rdfs:range xsd:string .
     
@@ -1297,7 +1302,7 @@ jdx:qualificationSummary a rdfs:Property ;
     rdfs:label "Qualification Summary"@en-US ;    
     rdfs:comment "Summary description of the ideal candidate's qualifications for a position."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
-    rdfs:domain jdx:JobOpening  ;
+    rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobPosting  ;
     rdfs:range rdf:langString .
       
 jdx:reportingRelationship a rdfs:Property ;
@@ -1305,7 +1310,7 @@ jdx:reportingRelationship a rdfs:Property ;
     rdfs:label "Reporting Relationship"@en-US ;
     rdfs:comment "Position(s) to which this position reports and over which this position exercises some degree of authority, control or leadership."@en-US ;     
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
-    rdfs:domain jdx:JobMaster, jdx:JobDescription ;
+    rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobPosting ;
     rdfs:range rdf:langString ;
     vann:usageNote "USE IN PILOT"@en-US .
     
@@ -1315,6 +1320,7 @@ jdx:required a rdfs:Property ;
     rdfs:comment "Whether or not the attribute being annotated is required."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:ScaleAnnotation ;
+    rdfs:range xsd:boolean ;
     vann:usageNote "USE IN PILOT"@en-US .
     
 jdx:requiredAssessment a rdfs:Property ;
@@ -1339,16 +1345,16 @@ jdx:requiredCondition a rdfs:Property ;
     rdfs:comment "Resource referenced provides the means to make logical assertions that combine resources that in aggregate fulfill education, experience and credential requirements."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:Condition, jdx:JobMaster, jdx:JobDescription, jdx:jobPosting ;
-    rdfs:range jdx:Condition ;
-    vann:usageNote "See github issue: https://github.com/jobdataexchange/Data-Modeling/issues/12"@en-US .
+    rdfs:range jdx:Condition .
         
 jdx:requiredEducation a rdfs:Property ;
     dct:identifier "jdx:requiredEducation" ;
     rdfs:label "Required Education"@en-US ;    
-    rdfs:comment "Description of the required education or training needed for the position or occupation - specific credential requirements should use required credential."@en-US ;
+    rdfs:comment "Description of the required education or training needed for the position or occupation."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:Condition, jdx:JobMaster, jdx:JobDescription, jdx:jobPosting ;
     rdfs:range jdx:QualifyingExperience ;
+    vann:uasgeNote "Specific credential requirements should use jdx:requiredCredential."@en-US ;
     vann:usageNote "USE IN PILOT"@en-US .
 
 jdx:requiredExperience a rdfs:Property ;
@@ -1369,13 +1375,13 @@ jdx:requiredCredential a rdfs:Property ;
     rdfs:range jdx:Credential ;
     vann:usageNote "USE IN PILOT"@en-US .
     
-schema:responsibility a rdfs:Property ;
+jdx:responsibility a rdfs:Property ;
     dct:identifier "schema:responsibility" ;
     rdfs:label "Responsibility"@en-US ;    
     rdfs:comment "Key work tasks or activities over which this position exercises some degree of authority, control or leadership."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobMaster, jdx:JobCompetencyProfile, jdx:JobDescription, jdx:JobPosting ; 
-    rdfs:range rdf:Concept ;
+    rdfs:range skos:Concept ;
     vann:usageNote "Use a value selected from a controlled vocabulary of responsibilities; encode using the jdx:AnnotatedDefinedTerm entity."@en-US ;
     vann:usageNote "USE IN PILOT"@en-US .
     
@@ -1391,10 +1397,10 @@ jdx:riskExposure a rdfs:Property ;
 jdx:riskExposureType a rdfs:Property ;
     dct:identifier "jdx:riskExposureType" ;
     rdfs:label "Risk Exposure Type"@en-US ;
-    rdfs:comment "Types or categories of risk exposure associated with the job including exposure to extreme noise or temperature, dust/particle matter, radiation, chemicals, airborne communicable diseases and bloodborne pathogens."@en-US;     
+    rdfs:comment "Types or categories of risk exposure associated with the job including exposure to extreme noise or temperature, dust/particle matter, radiation, chemicals, airborne communicable diseases and bloodborne pathogens; select from an existing enumeration of such types."@en-US;     
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobMaster, jdx:jobCompetencyProfile, jdx:JobDescription, jdx:JobPosting ;
-    rdfs:range skos:concept  ;
+    rdfs:range skos:Concept  ;
     vann:usageNote "Use a value selected from a controlled vocabulary of risk exposure types; encode using the jdx:AnnotatedDefinedTerm entity."@en-US ;
     vann:usageNote "USE IN PILOT"@en-US .
 
@@ -1402,7 +1408,7 @@ schema:sameAs a rdfs:Property ;
     dct:identifier "schema:sameAs" ;
     rdfs:label "Same As"@en-US ;    
     rdfs:comment "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain schema:Organization  ;
     rdfs:range xsd:anyURI .
     
@@ -1412,8 +1418,8 @@ jdx:scaleCategory a rdfs:Property ;
     rdfs:comment "Type or category of scale or weighting to be applied to a specific competency (knowledge, skill, ability), task, responsibility, interest etc.; select from an existing enumeration of such types."@en-US ;
     dct:description "Where logically applicable, previously defined scales can be applied to a range of previously defined controlled concepts and competencies."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
-    rdfs:domain jdx:ScaleAnnontation ;
-    rdfs:range skos:concept  ;
+    rdfs:domain jdx:ScaleAnnotation ;
+    rdfs:range skos:Concept  ;
     vann:usageNote "Use a value selected from a controlled vocabulary of scale types; encode using the jdx:AnnotatedDefinedTerm entity."@en-US ;
     vann:usageNote "USE IN PILOT"@en-US .
     
@@ -1447,17 +1453,17 @@ jdx:sensoryRequirement a rdfs:Property ;
 jdx:shiftSchedule a rdfs:Property ;
     dct:identifier "jdx:shiftSchedule" ;
     rdfs:label "Shift Schedule"@en-US ;
-    rdfs:comment "Type of the typical work shift of the job."@en-US;     
+    rdfs:comment "Type of the typical work shift of the job; select from an existing enumeration of such types."@en-US;     
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobMaster, jdx:JobPosting ;
-    rdfs:range skos:concept  ;
+    rdfs:range skos:Concept  ;
     vann:usageNote "Use a value selected from a controlled vocabulary of work shift types (e.g., HR Open Standards ShiftTypeCodeList.json); encode using the jdx:AnnotatedDefinedTerm entity."@en-US .    
     
 jdx:skill a rdfs:Property ;
     dct:identifier "jdx:skill" ;
     rdfs:label "Skill"@en-US ;    
     rdfs:comment "Ability to apply knowledge and use know-how to complete tasks and solve problems including types or categories of developed proficiency or dexterity in mental operations and physical processes required to fulfill a work role; select from an existing enumeration of such types."@en-US ;
-    dct:description "(Wikipedia) A skill is the ability to carry out a task with determined results often within a given amount of time, energy, or both."@en-US ;
+    dct:description "A skill is the ability to carry out a task with determined results often within a given amount of time, energy, or both. (Wikipedia)"@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobMaster, jdx:JobCompetencyProfile, jdx:JobDescription, jdx:JobPosting ;
     rdfs:range skos:Concept ;
@@ -1469,7 +1475,7 @@ schema:specialCommitment a rdfs:Property ;
     dct:identifier "schema:specialCommitment" ;
     rdfs:label "Special Commitment"@en-US ;    
     rdfs:comment "Any special commitments associated with this job posting (e.g. low-income, native American, ex-offenders, military commit) along with any special exclusions (e.g. criminal records)."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain jdx:JobMaster, jdx:JobPosting ;
     rdfs:range rdf:langString ;
     vann:usageNote "USE IN PILOT"@en-US .
@@ -1477,8 +1483,8 @@ schema:specialCommitment a rdfs:Property ;
 schema:streetAddress a rdfs:Property ;
     dct:identifier "schema:streetAddress" ;
     rdfs:label "Street Address"@en-US ;    
-    rdfs:comment "The street address. For example, 1600 Amphitheatre Pkwy."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:comment "Street address; for example, \"1600 Amphitheatre Pkwy\"."@en-US ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain schema:PostalAddress  ;
     rdfs:range rdf:langString ;
     vann:usageNote "USE IN PILOT"@en-US .
@@ -1487,14 +1493,14 @@ schema:subOrganization a rdfs:Property ;
     dct:identifier "schema:subOrganization" ;
     rdfs:label "Sub-Organization"@en-US ;    
     rdfs:comment "A relationship between two organizations where the first includes the second, e.g., as a subsidiary."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain schema:Organization  ;
     rdfs:range schema:Organization .
 
 jdx:task a rdfs:Property ;
     dct:identifier "jdx:task" ;
     rdfs:label "Task"@en-US ;    
-    rdfs:comment "A piece or unit of work to be done or undertaken and accomplished within a defined period of time or by a deadline; select from an existing enumeration of such types."@en-US ;
+    rdfs:comment "Piece or unit of work to be done or undertaken and accomplished within a defined period of time or by a deadline; select from an existing enumeration of such types."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobCompetenctProfile, jdx:JobPosting ;
     rdfs:range skos:Concept ;
@@ -1516,7 +1522,7 @@ schema:telephone a rdfs:Property ;
     dct:identifier "schema:telephone" ;
     rdfs:label "Telephone"@en-US ;    
     rdfs:comment "The telephone number of an organization or person."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain schema:Place, schema:ContactPoint, schema:Organization ;
     rdfs:range xsd:string ;
     vann:usageNote "USE IN PILOT"@en-US .
@@ -1525,7 +1531,7 @@ schema:termCode a rdfs:Property ;
     dct:identifier "schema:termCode" ;
     rdfs:label "Term Code"@en-US ;    
     rdfs:comment "A code that identifies this DefinedTerm within a DefinedTermSet."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain jdx:AnnotatedDefinedTerm  ;
     rdfs:range xsd:string .
     
@@ -1533,17 +1539,17 @@ schema:title a rdfs:Property ;
     dct:identifier "schema:title";
     rdfs:label "Title"@en-US ;    
     rdfs:comment "The title of the job."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain jdx:JobMaster, jdx:JobCompetencyProfile, jdx:JobDescription, jdx:JobPosting ;
     rdfs:range rdf:langString ;
     vann:usageNote "USE IN PILOT"@en-US .
     
-schema:totalJobOpenings a rdfs:Property ;
-    dct:identifier "schema:totalJobOpenings" ;
+jdx:totalJobOpenings a rdfs:Property ;
+    dct:identifier "jdx:totalJobOpenings" ;
     rdfs:label "Total Job Openings"@en-US ;    
     rdfs:comment "Total number of positions open at all locations."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
-    rdfs:domain jdx:jobDescription ;
+    rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
+    rdfs:domain JobPosting ;
     rdfs:range xsd:float .
     
 jdx:travelRequirement a rdfs:Property ;
@@ -1557,19 +1563,26 @@ jdx:travelRequirement a rdfs:Property ;
 schema:unitText a rdfs:Property ;
     dct:identifier "schema:unitText" ;
     rdfs:label "Unit Text"@en-US ;    
-    rdfs:comment "Unit of measurement on which employee pay is based such as \"hour\", \"day\", \"week\", \"month\", \"year\"; select from an existing enumeration of such types."@en-US ;
-    rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
-    rdfs:domain schema:QuantitativeValue ;
+    rdfs:comment "Unit of measurement on which values for schema:MonetaryAmount or schema:QuantitativeValue are based; select from an existing enumeration of such types."@en-US ;
+    rdfs:isDefinedBy <https://schema.org/> ;
+    rdfs:domain schema:QuantitativeValue, schema:MonetaryAmount ;
     rdfs:range skos:Concept  ;
-    vann:usageNote "Google Jobs recommends using \"HOUR\", \"DAY\", \"WEEK\", \"MONTH\", \"YEAR\"; these values also appear in HR Open's PayCycleIntervalCodeList.json"@en-US ;
+    vann:usageNote "On schema:MonetaryAmount, Google Jobs recommends using \"HOUR\", \"DAY\", \"WEEK\", \"MONTH\", \"YEAR\"; these values also appear in HR Open's PayCycleIntervalCodeList.json"@en-US ;
     vann:usageNote "USE IN PILOT"@en-US .
+    
+schema:url a rdfs:Property ;
+    dct:identifier "schema:url" ;
+    rdfs:label "URL"@en-US ;    
+    rdfs:comment "URL of the item."@en-US ;
+    rdfs:isDefinedBy <https://schema.org/> ;
+    rdfs:domain schema:Organization ;
+    rdfs:range schema:URL . 
     
 schema:validFrom a rdfs:Property ;
     dct:identifier "schema:validThrough" ;
     rdfs:label "Valid Through"@en-US ;    
-    rdfs:comment "The date from which the item is not valid."@en-US ;
-    dct:description: "The date from which the job posting is valid in ISO 8601 format. For example, \"2017-02-24\" or \"2017-02-24T19:33:17+00:00\" (Google) ."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:comment "The date from which the job posting is valid in ISO 8601 format; for example, \"2017-02-24\" or \"2017-02-24T19:33:17+00:00\."@en-US ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain jdx:JobPosting ;
     rdfs:range xsd:dateTime ;
     vann:usageNote "USE IN PILOT"@en-US .
@@ -1579,7 +1592,7 @@ schema:validThrough a rdfs:Property ;
     rdfs:label "Valid Through"@en-US ;    
     rdfs:comment "The date after when [which?] the item is not valid. For example the end of an offer, salary period, or a period of opening hours."@en-US ;
     dct:description: "The date when the job posting will expire in ISO 8601 format. For example, \"2017-02-24\" or \"2017-02-24T19:33:17+00:00\" (Google) ."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain jdx:JobPosting ;
     rdfs:range xsd:dateTime ;
     vann:usageNote "USE IN PILOT"@en-US .
@@ -1587,26 +1600,26 @@ schema:validThrough a rdfs:Property ;
 schema:value a rdfs:Property ;
     dct:identifier "schema:value" ;
     rdfs:label "Value"@en-US ;    
-    rdfs:comment "The value of the quantitative value or property value node."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:comment "Value of the quantitative value or property value node."@en-US ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain schema:PropertyValue, schema:MonetaryAmount, schema:QuantitativeValue  ;
     rdfs:range xsd:string ;
     vann:usageNote "USE IN PILOT"@en-US .
     
 jdx:workActivity a rdfs:Property ;
     dct:identifier "jdx:workActivity"@en-US ;
-    rdfs:comment "Purposeful, systematic activity by one or more workers acting on a work objective to reach an intended outcome."@en-US ;
+    rdfs:comment "Purposeful, systematic activity by one or more workers acting on a work objective to reach an intended outcome; select from an existing enumeration of such types."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:label "Work Activity"@en-US ;
     rdfs:subPropertyOf jdx:competency ;
     rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobPosting ;
-    rdfs:range skos:ConceptScheme  ;
+    rdfs:range skos:Concept  ;
     vann:usageNote "Use a value selected from a controlled vocabulary of activity types such as the O*NET work activities (https://www.onetonline.org/find/descriptor/browse/Work_Activities/); encode using the jdx:AnnotatedDefinedTerm entity."@en-US.
     
 jdx:workLanguage a rdfs:Property ;
     dct:identifier "jdx:workLanguage" ;
     rdfs:label "Work Language"@en-US ;    
-    rdfs:comment "Information on the work languages used for the job. (HR)"@en-US ;
+    rdfs:comment "Information on the work languages used on the job."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobPosting ;
     rdfs:range xsd:language ;
@@ -1615,8 +1628,8 @@ jdx:workLanguage a rdfs:Property ;
 schema:workHours a rdfs:Property ;
     dct:identifier "schema:workHours" ;
     rdfs:label "Work Hours"@en-US ;    
-    rdfs:comment "The typical working hours for this job (e.g. 1st shift, night shift, 8am-5pm)."@en-US ;
-    rdfs:isDefinedBy <https://schema.org> ;
+    rdfs:comment "Typical working hours for this job; e.g. \"1st shift\", \"night shift\", \"8am-5pm\"."@en-US ;
+    rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobPosting ;
     rdfs:range rdf:langString ;
     vann:usageNote "USE IN PILOT"@en-US .
