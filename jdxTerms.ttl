@@ -42,7 +42,19 @@ jdx:Credential a rdfs:Class ;
     dct:identifier "jdx:Credential" ;
     rdfs:comment "Entity describing authoritative permission to hold a certain status or to do certain things, e.g. to practice some trade or profession."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
-    rdfs:label "Credential"@en-US .    
+    rdfs:label "Credential"@en-US .
+    
+asn:CriterionCategory a rdfs:Class ;
+    dct:identifier "asn:CriterionCategory" ;
+    rdfs:comment "Resource identifying a category by which Rubric Criterion may be grouped."@en-US ;
+    rdfs:isDefinedBy <http://purl.org/asn/schema/core/> ;
+    rdfs:label "Criterion Category"@en-US . 
+    
+asn:CriterionLevel a rdfs:Class ;
+    dct:identifier "asn:CriterionLevel" ;
+    rdfs:comment "Resource identifying one or more benchmarks that must be met to achieve a performance task."@en-US ;
+    rdfs:isDefinedBy <http://purl.org/asn/schema/core/> ;
+    rdfs:label "Criterion Level"@en-US .   
   
 schema:GeoCoordinates a rdfs:Class ;
     dct:identifier "schema:GeoCoordinates" ;
@@ -127,6 +139,12 @@ jdx:PostingInstruction a rdfs:Class ;
     rdfs:label "Posting Instructions"@en-US ;
     vann:usageNote "A posting channel usually would be a job board or other advertising medium (HR)."@en-US .
     
+asn:ProgressionModel a rdfs:Class ;
+    dct:identifier "asn:ProgressionModel" ;
+    rdfs:comment "Model of identifiable points along a developmental progression including increasing levels of competence, complexity, or achievement."@en-US ;
+    rdfs:isDefinedBy <http://purl.org/asn/schema/core/> ;
+    rdfs:label "Progression Model"@en-US .
+    
 schema:PropertyValue a rdfs:Class ;
     dct:identifier "schema:PropertyValue" ;
     rdfs:comment "Property-value pair, e.g. representing a feature of an entity."@en-US ;
@@ -150,10 +168,16 @@ schema:QuantitativeValue a rdfs:Class ;
     rdfs:label "Quantitative Value"@en-US .
     
 asn:Rubric a rdfs:Class ;
-    dct:identifier "jdx:Rubric" ;
+    dct:identifier "asn:Rubric" ;
     rdfs:comment "Resource for identifying assessment criteria and their scoring."@en-US ;
     rdfs:isDefinedBy <http://purl.org/asn/schema/core/> ;
     rdfs:label "Rubric"@en-US .
+    
+asn:RubricCriterion a rdfs:Class ;
+    dct:identifier "asn:RubricCriterion" ;
+    rdfs:comment "Resource providing guidance in evaluating the quality and level of a person's responses or actions based on an explicit set of criteria."@en-US ;
+    rdfs:isDefinedBy <http://purl.org/asn/schema/core/> ;
+    rdfs:label "RubricCriterion"@en-US .
     
 jdx:ScaleAnnotation a rdfs:Class ;
     dct:identifier "jdx:ScaleAnnotation" ;
@@ -170,7 +194,7 @@ jdx:ability a rdfs:Property ;
     rdfs:label "Ability"@en-US ;
     rdfs:subPropertyOf jdx:competency ;
     rdfs:domain jdx:JobMaster  ;
-    rdfs:range skos:ConceptScheme  ;
+    rdfs:range skos:Concept  ;
     vann:usageNote "Use a value selected from a controlled vocabulary of ability types such as the O*NET cognitive, sensory, psychomotor and physical abilities; encode using the jdx:AnnotatedDefinedTerm entity."@en-US;
     vann:usageNote "USE IN PILOT"@en-US .
     
@@ -192,6 +216,14 @@ jdx:acquisitionDifficulty a rdfs:Property ;
     vann:usageNote "The scale may be applied to any appropriate controlled vocabulary concept such as knowledge, skill, and ability as identified in the associated jdx:AnnotationDefinedTerm."@en-US ;
     vann:usageNote "USE IN PILOT"@en-US .
     
+schema:additionalProperty a rdfs:Property ;
+    dct:identifier "additionalProperty" ;
+    rdfs:comment "Property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org."@en-US ;
+    rdfs:isDefinedBy <http://schema.org/> ;
+    rdfs:label "Additional Property"@en-US ;
+    rdfs:domain schema:Organization, jdx:JobCompetencyProfile jdx:JobMaster, jdx:JobDescription, jdx:jobPosting ;
+    rdfs:range schema:PostalAddress .
+
 schema:address a rdfs:Property ;
     dct:identifier "schema:address" ;
     rdfs:comment "Physical address of the entity."@en-US ;
@@ -207,7 +239,7 @@ schema:addressCountry a rdfs:Property ;
     rdfs:isDefinedBy <http://schema.org/> ;
     rdfs:label "Address Country"@en-US ;
     rdfs:domain schema:PostalAddress  ;
-    rdfs:range xsd:string ;
+    rdfs:range rdf:langString ;
     vann:usageNote "USE IN PILOT"@en-US .
     
 schema:addressLocality a rdfs:Property ;
@@ -216,7 +248,7 @@ schema:addressLocality a rdfs:Property ;
     rdfs:isDefinedBy <http://schema.org/> ;
     rdfs:label "City"@en-US ;
     rdfs:domain schema:PostalAddress ;
-    rdfs:range xsd:string ;
+    rdfs:range rdf:langString ;
     vann:usageNote "USE IN PILOT"@en-US .
     
 schema:addressRegion a rdfs:Property ;
@@ -225,7 +257,7 @@ schema:addressRegion a rdfs:Property ;
     rdfs:isDefinedBy <http://schema.org/> ;
     rdfs:label "Address Region"@en-US ;
     rdfs:domain schema:PostalAddress  ;
-    rdfs:range xsd:string  ;
+    rdfs:range rdf:langString ;
     vann:usageNote "The relevant state, province, territory or other subdivision of a nation."@en-US ;
     vann:usageNote "USE IN PILOT"@en-US .   
     
@@ -692,7 +724,7 @@ jdx:hasCompetencyProfile a rdfs:Property ;
     rdfs:label "Has Competency Profile"@en-US ;    
     rdfs:comment "Referenced resource describes the major work tasks, knowledge, skills, and abilities requirements for carrying out those work tasks based on a job analysis that engages subject matter experts in defining and validating the importance, frequency, or other types of weightings of the enumerated competencies."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
-    rdfs:domain schema:Organization, jdx:JobDescription  ;
+    rdfs:domain jdx:Job, jdx:JobDescription  ;
     rdfs:range jdx:JobCompetencyProfile  .
     
 asn:hasCriterion a rdfs:Property ;
@@ -711,12 +743,20 @@ asn:hasCriterionCategory a rdfs:Property ;
     rdfs:domain asn:Rubric, asn:CriterionCategory  ;
     rdfs:range asn:RubricCriterion .
     
+jdx:hasJob a rdfs:Property ;
+    dct:identifier "jdx:hasJob" ;
+    rdfs:label "Has Job Description"@en-US ;    
+    rdfs:comment "Entity referenced is a full description of a job defined and to be offered by the organization being described."@en-US ;
+    rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
+    rdfs:domain jdx:Organization ;
+    rdfs:range jdx:Job .
+    
 jdx:hasJobDescription a rdfs:Property ;
     dct:identifier "jdx:hasJobDescription" ;
     rdfs:label "Has Job Description"@en-US ;    
     rdfs:comment "Description of a job position generally including the formal job title, duties, purpose, responsibilities, scope, reporting relationships and working conditions along with the knowledge, skills, abilities, education, qualifications, experience and other requirements for performing the job."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
-    rdfs:domain schema:Organization, jdx:JobCompetencyProfile ;
+    rdfs:domain jdx:Job, jdx:JobCompetencyProfile ;
     rdfs:range jdx:JobDescription .
     
 jdx:hasJobPosting a rdfs:Property ;
@@ -724,7 +764,7 @@ jdx:hasJobPosting a rdfs:Property ;
     rdfs:label "Has Job Posting"@en-US ;    
     rdfs:comment "An online advertisement for filling one or more job position openings that contains information on the employer and the job position based on a job description as well as how and to apply for the job opening and how long the posting is valid for filling the job opening."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
-    rdfs:domain schema:Organization  ;
+    rdfs:domain jdx:Job  ;
     rdfs:range jdx:JobPosting .
     
 asn:hasLevel a rdfs:Property ;
@@ -826,7 +866,7 @@ jdx:industryCode a rdfs:Property ;
     rdfs:label "Industry Code"@en-US ;    
     rdfs:comment "Code from a controlled vocabulary of industry types identifying the primary economic activity of an establishment defined as a single physical location where business is conducted or where services or industrial operations are performed."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
-    rdfs:domain jdx:Organization, jdx:JobMaster, jdx:JobDescription, jdx:JobPosting;
+    rdfs:domain jdx:JobMaster, jdx:JobDescription, jdx:JobPosting;
     rdfs:range skos:Concept  ;
     vann:usageNote "NOTE: Use a value selected from a controlled vocabulary of industry types used in the country where the job is located; e.g., NAICS in the U.S. and ESCO in the European Union; encode using the jdx:AnnotatedDefinedTerm entity."@en-US ;
     vann:usageNote "NOTE: In a JDX job description, there my be multiple levels and locations for an organization identified and each may have different industry codes based on the kinds of work performed at those locations; the NAICS industry code here in JDX applies SOLELY to the location where the work of the job being described will be performed."@en-US.
@@ -1067,6 +1107,7 @@ schema:naics a rdfs:Property ;
     rdfs:label "NAICS"@en-US ;    
     rdfs:comment "The North American Industry Classification System (NAICS) code for a particular organization or business person."@en-US ;
     rdfs:isDefinedBy <https://schema.org/> ;
+    rdfs:subPropertyOf jdx:industryCode ;
     rdfs:domain schema:Organization  ;
     rdfs:range xsd:string  ;
     owl:equivalentProperty ceterms:naics .
@@ -1566,7 +1607,7 @@ schema:unitText a rdfs:Property ;
     rdfs:comment "Unit of measurement on which values for schema:MonetaryAmount or schema:QuantitativeValue are based; select from an existing enumeration of such types."@en-US ;
     rdfs:isDefinedBy <https://schema.org/> ;
     rdfs:domain schema:QuantitativeValue, schema:MonetaryAmount ;
-    rdfs:range skos:Concept  ;
+    rdfs:range xsd:string  ;
     vann:usageNote "On schema:MonetaryAmount, Google Jobs recommends using \"HOUR\", \"DAY\", \"WEEK\", \"MONTH\", \"YEAR\"; these values also appear in HR Open's PayCycleIntervalCodeList.json"@en-US ;
     vann:usageNote "USE IN PILOT"@en-US .
     
