@@ -71,8 +71,7 @@ jdx:Job a rdfs:Class ;
     rdfs:comment "Formally defined and titled role for performing a set of work tasks or activities."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:label "Job"@en-US ;
-    vann:usageNote "The jdx:JobDescription, jdx:JobCompetencyProfile and jdx:JobPosting define windows into the content of the jdx:Job. Do NOT use jdx:Job as an entity in any public facing resource."@en-US .
-    vann:usageNote "Entity used internally as "master" to which all properties used in JobDescription, JobPosting, and JobCompetencyProfile are applicable."@en-US .
+    vann:usageNote "The jdx:JobDescription, jdx:JobCompetencyProfile and jdx:JobPosting define windows into the content of the jdx:Job; do NOT use jdx:Job as an entity in any public facing resource. Entity used internally as \"master\" to which all properties used in JobDescription, JobPosting, and JobCompetencyProfile are applicable."@en-US .
     
 jdx:JobPosting a rdfs:Class ;
     dct:identifier "jdx:JobPosting" ;
@@ -210,7 +209,7 @@ schema:additionalProperty a rdfs:Property ;
     rdfs:comment "Property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org."@en-US ;
     rdfs:isDefinedBy <http://schema.org/> ;
     rdfs:label "Additional Property"@en-US ;
-    rdfs:domain schema:Organization, jdx:JobCompetencyProfile jdx:Job, jdx:JobDescription, jdx:jobPosting ;
+    rdfs:domain schema:Organization, jdx:JobCompetencyProfile, jdx:Job, jdx:JobDescription, jdx:jobPosting ;
     rdfs:range schema:PostalAddress .
 
 schema:address a rdfs:Property ;

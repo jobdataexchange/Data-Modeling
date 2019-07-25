@@ -4,9 +4,9 @@
         {
             "@id": "https://jobdataexchange.org/jdx/vocabs/workHours/",
             "@type": "skos:ConceptScheme",
-            "description": {"en-us": "@@@"},
+            "name": {"en-us": "Work Hours"},
+            "description": {"en-us": "Type of scheduled hours."},
             "inLanguage": ["en-US"],
-            "name": {"en-us": "@@@"},
             "publisherName": {"en-us": "Credential Engine"},
             "hasTopConcept": [
                 "https://jobdataexchange.org/jdx/vocabs/workHours/510cd708-a6e7-45c4-b03d-7a6060aa4f5e",,
