@@ -1,0 +1,132 @@
+{
+    "@context": "http://jobdataexchange.org/jdxcontext.json",
+    "@graph": [
+        {
+            "@id": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/",
+            "@type": "skos:ConceptScheme",
+            "name": {"en-us": "Shift Schedule"},
+            "description": {"en-us": "Type of the typical work shift of the job."},
+            "inLanguage": ["en-US"],
+            "publisherName": {"en-us": "Credential Engine"},
+            "hasTopConcept": [
+                "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/351f41c2-22b9-4061-a979-a510b3987272",
+                "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/0e1f0c06-302d-4491-b4d6-a4d42376f4ba",
+                "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/b12582cd-2854-40e7-bfdf-59010a19cc46",
+                "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/8934337f-1259-4920-ac3a-5d2a11fb431a",
+                "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/3af6ab5d-1eff-4ce2-9275-7a822c3713aa",
+                "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/7be89522-1ef2-4305-a42a-cbd4764b4a1f",
+                "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/3370615c-b928-48b2-a75b-e2ad98116789",
+                "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/937790b0-bbc0-4652-9471-79ddb540e66e",
+                "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/4cece613-edb9-47a8-a421-f32857075ecd",
+                "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/545e41a8-a2b0-4578-8a64-cae2a226a8f5",
+                "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/1aba403c-3440-409f-9df8-e7427ff5a5c4",
+                "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/6c1aa47d-ed8a-42f1-94ee-d8c16b36b67a",
+                "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/c5b54006-9234-4d6d-b9a7-d8c9affe88b4"
+            ]
+        },
+        {
+            "@id": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/351f41c2-22b9-4061-a979-a510b3987272",
+            "@type": "skos:Concept",
+            "prefLabel": {"en-us": "Weekday Shift 1"},
+            "definition": {"en-us": "TBD"},
+            "inScheme": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/",
+            "topConceptOf": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/"
+        },
+        {
+            "@id": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/0e1f0c06-302d-4491-b4d6-a4d42376f4ba",
+            "@type": "skos:Concept",
+            "prefLabel": {"en-us": "Weekday Shift 2"},
+            "definition": {"en-us": "TBD"},
+            "inScheme": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/",
+            "topConceptOf": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/"
+        },
+        {
+            "@id": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/b12582cd-2854-40e7-bfdf-59010a19cc46",
+            "@type": "skos:Concept",
+            "prefLabel": {"en-us": "Weekday Shift 3"},
+            "definition": {"en-us": "TBD"},
+            "inScheme": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/",
+            "topConceptOf": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/"
+        },
+        {
+            "@id": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/8934337f-1259-4920-ac3a-5d2a11fb431a",
+            "@type": "skos:Concept",
+            "prefLabel": {"en-us": "Weekend Shift 1"},
+            "definition": {"en-us": "TBD"},
+            "inScheme": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/",
+            "topConceptOf": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/"
+        },
+        {
+            "@id": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/3af6ab5d-1eff-4ce2-9275-7a822c3713aa",
+            "@type": "skos:Concept",
+            "prefLabel": {"en-us": "Weekend Shift 2"},
+            "definition": {"en-us": "TBD"},
+            "inScheme": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/",
+            "topConceptOf": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/"
+        },
+        {
+            "@id": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/7be89522-1ef2-4305-a42a-cbd4764b4a1f",
+            "@type": "skos:Concept",
+            "prefLabel": {"en-us": "Weekend Shift 3"},
+            "definition": {"en-us": "TBD"},
+            "inScheme": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/",
+            "topConceptOf": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/"
+        },
+        {
+            "@id": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/3370615c-b928-48b2-a75b-e2ad98116789",
+            "@type": "skos:Concept",
+            "prefLabel": {"en-us": "Split Shift"},
+            "definition": {"en-us": "TBD"},
+            "inScheme": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/",
+            "topConceptOf": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/"
+        },
+        {
+            "@id": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/937790b0-bbc0-4652-9471-79ddb540e66e",
+            "@type": "skos:Concept",
+            "prefLabel": {"en-us": "Double Shift Weekday"},
+            "definition": {"en-us": "TBD"},
+            "inScheme": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/",
+            "topConceptOf": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/"
+        },
+        {
+            "@id": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/4cece613-edb9-47a8-a421-f32857075ecd",
+            "@type": "skos:Concept",
+            "prefLabel": {"en-us": "Double Shift Weekend"},
+            "definition": {"en-us": "TBD"},
+            "inScheme": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/",
+            "topConceptOf": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/"
+        },
+        {
+            "@id": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/545e41a8-a2b0-4578-8a64-cae2a226a8f5",
+            "@type": "skos:Concept",
+            "prefLabel": {"en-us": "Holiday Shift"},
+            "definition": {"en-us": "TBD"},
+            "inScheme": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/",
+            "topConceptOf": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/"
+        },
+        {
+            "@id": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/1aba403c-3440-409f-9df8-e7427ff5a5c4",
+            "@type": "skos:Concept",
+            "prefLabel": {"en-us": "Shift 1 Day"},
+            "definition": {"en-us": "TBD"},
+            "inScheme": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/",
+            "topConceptOf": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/"
+        },
+        {
+            "@id": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/6c1aa47d-ed8a-42f1-94ee-d8c16b36b67a",
+            "@type": "skos:Concept",
+            "prefLabel": {"en-us": "Shift 2 Evening"},
+            "definition": {"en-us": "TBD"},
+            "inScheme": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/",
+            "topConceptOf": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/"
+        },
+        {
+            "@id": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/c5b54006-9234-4d6d-b9a7-d8c9affe88b4",
+            "@type": "skos:Concept",
+            "prefLabel": {"en-us": "Shift 3 Overnight"},
+            "definition": {"en-us": "TBD"},
+            "inScheme": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/",
+            "topConceptOf": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/"
+        }
+    ]
+}
