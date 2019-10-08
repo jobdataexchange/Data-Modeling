@@ -339,7 +339,7 @@ jdx:applicantLocationRequirement a rdfs:Property ;
     rdfs:comment "Geographic location(s) in which employees may be located for remote (telecommuting) jobs."@en-US ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:label "Applicant Location Requirement"@en-US ;
-    rdfs:domain jdx:PostingInstruction  ;
+    rdfs:domain jdx:Job, jdx:JobPosting  ;
     rdfs:range schema:GeoCoordinates ;
     vann:usageNote "USE IN PILOT"@en-US .
         
@@ -760,6 +760,14 @@ jdx:hasPostingInstructions a rdfs:Property ;
     rdfs:isDefinedBy <http://purl.org/jdx/terms/> ;
     rdfs:domain jdx:Job, jdx:jobPosting ;
     rdfs:range jdx:PostingInstructions .
+    
+asn:hasProgressionModel a rdfs:Property ;
+    dct:identifier "asn:hasProgressionModel" ;
+    rdfs:label "Has ProgressionModel"@en-US ;    
+    rdfs:comment "Reference to a progression model used."@en-US ;
+    rdfs:isDefinedBy <http://purl.org/asn/schema/core/> ;
+    rdfs:domain asn:Rubric ;
+    rdfs:range asn:ProgressionModel .
     
 schema:hiringOrganization a rdfs:Property ;
     dct:identifier "schema:hiringOrganization" ;

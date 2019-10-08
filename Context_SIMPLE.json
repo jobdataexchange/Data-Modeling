@@ -1,0 +1,16 @@
+{
+  "@context": {
+      "asn": "http://purl.org/asn/schema/core/",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "schema": "http://schema.org/",
+      "DefinedTermSet": {"@id": "schema:DefinedTermSet"},
+      "Rubric": {"@id": "asn:Rubric"},
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "description": {"@id": "schema:description", "@container": "@language"},
+      "hasProgressionModel": {"@id": "asn:hasProgressionModel", "@type": "@id"},
+      "name": {"@id": "schema:name", "@container": "@language"},
+      "url": {"@id": "schema:url", "@type": "schema:URL"}
+  }
+  
+}
