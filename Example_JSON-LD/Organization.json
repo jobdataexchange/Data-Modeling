@@ -1,42 +1,30 @@
 {
-    "@context": [ "http://schema.org/" ,
-        {"jdx": "http://jdx.org/terms/"}
-    ],
+    "@context": "http://jobdataexchange.org/jdxcontext.json",
     "@graph": [
         {
-            "@id": "http://someRepository.org/agent/d49f2e25-14ee-4cda-873a-d40a2eedbd0b" ,
-            "@type": "Organization" ,
-            "legalName": {"en": "ABC Company Inc." } ,
-            "sameAs": "http://ABC.com",
-            "logo": "http://ABC.com/images/logo.png",
-            "address": {
-                "@type": "PostalAddress" ,
-                "streetAddress": "2275 Oak Valley Parkway" ,
-                "addressLocality": "Kirkland" ,
-                "addressRegion": "WA"
+            "@id": "https://jobdataexchange.org/jdx/pp/resource/f0a23159-e3c3-43df-94da-b15c749599d0",
+            "@type": "jdx:Organization",
+            "email": "info@acme.com",
+            "hasJobPosting": "https://jobdataexchange.org/jdx/pp/resource/b9fc49d4-1344-4cb4-8e3d-21247887b77e",
+            "jdx:employerOverview": {
+                "en-US": "Blake Lee founded the company in Seattle in 1989. Since then we have become a state of the art cybersecurity company with a culture of responsibility. We have 6,000 employees working every day to promote the security in a forward-thinking, innovative, sustainable way. Find out more about our global operations."
             },
-            "contactPoint" : { 
-                "@type" : "ContactPoint",
-                "telephone" : "+1-877-746-0909",
-                "contactType" : "Personnel Services",
-                "email": "personnel@ABC.com",
-                "faxNumber": "+1-877-746-1000"
+            "jdx:industryCode": {
+                "@type": "AnnotatedDefinedTerm",
+                "termCode": "541512",
             },
-            "email": "ABC@someMail.com",
-            "telephone": "+1-877-746-0910",
-            "faxNumber": "+1-877-746-0911",
-            "duns": "150483782",
-            "leiCode": "548300TGFLH2QZV80T71",
-            "isicV4": {
-                "@type": "DefinedTerm" ,
-                "termCode": "6201",
-                "name": {"en": "Computer programming activities"},
-                "inDefinedTermSet": "https://unstats.un.org/unsd/classifications/"
+            "schema:address": {
+                "@type": "schema:PostalAddress",
+                "schema:streetAddress": "",
+                "streetAddress": "123 Acme Way"
             },
-            "parentOrganization": "http://someRepository.org/agent/aab560d4-d1b2-4c71-a11a-6f1b9bc65875",
-            "subOrganization": "http://someRepository.org/agent/00596444-bea0-450a-b3af-a0ae3193ec33",
-            "department": "http://someRepository.org/agent/77083d8d-dbd1-4443-b7aa-68ff26bd9937",
-            "numberOfEmployees": 2500
+            "schema:legalName": {
+                "en-US": "ACME Cyber"
+            },
+            "schema:occupationalCategory": {
+                "@type": "AnnotatedDefinedTerm",
+                "termCode": "15-1112.00"
+            },
+            "schema:telephone": "(406) 234-0987",
+            "url": "https://acme.com",
         }
-    ]
-}
