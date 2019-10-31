@@ -1121,6 +1121,9 @@
         },
         {
           "@id": "jdx:ScaleAnnotation"
+        },
+        {
+          "@id": "schema:DefinedTermSet"
         }
       ],
       "rdfs:isDefinedBy": {
@@ -2984,6 +2987,9 @@
         },
         {
           "@id": "jdx:JobPosting"
+        },
+        {
+          "@id": "schema:DefinedTermSet"
         }
       ],
       "rdfs:isDefinedBy": {
@@ -4572,9 +4578,14 @@
         "@language": "en-US",
         "@value": "URL of the item."
       },
-      "rdfs:domain": {
-        "@id": "schema:Organization"
-      },
+      "rdfs:domain": [
+        {
+            "@id": "schema:Organization"
+        },
+        {
+            "@id": "schema:DefinedTermSet"
+        }       
+      ],
       "rdfs:isDefinedBy": {
         "@id": "https://schema.org/"
       },
