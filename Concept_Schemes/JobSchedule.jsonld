@@ -35,7 +35,7 @@
         {
             "@id": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/6329dbd5-6c52-4b56-8e89-84dbbe38143b",
             "@type": "skos:Concept",
-            "prefLabel": {"en-us": "FLextime"},
+            "prefLabel": {"en-us": "Flextime"},
             "definition": {"en-us": "TBD"},
             "inScheme": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/",
             "topConceptOf": "https://jobdataexchange.org/jdx/vocabs/shiftSchedule/"

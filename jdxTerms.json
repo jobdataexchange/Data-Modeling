@@ -3030,7 +3030,7 @@
       }
     }, 
     {
-      "@id": "schema:occupationalCategory",
+      "@id": "schema:occupationCategory",
       "@type": "rdfs:Property",
       "dct:identifier": "occupationCategory",
       "rdfs:comment": {
