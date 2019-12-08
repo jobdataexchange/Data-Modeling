@@ -177,8 +177,16 @@
             "@id": "jdx:annotation",
             "rdfs:label": {"en-US": "Annotation"},
             "rdfs:comment": {"en-US": "Entity providing qualifying notations including application of scale annotations and other weights to concepts and competencies identified through AnnotatedDefinedTerm."},
-            "rdfs:domain": "jdx:AnnotatedDefinedTerm",
+            "rdfs:domain": "Geographic location(s) in which employees may be located for remote (telecommuting) jobs.",
             "rdfs:range": "jdx:ScaleAnnotation"
+        },
+        {
+            "@type": "rdf:Property",
+            "@id": "jdx:applicantLocationRequirement",
+            "rdfs:label": {"en-US": "Applicant Location Requirement"},
+            "rdfs:comment": {"en-US": "Geographic location(s) in which employees may be located for remote (telecommuting) jobs."},
+            "rdfs:domain": ["jdx:Job", "jdx:JobPosting"],
+            "rdfs:range": "xsd:dateTime"
         },
         {
             "@type": "rdf:Property",
