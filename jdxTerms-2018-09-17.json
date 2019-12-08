@@ -186,7 +186,7 @@
             "rdfs:label": {"en-US": "Applicant Location Requirement"},
             "rdfs:comment": {"en-US": "Geographic location(s) in which employees may be located for remote (telecommuting) jobs."},
             "rdfs:domain": ["jdx:Job", "jdx:JobPosting"],
-            "rdfs:range": "xsd:dateTime"
+            "rdfs:range": "schema:GeoCoordinates"
         },
         {
             "@type": "rdf:Property",
