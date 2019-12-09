@@ -14,17 +14,18 @@
             ]
         },
         {
-            "@id": "https://jobdataexchange.org/jdx/vocabs/workHours/510cd708-a6e7-45c4-b03d-7a6060aa4f5e",
+            "@id": "https://jobdataexchange.org/jdx/vocabs/workHours/5e3b62b7-b41e-4053-899b-9112e3db4224",
             "@type": "skos:Concept",
-            "prefLabel": {"en-us": "Normal"},
-            "definition": {"en-us": "TBD"},
+            "prefLabel": {"en-us": "Flexible Work Hours"},
+            "definition": {"en-us": "Flexible work hours of schedule is an alternative to the traditional 9:00am to 5:00pm, 40-hour work week. It allows employees to vary their arrival and/or departure times."},
             "inScheme": "https://jobdataexchange.org/jdx/vocabs/workHours/",
             "topConceptOf": "https://jobdataexchange.org/jdx/vocabs/workHours/"
         },
         {
-            "@id": "https://jobdataexchange.org/jdx/vocabs/workHours/5e3b62b7-b41e-4053-899b-9112e3db4224",
+            "@id": "https://jobdataexchange.org/jdx/vocabs/workHours/510cd708-a6e7-45c4-b03d-7a6060aa4f5e",
             "@type": "skos:Concept",
-            "prefLabel": {"en-us": "Flexible Work Hours"},
+            "prefLabel": {"en-us": "Normal"},
+            "definition": {"en-us": "Typical, full-time work week consists of no more than 40 hours per week, usually from 9 a.m. until 5 p.m."},
             "inScheme": "https://jobdataexchange.org/jdx/vocabs/workHours/",
             "topConceptOf": "https://jobdataexchange.org/jdx/vocabs/workHours/"
         }
