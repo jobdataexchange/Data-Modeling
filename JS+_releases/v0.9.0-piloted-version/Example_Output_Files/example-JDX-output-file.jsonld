@@ -1,0 +1,211 @@
+{
+    "@context": "http://jobdataexchange.org/jdxcontext.json",
+    "@graph": [
+        {
+            "@id": "https://jobdataexchange.org/jdx/pp/resource/f0a23159-e3c3-43df-94da-b15c749599d0",
+            "@type": "jdx:Organization",
+            "email": "info@acme.com",
+            "hasJobPosting": "https://jobdataexchange.org/jdx/pp/resource/b9fc49d4-1344-4cb4-8e3d-21247887b77e",
+            "jdx:employerOverview": {
+                "en-US": "Blake Lee founded the company in Seattle in 1989. Since then we have become a state of the art cybersecurity company with a culture of responsibility. We have 6,000 employees working every day to promote the security in a forward-thinking, innovative, sustainable way. Find out more about our global operations."
+            },
+            "jdx:industryCode": {
+                "@type": "AnnotatedDefinedTerm",
+                "termCode": "541512"
+            },
+            "schema:address": {
+                "@type": "schema:PostalAddress",
+                "schema:streetAddress": "",
+                "streetAddress": "123 Acme Way"
+            },
+            "schema:legalName": {
+                "en-US": "ACME Cyber"
+            },
+            "schema:occupationalCategory": {
+                "@type": "AnnotatedDefinedTerm",
+                "termCode": "15-1112.00"
+            },
+            "schema:telephone": "(406) 234-0987",
+            "url": "https://acme.com"
+        },
+        {
+            "@id": "https://jobdataexchange.org/jdx/pp/resource/9542b372-6436-4fc1-a5b6-8ca8d3ba04e6",
+            "@type": "JobPosting",
+            "jdx:applicantLocationRequirement": {
+                "@type": "schema:Place",
+                "name": "No location requirement but no relocation expenses paid."
+            },
+            "jdx:citizenshipRequirement": {
+                "@type": "AnnotatedDefinedTerm",
+                "name": {
+                    "en-US": "US Citizen"
+                }
+            },
+            "jdx:competency": [
+                {
+                    "@id": "https://jobdataexchange.org/jdx/competency/e8d09da2-5474-598d-9218-3615d3ab1c2b",
+                    "@type": "jdx:AnnotatedDefinedTerm",
+                    "schema:description": {
+                        "en-US": "Understand common software architectures, including layered and distributed architecture models"
+                    },
+                    "schema:inDefinedTermSet": {
+                        "@type": "DefinedTermSet",
+                        "name": {
+                            "url": "https://jobdataexchange.org/jdx/framework/44a01b50-4628-51e0-b06a-aae3e669d5b8"
+                        }
+                    }
+                },
+                {
+                    "@id": "https://jobdataexchange.org/jdx/competency/028138b8-d48b-5345-aecd-5bf4bd149ace",
+                    "@type": "jdx:AnnotatedDefinedTerm",
+                    "schema:description": {
+                        "en-US": "Microsoft Windows"
+                    },
+                    "schema:inDefinedTermSet": {
+                        "@type": "DefinedTermSet",
+                        "name": {
+                            "url": "https://jobdataexchange.org/jdx/framework/bf820ded-fc91-516a-b985-be08fc0bc6f4"
+                        }
+                    }
+                },
+                {
+                    "@id": "https://jobdataexchange.org/jdx/competency/702d20a7-0136-538f-be65-d0721c280e30",
+                    "@type": "jdx:AnnotatedDefinedTerm",
+                    "schema:description": {
+                        "en-US": "Be able to connect common User devices to networks and secure them appropriately"
+                    },
+                    "schema:inDefinedTermSet": {
+                        "@type": "DefinedTermSet",
+                        "name": {
+                            "url": "https://jobdataexchange.org/jdx/framework/44a01b50-4628-51e0-b06a-aae3e669d5b8"
+                        }
+                    }
+                },
+                {
+                    "@id": "https://jobdataexchange.org/jdx/competency/ug/85fd4bcc-afe6-5e1f-af75-edad4ea54a4e",
+                    "@type": "jdx:AnnotatedDefinedTerm",
+                    "schema:description": {
+                        "en-US": "Should be an experienced, highly self motivated individual, who works well in a team-oriented environment and possesses excellent communication and customer service skills."
+                    },
+                    "schema:inDefinedTermSet": {
+                        "@type": "DefinedTermSet",
+                        "name": {
+                            "en-US": "User Generated Competency"
+                        }
+                    }
+                }
+            ],
+            "jdx:employmentUnit": {
+                "@type": "Organization" ,
+                "name": "ITC - R&D"
+            },
+            "jdx:hiringOrganization": "https://jobdataexchange.org/jdx/pp/resource/f0a23159-e3c3-43df-94da-b15c749599d0" ,
+            "jdx:industryCode": {
+                "@type": "AnnotatedDefinedTerm" ,
+                "termCode": "541512"
+            },
+            "jdx:jobAgreement": {
+                "@type": "AnnotatedDefinedTerm" ,
+                "name": "Employee"
+            },
+            "jdx:jobSchedule": {
+                "@type": "AnnotatedDefinedTerm",
+                "name": "Full-time"
+            },
+            "jdx:jobTerm": {
+                "@type": "AnnotatedDefinedTerm" ,
+                "name": "Regular"
+            },
+            "jdx:physicalRequirement": {
+                "en-US": "sitting, occasional lifting (under 35 lb)"
+            },     
+            "jdx:positionID": "456-A",
+            "jdx:requiredAssessment": {
+                "@type": "AssessmentProfile",
+                "description": "Complete an interview process which includes a live coding challenge."
+            },
+            "jdx:requiredCredential": {
+                "@type": "Credential",
+                "description": {
+                    "en-US": "Bachelor's Degree or equivalent experience"
+                }
+            },
+            "jdx:securityClearanceRequirement": {
+                "en-US": "US federal type C clearance"
+            },    
+            "jdx:sensoryRequirement": {
+                "en-US": "Normal vision"
+            },    
+            "jdx:specialCommitment": {
+              "en-US": "Special program for ex-offenders"
+            },  
+            "jdx:workHours": {
+                "@type": "AnnotatedDefinedTerm",
+                "name": "Normal work hours"
+            },    
+            "schema:baseSalary": {
+                "@type": "schema:MonetaryAmount",
+                "jdx:payCycleInterval": {
+                    "@type": "jdx:AnnotateDefinedTerm",
+                    "name": {
+                        "en-US": "Per Year"
+                    }
+                },
+                "schema:currency": "USD",
+                "schema:maxValue": "65000",
+                "schema:minValue": "45000"
+            },
+            "schema:datePosted": "2019-09-01",
+            "schema:description": {
+                "en-US": "ACME Cyber, inc. is looking for junior level cybersecurity specialist to support corporate and client contracts in our Hernon, VA locations. You will be a critical member of a highly-skilled, adaptive cyber team that carries out defensive vulnerability research."
+            },
+            "schema:incentiveCompensation": {
+                "en-US": "Annual bonus possible."
+            },
+            "schema:industry": {
+                "en-US": "Software design and deployment including cybersecurity."
+            },
+            "schema:jobBenefits": [
+                {
+                    "@type": "jdx:AnnotatedDefinedTerm",
+                    "name": {
+                        "en-US": "Health Insurance"
+                    }
+                },
+                {
+                    "@type": "jdx:AnnotatedDefinedTerm",
+                    "name": {
+                        "en-US": "401(k)"
+                    }
+                },
+                {
+                    "@type": "jdx:AnnotatedDefinedTerm",
+                    "name": {
+                        "en-US": "Gym membership"
+                    }
+                },
+                {
+                    "@type": "jdx:AnnotatedDefinedTerm",
+                    "name": {
+                        "en-US": "Commuting/travel assistance"
+                    }
+                }
+            ],
+            "schema:jobLocation": {
+                "@type": "schema:Place",
+                "address": {
+                    "@type": "schema:PostalAddress",
+                    "schema:streetAddress": "Seattle, WA"
+                }
+            },
+            "schema:jobLocationType": {
+                "en-US": "telecommute"
+            },
+            "schema:title": {
+                "en-US": "Junior Cybersecurity Specialist"
+            },
+            "schema:validThrough": "2019-09-30",
+            "jdx:totalJobOpenings": "1"
+        }
+    ]
+}
