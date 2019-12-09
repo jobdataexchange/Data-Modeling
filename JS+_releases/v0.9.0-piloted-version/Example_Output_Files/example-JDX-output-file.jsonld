@@ -102,7 +102,7 @@
             "jdx:hiringOrganization": "https://jobdataexchange.org/jdx/pp/resource/f0a23159-e3c3-43df-94da-b15c749599d0" ,
             "jdx:industryCode": {
                 "@type": "AnnotatedDefinedTerm" ,
-                "termCode": "541512",
+                "termCode": "541512"
             },
             "jdx:jobAgreement": {
                 "@type": "AnnotatedDefinedTerm" ,
@@ -153,7 +153,7 @@
                 },
                 "schema:currency": "USD",
                 "schema:maxValue": "65000",
-                "schema:minValue": "45000",
+                "schema:minValue": "45000"
             },
             "schema:datePosted": "2019-09-01",
             "schema:description": {
@@ -189,7 +189,7 @@
                     "name": {
                         "en-US": "Commuting/travel assistance"
                     }
-                },
+                }
             ],
             "schema:jobLocation": {
                 "@type": "schema:Place",
