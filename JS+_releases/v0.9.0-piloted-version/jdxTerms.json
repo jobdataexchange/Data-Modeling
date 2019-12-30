@@ -1081,77 +1081,7 @@
       "rdfs:range": {
         "@id": "jdx:Credential"
       }
-    }, 
- {
-      "@id": "jdx:requiredEducation",
-      "@type": "rdfs:Property",
-      "dct:identifier": "jdx:requiredEducation",
-      "rdfs:comment": {
-        "@language": "en-US",
-        "@value": "Description of the required education or training needed for the position or occupation."
-      },
-      "rdfs:domain": [
-        {
-          "@id": "jdx:jobPosting"
-        },
-        {
-          "@id": "jdx:Condition"
-        },
-        {
-          "@id": "jdx:Job"
-        },
-        {
-          "@id": "jdx:JobDescription"
-        }
-      ],
-      "rdfs:isDefinedBy": {
-        "@id": "jdx:"
-      },
-      "rdfs:label": {
-        "@language": "en-US",
-        "@value": "Required Education"
-      },
-      "rdfs:range": {
-        "@id": "jdx:QualifyingExperience"
-      },
-      "vann:uasgeNote": {
-        "@language": "en-US",
-        "@value": "Specific credential requirements should use jdx:requiredCredential."
-      }
-    },
-    {
-      "@id": "jdx:requiredExperience",
-      "@type": "rdfs:Property",
-      "dct:identifier": "jdx:requiredExperience",
-      "rdfs:comment": {
-        "@language": "en-US",
-        "@value": "Description of the required experience needed for the position or occupation."
-      },
-      "rdfs:domain": [
-        {
-          "@id": "jdx:jobPosting"
-        },
-        {
-          "@id": "jdx:Job"
-        },
-        {
-          "@id": "jdx:Condition"
-        },
-        {
-          "@id": "jdx:JobDescription"
-        }
-      ],
-      "rdfs:isDefinedBy": {
-        "@id": "jdx:"
-      },
-      "rdfs:label": {
-        "@language": "en-US",
-        "@value": "Required Experience"
-      },
-      "rdfs:range": {
-        "@id": "jdx:QualifyingExperience"
-      }
-    }, 
+    },  
     {
       "@id": "jdx:securityClearanceRequirement",
       "@type": "rdfs:Property",
@@ -1239,7 +1169,7 @@
         "@id": "rdf:langString"
       }
     }, 
-{
+    {
       "@id": "schema:streetAddress",
       "@type": "rdfs:Property",
       "dct:identifier": "schema:streetAddress",
@@ -1424,13 +1354,6 @@
         "@id": "rdf:langString"
       }
     },
-
-
-
-
-
-
-
     {
       "@id": "jdx:AnnotatedDefinedTerm",
       "@type": "rdfs:Class",
