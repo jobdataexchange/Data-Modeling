@@ -151,8 +151,8 @@
                     }
                 },
                 "currency": "USD",
-                "maxValue": "65000",
-                "minValue": "45000"
+                "maxValue": 65000,
+                "minValue": 45000
             },
             "datePosted": "2019-09-01",
             "description": {
@@ -204,7 +204,7 @@
                 "en-US": "Junior Cybersecurity Specialist"
             },
             "validThrough": "2019-09-30",
-            "totalJobOpenings": "1"
+            "totalJobOpenings": 1
         }
     ]
 }
