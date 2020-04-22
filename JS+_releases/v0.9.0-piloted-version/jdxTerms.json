@@ -547,6 +547,9 @@
         },
         {
           "@id": "jdx:JobPosting"
+        },
+        {
+          "@id": "jdx:Organization"
         }
       ],
       "rdfs:isDefinedBy": {
