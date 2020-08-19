@@ -107,7 +107,7 @@
           "@id": "jdx:JobDescription"
         },
         {
-          "@id": "jdx:jobPosting"
+          "@id": "jdx:JobPosting"
         },
         {
           "@id": "schema:Organization"
@@ -256,7 +256,7 @@
       },
       "rdfs:domain": [
         {
-          "@id": "jdx:jobPosting"
+          "@id": "jdx:JobPosting"
         },
         {
           "@id": "jdx:Condition"
@@ -289,7 +289,7 @@
       },
       "rdfs:domain": [
         {
-          "@id": "jdx:jobPosting"
+          "@id": "jdx:JobPosting"
         },
         {
           "@id": "jdx:Job"
@@ -321,7 +321,7 @@
         "@value": "Description of an alternative experience fulfilling requirements for the position or occupation."
       },
       "rdfs:domain": [
-        { "@id": "jdx:jobPosting" },
+        { "@id": "jdx:JobPosting" },
         {
           "@id": "jdx:JobDescription"
         },
@@ -377,7 +377,7 @@
           "@id": "jdx:JobDescription"
         },
         {
-          "@id": "jdx:CompetencyProfile"
+          "@id": "jdx:JobCompetencyProfile"
         },
         {
           "@id": "jdx:Job"
@@ -844,7 +844,7 @@
         "@value": "Contact Point"
       },
       "rdfs:range": {
-        "@id": "schem:ContactPoint"
+        "@id": "schema:ContactPoint"
       }
     },
     {
@@ -1231,7 +1231,7 @@
           "@id": "jdx:Credential"
         },
         {
-          "@id": "schema:MonetaryValueDistribution"
+          "@id": "schema:MonetaryAmountDistribution"
         }
       ],
       "rdfs:isDefinedBy": {
@@ -1385,7 +1385,7 @@
           "@id": "jdx:JobDescription"
         },
         {
-          "@id": "jdx:jobPosting"
+          "@id": "jdx:JobPosting"
         }
       ],
       "rdfs:isDefinedBy": {
@@ -1415,7 +1415,7 @@
           "@id": "jdx:Job"
         },
         {
-          "@id": "jdx:jobPosting"
+          "@id": "jdx:JobPosting"
         },
         {
           "@id": "jdx:Condition"
@@ -1452,7 +1452,7 @@
           "@id": "jdx:JobDescription"
         },
         {
-          "@id": "jdx:jobPosting"
+          "@id": "jdx:JobPosting"
         },
         {
           "@id": "jdx:Condition"
@@ -1894,7 +1894,7 @@
           "@id": "jdx:Job"
         },
         {
-          "@id": "jdx:jobPosting"
+          "@id": "jdx:JobPosting"
         }
       ],
       "rdfs:isDefinedBy": {
@@ -2014,7 +2014,7 @@
       },
       "rdfs:domain": [
         {
-          "@id": "jdx:jobPosting"
+          "@id": "jdx:JobPosting"
         },
         {
           "@id": "jdx:Job"
@@ -2372,10 +2372,10 @@
           "@id": "schema:Organization"
         },
         {
-          "@id": "jdx:jobDescription"
+          "@id": "jdx:JobDescription"
         },
         {
-          "@id": "jdx:jobPosting"
+          "@id": "jdx:JobPosting"
         },
         {
           "@id": "jdx:Job"
@@ -2405,10 +2405,10 @@
           "@id": "jdx:Job"
         },
         {
-          "@id": "jdx:jobPosting"
+          "@id": "jdx:JobPosting"
         },
         {
-          "@id": "jdx:jobDescription"
+          "@id": "jdx:JobDescription"
         }
       ],
       "rdfs:isDefinedBy": {
@@ -2820,7 +2820,7 @@
           "@id": "jdx:Job"
         },
         {
-          "@id": "jdx:jobPosting"
+          "@id": "jdx:JobPosting"
         }
       ],
       "rdfs:isDefinedBy": {
@@ -2853,7 +2853,7 @@
           "@id": "jdx:Job"
         },
         {
-          "@id": "jdx:jobPosting"
+          "@id": "jdx:JobPosting"
         }
       ],
       "rdfs:isDefinedBy": {
@@ -2886,7 +2886,7 @@
           "@id": "jdx:Job"
         },
         {
-          "@id": "jdx:jobPosting"
+          "@id": "jdx:JobPosting"
         }
       ],
       "rdfs:isDefinedBy": {
@@ -3211,7 +3211,7 @@
       "rdfs:comment": "Resource identifying types of physical activity associated with a job; select from an existing enumeration of such types.",
       "rdfs:domain": [
         {
-          "@id": "jdx:jobCompetencyProfile"
+          "@id": "jdx:JobCompetencyProfile"
         },
         {
           "@id": "jdx:JobPosting"
@@ -3480,7 +3480,7 @@
           "@id": "jdx:Condition"
         },
         {
-          "@id": "jdx:jobPosting"
+          "@id": "jdx:JobPosting"
         }
       ],
       "rdfs:isDefinedBy": {
@@ -3513,7 +3513,7 @@
           "@id": "jdx:Condition"
         },
         {
-          "@id": "jdx:jobPosting"
+          "@id": "jdx:JobPosting"
         }
       ],
       "rdfs:isDefinedBy": {
@@ -3537,7 +3537,7 @@
       },
       "rdfs:domain": [
         {
-          "@id": "jdx:jobPosting"
+          "@id": "jdx:JobPosting"
         },
         {
           "@id": "jdx:JobDescription"
@@ -3649,9 +3649,6 @@
           "@id": "jdx:QualifyingExperience"
         },
         {
-          "@id": "jdx:Person"
-        },
-        {
           "@id": "jdx:Credential"
         }
       ],
@@ -3761,7 +3758,7 @@
           "@id": "jdx:ScaleAnnotation"
         },
         {
-          "@id": "jdx:Description"
+          "@id": "jdx:JobDescription"
         },
         {
           "@id": "jdx:Job"
@@ -3816,7 +3813,7 @@
           "@id": "jdx:Condition"
         },
         {
-          "@id": "jdx:jobPosting"
+          "@id": "jdx:JobPosting"
         },
         {
           "@id": "jdx:Job"
@@ -3846,7 +3843,7 @@
       },
       "rdfs:domain": [
         {
-          "@id": "jdx:jobPosting"
+          "@id": "jdx:JobPosting"
         },
         {
           "@id": "jdx:Condition"
@@ -3879,7 +3876,7 @@
       },
       "rdfs:domain": [
         {
-          "@id": "jdx:jobPosting"
+          "@id": "jdx:JobPosting"
         },
         {
           "@id": "jdx:Condition"
@@ -3916,7 +3913,7 @@
       },
       "rdfs:domain": [
         {
-          "@id": "jdx:jobPosting"
+          "@id": "jdx:JobPosting"
         },
         {
           "@id": "jdx:Job"
@@ -3986,7 +3983,7 @@
           "@id": "jdx:JobPosting"
         },
         {
-          "@id": "jdx:jobCompetencyProfile"
+          "@id": "jdx:JobCompetencyProfile"
         },
         {
           "@id": "jdx:JobDescription"
@@ -4025,7 +4022,7 @@
           "@id": "jdx:JobDescription"
         },
         {
-          "@id": "jdx:jobCompetencyProfile"
+          "@id": "jdx:JobCompetencyProfile"
         }
       ],
       "rdfs:isDefinedBy": {
@@ -4134,7 +4131,7 @@
           "@id": "jdx:JobPosting"
         },
         {
-          "@id": "jdx:jobCompetencyProfile"
+          "@id": "jdx:JobCompetencyProfile"
         },
         {
           "@id": "jdx:JobDescription"
@@ -4168,7 +4165,7 @@
           "@id": "jdx:JobDescription"
         },
         {
-          "@id": "jdx:jobCompetencyProfile"
+          "@id": "jdx:JobCompetencyProfile"
         },
         {
           "@id": "jdx:JobPosting"
@@ -4737,7 +4734,7 @@
           "@id": "jdx:JobDescription"
         },
         {
-          "@id": "jdx:JobMaster"
+          "@id": "jdx:Job"
         }
       ],
       "rdfs:isDefinedBy": {
@@ -4868,6 +4865,54 @@
       "rdfs:label": {
         "@language": "en-US",
         "@value": "Credential"
+      }
+    },
+    {
+      "@id": "asn:CriterionCategory",
+      "@type": "rdfs:Class",
+      "dct:identifier": "asn:CriterionCategory",
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Resource identifying a category by which Rubric Criterion may be grouped."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "asn:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Criterion Category"
+      }
+    },
+    {
+      "@id": "asn:CriterionLevel",
+      "@type": "rdfs:Class",
+      "dct:identifier": "asn:CriterionLevel",
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Resource identifying one or more benchmarks that must be met to achieve a performance task."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "asn:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Criterion Level"
+      }
+    },
+    {
+      "@id": "schema:DefinedTermSet",
+      "@type": "rdfs:Class",
+      "dct:identifier": "schema:DefinedTermSet",
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "A set of defined terms for example a set of categories or a classification scheme, a glossary, dictionary or enumeration."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "schema:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Defined Term Set"
       }
     },        
     {
@@ -5001,40 +5046,24 @@
       }
     },
     {
-      "@id": "schema:Organization",
+      "@id": "jdx:Organization",
       "@type": "rdfs:Class",
       "dct:identifier": {
         "@language": "en-US",
-        "@value": "schema:Organization"
+        "@value": "jdx:Organization"
       },
       "rdfs:comment": {
         "@language": "en-US",
         "@value": "An organization such as a corporate body, employer, distribution channel provider."
       },
       "rdfs:isDefinedBy": {
-        "@id": "http://schema.org/"
+        "@id": "jdx:"
       },
       "rdfs:label": {
         "@language": "en-US",
         "@value": "Organization"
       }
     },  
-    {
-      "@id": "schema:Person",
-      "@type": "rdfs:Class",
-      "dct:identifier": "schema:Person",
-      "rdfs:comment": {
-        "@language": "en-US",
-        "@value": "Human being regarded as an individual."
-      },
-      "rdfs:isDefinedBy": {
-        "@id": "schema:"
-      },
-      "rdfs:label": {
-        "@language": "en-US",
-        "@value": "Person"
-      }
-    },
     {
       "@id": "schema:Place",
       "@type": "rdfs:Class",
