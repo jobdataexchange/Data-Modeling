@@ -4338,7 +4338,7 @@
       },
       "rdfs:domain": [
         {
-          "@id": "jdx:JobCompetenctProfile"
+          "@id": "jdx:JobCompetencyProfile"
         },
         {
           "@id": "jdx:JobPosting"
