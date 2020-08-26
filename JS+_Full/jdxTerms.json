@@ -33,7 +33,7 @@
         "@value": "Ability"
       },
       "rdfs:range": {
-        "@id": "skos:Concept"
+        "@id": "jdx:AnnotatedDefinedTerm"
       },
       "rdfs:subPropertyOf": {
         "@id": "jdx:competency"
@@ -548,7 +548,7 @@
         "@value": "Assessment Method"
       },
       "rdfs:range": {
-        "@id": "skos:Concept"
+        "@id": "jdx:AnnotatedDefinedTerm"
       },
       "vann:usageNote": 
         {
@@ -575,7 +575,7 @@
         "@value": "Attitude"
       },
       "rdfs:range": {
-        "@id": "skos:Concept"
+        "@id": "jdx:AnnotatedDefinedTerm"
       },
       "rdfs:subPropertyOf": {
         "@id": "jdx:competency"
@@ -631,7 +631,7 @@
         "@value": "Career Level"
       },
       "rdfs:range": {
-        "@id": "skos:Concept"
+        "@id": "jdx:AnnotatedDefinedTerm"
       },
       "vann:usageNote": {
         "@language": "en-US",
@@ -665,7 +665,7 @@
         "@value": "Citizenship Requirement"
       },
       "rdfs:range": {
-        "@id": "skos:Concept"
+        "@id": "jdx:AnnotatedDefinedTerm"
       },
       "vann:usageNote": {
           "@language": "en-US",
@@ -699,7 +699,7 @@
         "@value": "Competency"
       },
       "rdfs:range": {
-        "@id": "skos:Concept"
+        "@id": "jdx:AnnotatedDefinedTerm"
       },
       "vann:usageNote": [
         {
@@ -771,7 +771,7 @@
         "@value": "Contact Type"
       },
       "rdfs:range": {
-        "@id": "skos:Concept"
+        "@id": "jdx:AnnotatedDefinedTerm"
       },
       "vann:usageNote": {
         "@language": "en-US",
@@ -798,7 +798,7 @@
         "@value": "Credential Category"
       },
       "rdfs:range": {
-        "@id": "skos:Concept"
+        "@id": "jdx:AnnotatedDefinedTerm"
       },
       "vann:usageNote": {
         "@language": "en-US",
@@ -1158,7 +1158,7 @@
         "@value": "Education Level"
       },
       "rdfs:range": {
-        "@id": "skos:Concept"
+        "@id": "jdx:AnnotatedDefinedTerm"
       },
       "vann:usageNote": {
         "@language": "en-US",
@@ -1435,7 +1435,7 @@
         "@value": "EvidenceType"
       },
       "rdfs:range": {
-        "@id": "skos:Concept"
+        "@id": "jdx:AnnotatedDefinedTerm"
       },
       "vann:usageNote": {
           "@language": "en-US",
@@ -1472,7 +1472,7 @@
         "@value": "Experience Category"
       },
       "rdfs:range": {
-        "@id": "skos:Concept"
+        "@id": "jdx:AnnotatedDefinedTerm"
       },
       "vann:usageNote": {
         "@language": "en-US",
@@ -1931,7 +1931,7 @@
         "@value": "Industry Code"
       },
       "rdfs:range": {
-        "@id": "skos:Concept"
+        "@id": "jdx:AnnotatedDefinedTerm"
       },
       "vann:usageNote": [
         {
@@ -2032,7 +2032,7 @@
         "@value": "Job Agreement"
       },
       "rdfs:range": {
-        "@id": "skos:Concept"
+        "@id": "jdx:AnnotatedDefinedTerm"
       },
       "vann:usageNote": {
           "@language": "en-US",
@@ -2206,7 +2206,7 @@
         "@value": "Job Schedule"
       },
       "rdfs:range": {
-        "@id": "skos:Concept"
+        "@id": "jdx:AnnotatedDefinedTerm"
       },
       "vann:usageNote": {
           "@language": "en-US",
@@ -2267,7 +2267,7 @@
         "@value": "Job Term"
       },
       "rdfs:range": {
-        "@id": "skos:Concept"
+        "@id": "jdx:AnnotatedDefinedTerm"
       },
       "vann:usageNote": {
           "@language": "en-US",
@@ -2308,7 +2308,7 @@
         "@value": "Knowledge"
       },
       "rdfs:range": {
-        "@id": "skos:Concept"
+        "@id": "jdx:AnnotatedDefinedTerm"
       },
       "rdfs:subPropertyOf": {
         "@id": "jdx:competency"
@@ -2406,7 +2406,7 @@
         "@value": "Level Code"
       },
       "rdfs:range": {
-        "@id": "skos:Concept"
+        "@id": "jdx:AnnotatedDefinedTerm"
       },
       "vann:usageNote": {
         "@language": "en-US",
@@ -2764,7 +2764,7 @@
         "@value": "Occupation Category"
       },
       "rdfs:range": {
-        "@id": "skos:Concept"
+        "@id": "jdx:AnnotatedDefinedTerm"
       },
       "vann:usageNote": [
         {
@@ -2814,7 +2814,7 @@
         "@value": "Pay Cycle Interval"
       },
       "rdfs:range": {
-        "@id": "skos:Concept"
+        "@id": "jdx:AnnotatedDefinedTerm"
       },
       "vann:usageNote": {
         "@language": "en-US",
@@ -2936,7 +2936,7 @@
         "@value": "Physical Activity"
       },
       "rdfs:range": {
-        "@id": "skos:Concept"
+        "@id": "jdx:AnnotatedDefinedTerm"
       },
       "vann:usageNote": {
           "@language": "en-US",
@@ -3668,7 +3668,7 @@
         "@value": "Responsibility"
       },
       "rdfs:range": {
-        "@id": "skos:Concept"
+        "@id": "jdx:AnnotatedDefinedTerm"
       },
       "vann:usageNote": {
           "@language": "en-US",
@@ -3738,7 +3738,7 @@
         "@value": "Risk Exposure Type"
       },
       "rdfs:range": {
-        "@id": "skos:Concept"
+        "@id": "jdx:AnnotatedDefinedTerm"
       },
       "vann:usageNote": {
           "@language": "en-US",
@@ -3790,7 +3790,7 @@
         "@value": "Scale Category"
       },
       "rdfs:range": {
-        "@id": "skos:Concept"
+        "@id": "jdx:AnnotatedDefinedTerm"
       }
     },  
     {
@@ -3850,7 +3850,7 @@
         "@value": "Sensory Category"
       },
       "rdfs:range": {
-        "@id": "skos:Concept"
+        "@id": "jdx:AnnotatedDefinedTerm"
       },
       "vann:usageNote": {
         "@language": "en-US",
@@ -3911,7 +3911,7 @@
         "@value": "Shift Schedule"
       },
       "rdfs:range": {
-        "@id": "skos:Concept"
+        "@id": "jdx:AnnotatedDefinedTerm"
       },
       "vann:usageNote": {
         "@language": "en-US",
@@ -3952,7 +3952,7 @@
         "@value": "Skill"
       },
       "rdfs:range": {
-        "@id": "skos:Concept"
+        "@id": "jdx:AnnotatedDefinedTerm"
       },
       "rdfs:subPropertyOf": {
         "@id": "jdx:competency"
@@ -4063,7 +4063,7 @@
         "@value": "Task"
       },
       "rdfs:range": {
-        "@id": "skos:Concept"
+        "@id": "jdx:AnnotatedDefinedTerm"
       },
       "rdfs:subPropertyOf": {
         "@id": "jdx:competency"
@@ -4100,7 +4100,7 @@
         "@value": "Technology"
       },
       "rdfs:range": {
-        "@id": "skos:Concept"
+        "@id": "jdx:AnnotatedDefinedTerm"
       },
       "vann:usageNote": {
           "@language": "en-US",
@@ -4410,7 +4410,7 @@
         "@value": "Work Activity"
       },
       "rdfs:range": {
-        "@id": "skos:Concept"
+        "@id": "jdx:AnnotatedDefinedTerm"
       },
       "rdfs:subPropertyOf": {
         "@id": "jdx:competency"
@@ -4570,38 +4570,6 @@
       "rdfs:label": {
         "@language": "en-US",
         "@value": "Credential"
-      }
-    },
-    {
-      "@id": "asn:CriterionCategory",
-      "@type": "rdfs:Class",
-      "dct:identifier": "asn:CriterionCategory",
-      "rdfs:comment": {
-        "@language": "en-US",
-        "@value": "Resource identifying a category by which Rubric Criterion may be grouped."
-      },
-      "rdfs:isDefinedBy": {
-        "@id": "asn:"
-      },
-      "rdfs:label": {
-        "@language": "en-US",
-        "@value": "Criterion Category"
-      }
-    },
-    {
-      "@id": "asn:CriterionLevel",
-      "@type": "rdfs:Class",
-      "dct:identifier": "asn:CriterionLevel",
-      "rdfs:comment": {
-        "@language": "en-US",
-        "@value": "Resource identifying one or more benchmarks that must be met to achieve a performance task."
-      },
-      "rdfs:isDefinedBy": {
-        "@id": "asn:"
-      },
-      "rdfs:label": {
-        "@language": "en-US",
-        "@value": "Criterion Level"
       }
     },
     {
@@ -4916,28 +4884,6 @@
           "@language": "en-US",
           "@value": "Used, for example, when applying an importance scale to a competency identified in an instance of the AnnotatedDefinedTerm class."
         }
-    },
-    {
-      "@id": "asn:benchmark",
-      "@type": "rdfs:Property",
-      "dct:identifier": "asn:benchmark",
-      "rdfs:comment": {
-        "@language": "en-US",
-        "@value": "Description of a level of achievement on a performance task defined by the Rubric Criterion."
-      },
-      "rdfs:domain": {
-        "@id": "asn:CriterionLevel"
-      },
-      "rdfs:isDefinedBy": {
-        "@id": "asn:"
-      },
-      "rdfs:label": {
-        "@language": "en-US",
-        "@value": "Benchmark"
-      },
-      "rdfs:range": {
-        "@id": "rdf:langString"
-      }
     }
   ]
 }
