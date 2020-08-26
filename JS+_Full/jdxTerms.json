@@ -364,51 +364,7 @@
       "rdfs:range": {
         "@id": "jdx:ScaleAnnotation"
       }
-    },    
-    {
-      "@id": "jdx:annotatedTerm",
-      "@type": "rdfs:Property",
-      "dct:identifier": "jdx:annotatedTerm",
-      "rdfs:domain": [
-        {
-          "@id": "jdx:ScaleAnnotation"
-        },
-        {
-          "@id": "jdx:JobDescription"
-        },
-        {
-          "@id": "jdx:JobCompetencyProfile"
-        },
-        {
-          "@id": "jdx:Job"
-        },
-        {
-          "@id": "jdx:JobPosting"
-        }
-      ],
-      "rdfs:isDefinedBy": {
-        "@id": "jdx:"
-      },
-      "rdfs:label": {
-        "@language": "en-US",
-        "@value": "Annotated Term"
-      },
-      "rdfs:range": [
-        {
-          "@id": "skos:Concept"
-        },
-        {
-          "@id": "ceasn:Competency"
-        },
-        {
-          "@id": "asn:Rubric"
-        }
-      ],
-      "vann:usageNote": {
-        "@language": "en-US",
-        "@value": "Use a value selected from a controlled vocabulary of types; likely external encounters with encodings in schema:DefinedTermSet, schema:DefinedTerm, W3C's SKOS, CTDL-ASN and ASN."
-      }
-    },    
+    },        
     {
       "@id": "jdx:applicationCloseDate",
       "@type": "rdfs:Property",
@@ -440,7 +396,7 @@
         "@value": "Organization or person contact point for the posting."
       },
       "rdfs:domain": {
-        "@id": "jdx:PostingInstruction"
+        "@id": "jdx:PostingInstructions"
       },
       "rdfs:isDefinedBy": {
         "@id": "jdx:"
@@ -484,7 +440,7 @@
         "@value": "Physical location where job applications can be submitted."
       },
       "rdfs:domain": {
-        "@id": "jdx:PostingInstruction"
+        "@id": "jdx:PostingInstructions"
       },
       "rdfs:isDefinedBy": {
         "@id": "jdx:"
@@ -601,35 +557,6 @@
         }
     },
     {
-      "@id": "jdx:assessmentRubric",
-      "@type": "rdfs:Property",
-      "dct:identifier": {
-        "@language": "en-US",
-        "@value": "jdx:assessmentRubric"
-      },
-      "vann:usageNote": {
-        "@language": "en-US",
-        "@value": "USE IN PILOT"
-      },
-      "rdfs:comment": {
-        "@language": "en-US",
-        "@value": "Resource provided as assessment rubric for the annotated defined term ."
-      },
-      "rdfs:domain": {
-        "@id": "jdx:ScaleAnnotation"
-      },
-      "rdfs:isDefinedBy": {
-        "@id": "jdx:"
-      },
-      "rdfs:label": {
-        "@language": "en-US",
-        "@value": "Assessment Ribric"
-      },
-      "rdfs:range": {
-        "@id": "xsd:anyURI"
-      }
-    },
-    {
       "@id": "jdx:attitude",
       "@type": "rdfs:Property",
       "dct:identifier": "jdx:attitude",
@@ -683,28 +610,6 @@
       },
       "rdfs:range": {
         "@id": "schema:MonetaryAmount"
-      }
-    },
-    {
-      "@id": "asn:benchmark",
-      "@type": "rdfs:Property",
-      "dct:identifier": "asn:benchmark",
-      "rdfs:comment": {
-        "@language": "en-US",
-        "@value": "Description of a level of achievement on a performance task defined by the Rubric Criterion."
-      },
-      "rdfs:domain": {
-        "@id": "asn:CriterionLevel"
-      },
-      "rdfs:isDefinedBy": {
-        "@id": "asn:"
-      },
-      "rdfs:label": {
-        "@language": "en-US",
-        "@value": "Benchmark"
-      },
-      "rdfs:range": {
-        "@id": "rdf:langString"
       }
     },
     {
@@ -898,28 +803,6 @@
       "vann:usageNote": {
         "@language": "en-US",
         "@value": "Use a value selected from a controlled vocabulary of credential types (e.g., credential subclasses from CTDL); encode using the jdx:AnnotatedDefinedTerm entity."
-      }
-    },
-    {
-      "@id": "asn:criterionFor",
-      "@type": "rdfs:Property",
-      "dct:identifier": "asn:criterionFor",
-      "rdfs:comment": {
-        "@language": "en-US",
-        "@value": "Reference to the Rubric to which the Rubric Criterion being described belongs."
-      },
-      "rdfs:domain": {
-        "@id": "asn:RubricCriterion"
-      },
-      "rdfs:isDefinedBy": {
-        "@id": "asn:"
-      },
-      "rdfs:label": {
-        "@language": "en-US",
-        "@value": "Criterion For"
-      },
-      "rdfs:range": {
-        "@id": "asn:Rubric"
       }
     },
     {
@@ -1180,7 +1063,7 @@
         "@value": "Identifies a job board or media channel associated with a job posting."
       },
       "rdfs:domain": {
-        "@id": "jdx:PostingInstruction"
+        "@id": "jdx:PostingInstructions"
       },
       "rdfs:isDefinedBy": {
         "@id": "jdx:"
@@ -1733,61 +1616,7 @@
       "rdfs:range": {
         "@id": "jdx:JobCompetencyProfile"
       }
-    },    
-    {
-      "@id": "asn:hasCriterion",
-      "@type": "rdfs:Property",
-      "dct:identifier": "asn:hasCriterion",
-      "rdfs:comment": {
-        "@language": "en-US",
-        "@value": "Resource referenced defines a criterion to be met in order to demonstrate quality in performance of a task or obtaining an objective."
-      },
-      "rdfs:domain": [
-        {
-          "@id": "asn:Rubric"
-        },
-        {
-          "@id": "asn:CriterionCategory"
-        }
-      ],
-      "rdfs:isDefinedBy": {
-        "@id": "asn:"
-      },
-      "rdfs:label": {
-        "@language": "en-US",
-        "@value": "Has Criterion"
-      },
-      "rdfs:range": {
-        "@id": "asn:RubricCriterion"
-      }
-    },    
-    {
-      "@id": "asn:hasCriterionCategory",
-      "@type": "rdfs:Property",
-      "dct:identifier": "asn:hasCriterionCategory",
-      "rdfs:comment": {
-        "@language": "en-US",
-        "@value": "Resource referenced defines a criterion to be met in order to demonstrate quality in performance of a task or obtaining an objective."
-      },
-      "rdfs:domain": [
-        {
-          "@id": "asn:CriterionCategory"
-        },
-        {
-          "@id": "asn:Rubric"
-        }
-      ],
-      "rdfs:isDefinedBy": {
-        "@id": "asn:"
-      },
-      "rdfs:label": {
-        "@language": "en-US",
-        "@value": "Has Criterion"
-      },
-      "rdfs:range": {
-        "@id": "asn:RubricCriterion"
-      }
-    },    
+    },            
     {
       "@id": "jdx:hasJob",
       "@type": "rdfs:Property",
@@ -1797,7 +1626,7 @@
         "@value": "Entity referenced is a full description of a job defined and to be offered by the organization being described."
       },
       "rdfs:domain": {
-        "@id": "jdx:Organization"
+        "@id": "schema:Organization"
       },
       "rdfs:isDefinedBy": {
         "@id": "jdx:"
@@ -1860,28 +1689,6 @@
       }
     }, 
     {
-      "@id": "asn:hasLevel",
-      "@type": "rdfs:Property",
-      "dct:identifier": "asn:hasLevel",
-      "rdfs:comment": {
-        "@language": "en-US",
-        "@value": "Resource referenced describes of a level of performance based on a Rubric Criterion."
-      },
-      "rdfs:domain": {
-        "@id": "asn:RubricCriterion"
-      },
-      "rdfs:isDefinedBy": {
-        "@id": "asn:"
-      },
-      "rdfs:label": {
-        "@language": "en-US",
-        "@value": "Has Level"
-      },
-      "rdfs:range": {
-        "@id": "asn:CriterionLevel"
-      }
-    },
-    {
       "@id": "jdx:hasPostingInstructions",
       "@type": "rdfs:Property",
       "dct:identifier": "jdx:hasPostingInstructions",
@@ -1906,72 +1713,6 @@
       },
       "rdfs:range": {
         "@id": "jdx:PostingInstructions"
-      }
-    },
-    {
-      "@id": "asn:hasProgressionLevel",
-      "@type": "rdfs:Property",
-      "dct:identifier": "asn:hasProgressionLevel",
-      "rdfs:comment": {
-        "@language": "en-US",
-        "@value": "Reference to a specific point in a progression model."
-      },
-      "rdfs:domain": {
-        "@id": "asn:CriterionLevel"
-      },
-      "rdfs:isDefinedBy": {
-        "@id": "asn:"
-      },
-      "rdfs:label": {
-        "@language": "en-US",
-        "@value": "Has Progression Level"
-      },
-      "rdfs:range": {
-        "@id": "asn:ProgressionModel"
-      }
-    },
-    {
-      "@id": "asn:hasProgressionModel",
-      "@type": "rdfs:Property",
-      "dct:identifier": "asn:hasProgressionModel",
-      "rdfs:comment": {
-        "@language": "en-US",
-        "@value": "Reference to a progression model used."
-      },
-      "rdfs:domain": {
-        "@id": "asn:Rubric"
-      },
-      "rdfs:isDefinedBy": {
-        "@id": "asn:"
-      },
-      "rdfs:label": {
-        "@language": "en-US",
-        "@value": "Has ProgressionModel"
-      },
-      "rdfs:range": {
-        "@id": "asn:ProgressionModel"
-      }
-    },
-    {
-      "@id": "asn:hasScope",
-      "@type": "rdfs:Property",
-      "dct:identifier": "asn:hasScope",
-      "rdfs:comment": {
-        "@language": "en-US",
-        "@value": "Description of what the rubric's creator intended to assess or evaluate."
-      },
-      "rdfs:domain": {
-        "@id": "asn:Rubric"
-      },
-      "rdfs:isDefinedBy": {
-        "@id": "asn:"
-      },
-      "rdfs:label": {
-        "@language": "en-US",
-        "@value": "Has Scope"
-      },
-      "rdfs:range": {
-        "@id": "rdf:langString"
       }
     },    
     {
@@ -2055,9 +1796,6 @@
       "rdfs:range": [
         {
             "@id": "schema:DefinedTermSet"
-        },
-        {
-            "@id": "skos:ConceptSCheme"
         }
       ]
     },    
@@ -2142,7 +1880,7 @@
           "@id": "jdx:JobDescription"
         },
         {
-          "@id": "jdx:Organization"
+          "@id": "schema:Organization"
         },
         {
           "@id": "jdx:JobPosting"
@@ -2182,7 +1920,7 @@
           "@id": "jdx:JobPosting"
         },
         {
-          "@id": "jdx:Organization"
+          "@id": "schema:Organization"
         }
       ],
       "rdfs:isDefinedBy": {
@@ -2597,39 +2335,6 @@
       "rdfs:label": {
         "@language": "en-US",
         "@value": "Latitude"
-      },
-      "rdfs:range": {
-        "@id": "xsd:string"
-      }
-    },
-    {
-      "@id": "dct:language",
-      "@type": "rdfs:Property",
-      "dct:identifier": "dct:language",
-      "rdfs:comment": {
-        "@language": "en-US",
-        "@value": "A language of the resource."
-      },
-      "rdfs:domain": [
-        {
-          "@id": "asn:Rubric"
-        },
-        {
-          "@id": "asn:RubricCriterion"
-        },
-        {
-          "@id": "asn:CriterionLevel"
-        },
-        {
-          "@id": "asn:CriterionCategory"
-        }
-      ],
-      "rdfs:isDefinedBy": {
-        "@id": "http://purl.org/dc/terms/"
-      },
-      "rdfs:label": {
-        "@language": "en-US",
-        "@value": "language"
       },
       "rdfs:range": {
         "@id": "xsd:string"
@@ -3326,7 +3031,7 @@
         "@value": "End date (time) for the posting."
       },
       "rdfs:domain": {
-        "@id": "jdx:PostingInstruction"
+        "@id": "jdx:PostingInstructions"
       },
       "rdfs:isDefinedBy": {
         "@id": "jdx:"
@@ -3404,7 +3109,7 @@
         "@value": "Start date (time) for the posting."
       },
       "rdfs:domain": {
-        "@id": "jdx:PostingInstruction"
+        "@id": "jdx:PostingInstructions"
       },
       "rdfs:isDefinedBy": {
         "@id": "jdx:"
@@ -3426,7 +3131,7 @@
         "@value": "Whether or not the attribute being annotated has been given priority."
       },
       "rdfs:domain": {
-        "@id": "schema:ScaleAnnotation"
+        "@id": "jdx:ScaleAnnotation"
       },
       "rdfs:isDefinedBy": {
         "@id": "jdx:"
@@ -5046,18 +4751,18 @@
       }
     },
     {
-      "@id": "jdx:Organization",
+      "@id": "schema:Organization",
       "@type": "rdfs:Class",
       "dct:identifier": {
         "@language": "en-US",
-        "@value": "jdx:Organization"
+        "@value": "schema:Organization"
       },
       "rdfs:comment": {
         "@language": "en-US",
         "@value": "An organization such as a corporate body, employer, distribution channel provider."
       },
       "rdfs:isDefinedBy": {
-        "@id": "jdx:"
+        "@id": "schema:"
       },
       "rdfs:label": {
         "@language": "en-US",
@@ -5097,9 +4802,9 @@
       }
     },    
     {
-      "@id": "jdx:PostingInstruction",
+      "@id": "jdx:PostingInstructions",
       "@type": "rdfs:Class",
-      "dct:identifier": "jdx:PostingInstruction",
+      "dct:identifier": "jdx:PostingInstructions",
       "rdfs:comment": {
         "@language": "en-US",
         "@value": "Entity providing information about where and how a posting should be communicated."
@@ -5193,38 +4898,6 @@
       }
     },
     {
-      "@id": "asn:Rubric",
-      "@type": "rdfs:Class",
-      "dct:identifier": "asn:Rubric",
-      "rdfs:comment": {
-        "@language": "en-US",
-        "@value": "Resource for identifying assessment criteria and their scoring."
-      },
-      "rdfs:isDefinedBy": {
-        "@id": "asn:"
-      },
-      "rdfs:label": {
-        "@language": "en-US",
-        "@value": "Rubric"
-      }
-    },
-    {
-      "@id": "asn:RubricCriterion",
-      "@type": "rdfs:Class",
-      "dct:identifier": "asn:RubricCriterion",
-      "rdfs:comment": {
-        "@language": "en-US",
-        "@value": "Resource providing guidance in evaluating the quality and level of a person's responses or actions based on an explicit set of criteria."
-      },
-      "rdfs:isDefinedBy": {
-        "@id": "asn:"
-      },
-      "rdfs:label": {
-        "@language": "en-US",
-        "@value": "RubricCriterion"
-      }
-    },
-    {
       "@id": "jdx:ScaleAnnotation",
       "@type": "rdfs:Class",
       "dct:identifier": "jdx:ScaleAnnotation",
@@ -5243,6 +4916,28 @@
           "@language": "en-US",
           "@value": "Used, for example, when applying an importance scale to a competency identified in an instance of the AnnotatedDefinedTerm class."
         }
+    },
+    {
+      "@id": "asn:benchmark",
+      "@type": "rdfs:Property",
+      "dct:identifier": "asn:benchmark",
+      "rdfs:comment": {
+        "@language": "en-US",
+        "@value": "Description of a level of achievement on a performance task defined by the Rubric Criterion."
+      },
+      "rdfs:domain": {
+        "@id": "asn:CriterionLevel"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "asn:"
+      },
+      "rdfs:label": {
+        "@language": "en-US",
+        "@value": "Benchmark"
+      },
+      "rdfs:range": {
+        "@id": "rdf:langString"
+      }
     }
   ]
 }
