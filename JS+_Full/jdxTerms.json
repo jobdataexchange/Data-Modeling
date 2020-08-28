@@ -352,7 +352,7 @@
         "@value": "Entity providing qualifying notations including application of scales and other weights to concepts and competencies identified through a jdx:AnnotatedDefinedTerm."
       },
       "rdfs:domain": {
-        "@id": "jdx:AnnnotatedDefinedTerm"
+        "@id": "jdx:AnnotatedDefinedTerm"
       },
       "rdfs:isDefinedBy": {
         "@id": "jdx:"
