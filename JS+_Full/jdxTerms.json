@@ -4790,22 +4790,6 @@
       }
     },
     {
-      "@id": "asn:ProgressionModel",
-      "@type": "rdfs:Class",
-      "dct:identifier": "asn:ProgressionModel",
-      "rdfs:comment": {
-        "@language": "en-US",
-        "@value": "Model of identifiable points along a developmental progression including increasing levels of competence, complexity, or achievement."
-      },
-      "rdfs:isDefinedBy": {
-        "@id": "asn:"
-      },
-      "rdfs:label": {
-        "@language": "en-US",
-        "@value": "Progression Model"
-      }
-    },
-    {
       "@id": "schema:PropertyValue",
       "@type": "rdfs:Class",
       "dct:description": {
