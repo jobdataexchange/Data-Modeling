@@ -1,6 +1,5 @@
 {
   "@context": {
-      "asn": "http://purl.org/asn/schema/core/",
       "ceterms": "https://purl.org/ctdl/terms/",
       "dct": "http://purl.org/dc/terms/",
       "jdx": "http://purl.org/jdx/terms/",
@@ -8,7 +7,6 @@
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "schema": "http://schema.org/",
       "xsd": "http://www.w3.org/2001/XMLSchema#",
-      "vann": "http://purl.org/vocab/vann/",
       "AnnotatedDefinedTerm": {"@id": "jdx:AnnotatedDefinedTerm"},
       "AssessmentProfile": {"@id": "jdx:AssessmentProfile"},
       "Condition": {"@id": "jdx:Condition"},
@@ -183,6 +181,7 @@
       "sameAs": {"@id": "schema:sameAs", "@type": "xsd:anyURI"},
       "scaleCategory": {"@id": "jdx:scaleCategory", "@type": "@id"},
       "scaleValue": {"@id": "jdx:scaleValue", "@type": "@id"},
+      "scopeNote": {"@id": "skos:scopeNote", "@container": "@language"},
       "securityClearanceRequirement": {"@id": "jdx:securityClearanceRequirement", "@container": "@language"},
       "sensoryRequirement": {"@id": "jdx:sensoryRequirement", "@container": "@language"},
       "shiftSchedule": {"@id": "jdx:shiftSchedule", "@type": "@id"},
@@ -199,7 +198,6 @@
       "travelRequirement": {"@id": "schema:travelRequirement", "@container": "@language"},
       "unitText": {"@id": "schema:unitText", "@type": "xsd:string"},
       "url": {"@id": "schema:url", "@type": "schema:URL"},
-      "usageNote": {"@id": "vann:usageNote", "@container": "@language"},
       "validFrom": {"@id": "schema:validFrom", "@type": "xsd:dateTime"},
       "validThrough": {"@id": "schema:validThrough", "@type": "xsd:dateTime"},
       "value": {"@id": "schema:value", "@type": "xsd:string"},
