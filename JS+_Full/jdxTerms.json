@@ -701,12 +701,11 @@
       "rdfs:range": {
         "@id": "jdx:AnnotatedDefinedTerm"
       },
-      "vann:usageNote": [
+      "vann:usageNote": 
         {
           "@language": "en-US",
           "@value": "This property has been defined as a super-property for a set of more refined subproperties including knowledge, skills, abilities, attitudes, tasks, and work activities that indicate qualification for the job; encode competencies using the jdx:AnnotatedDefinedTerm entity."
         }
-      ]
     },
     {
       "@id": "jdx:conceptKeyword",
@@ -1793,11 +1792,10 @@
         "@language": "en-US",
         "@value": "In Defined Term Set"
       },
-      "rdfs:range": [
+      "rdfs:range": 
         {
             "@id": "schema:DefinedTermSet"
         }
-      ]
     },    
     {
       "@id": "schema:identifier",
@@ -2766,12 +2764,11 @@
       "rdfs:range": {
         "@id": "jdx:AnnotatedDefinedTerm"
       },
-      "vann:usageNote": [
+      "vann:usageNote": 
         {
           "@language": "en-US",
           "@value": "Use a value selected from a controlled vocabulary of occupation categories such as the Standard Occupational Classification (SOC); encode using the jdx:AnnotatedDefinedTerm entity."
         }
-      ]
     }, 
     {
       "@id": "schema:parentOrganization",
@@ -4334,7 +4331,7 @@
       "dct:identifier": "schema:validThrough",
       "rdfs:comment": {
         "@language": "en-US",
-        "@value": "The date after when [which?] the item is not valid. For example the end of an offer, salary period, or a period of opening hours."
+        "@value": "The date after which the item is not valid. For example the end of an offer, salary period, or a period of opening hours."
       },
       "rdfs:domain": {
         "@id": "jdx:JobPosting"
@@ -4498,12 +4495,11 @@
         "@language": "en-US",
         "@value": "Annotated Defined Term"
       },
-      "vann:usageNote": [
+      "vann:usageNote": 
         {
           "@language": "en-US",
           "@value": "Used in the context of JDX to assign terms from occupation, industry and instructional program classifications, skills and abilities, and abstract concepts to JDX entities. Through the class' relationship with the jdx:ScaledAnnotation class, terms can be conditioned through applications of scales for attributes such as importance and frequency."
         }
-      ]
     }, 
     {
       "@id": "jdx:AssessmentProfile",
@@ -4603,12 +4599,11 @@
         "@language": "en-US",
         "@value": "Location Geocoordinates"
       },
-      "vann:usageNote": [
+      "vann:usageNote":
         {
           "@language": "en-US",
           "@value": "Use to identify a place using geo coordinates; preferably includes a URI for the location as well as longitude and latitude from a service such as GeoNames (https://www.geonames.org/)."
         }
-      ]
     },    
     {
       "@id": "jdx:Job",
