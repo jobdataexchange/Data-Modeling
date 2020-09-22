@@ -547,7 +547,7 @@
       "rdfs:range": {
         "@id": "jdx:AnnotatedDefinedTerm"
       },
-      "vann:usageNote": 
+      "skos:scopeNote": 
         {
           "@language": "en-US",
           "@value": "Use a value selected from a controlled vocabulary of assessment method types such as the ceterms:AssessmentMethod vocabulary; encode using the jdx:AnnotatedDefinedTerm entity."
@@ -698,7 +698,7 @@
       "rdfs:range": {
         "@id": "jdx:AnnotatedDefinedTerm"
       },
-      "vann:usageNote": 
+      "skos:scopeNote": 
         {
           "@language": "en-US",
           "@value": "This property has been defined as a super-property for a set of more refined subproperties including knowledge, skills, abilities, attitudes, tasks, and work activities that indicate qualification for the job; encode competencies using the jdx:AnnotatedDefinedTerm entity."
@@ -1826,7 +1826,7 @@
       "rdfs:range": {
         "@id": "schema:PropertyValue"
       },
-      "vann:usageNote": [
+      "skos:scopeNote": [
         {
           "@language": "en-US",
           "@value": "NOTE: Identifier in JDX has a constrained range of schema:PropertyValue. Best practice is to use schema:name property to textually identify the type of identifier, schema:value property to hold the textual value of the identifier, and the schema;properytID for a URI indicating the type of identifier."
@@ -1836,28 +1836,6 @@
           "@value": "NOTE: JDX defines subproperties called jdx:positionID and jdx:postingID to handle the employer's identifier for a particular position or posting."
         }
       ]
-    },    
-    {
-      "@id": "schema:inDefinedTermSet",
-      "@type": "rdfs:Property",
-      "dct:identifier": "schema:inDefinedTermSet",
-      "rdfs:comment": {
-        "@language": "en-US",
-        "@value": "A defined term set that contains this term."
-      },
-      "rdfs:domain": {
-        "@id": "jdx:AnnotatedDefinedTerm"
-      },
-      "rdfs:isDefinedBy": {
-        "@id": "https://schema.org/"
-      },
-      "rdfs:label": {
-        "@language": "en-US",
-        "@value": "In Defined Term Set"
-      },
-      "rdfs:range": {
-        "@id": "jdx:AnnotatedDefinedTermSet"
-      }
     },    
     {
       "@id": "schema:industry",
@@ -1928,7 +1906,7 @@
       "rdfs:range": {
         "@id": "jdx:AnnotatedDefinedTerm"
       },
-      "vann:usageNote": [
+      "skos:scopeNote": [
         {
           "@language": "en-US",
           "@value": "NOTE: Use a value selected from a controlled vocabulary of industry types used in the country where the job is located; e.g., NAICS in the U.S. and ESCO in the European Union; encode using the jdx:AnnotatedDefinedTerm entity."
@@ -2761,7 +2739,7 @@
       "rdfs:range": {
         "@id": "jdx:AnnotatedDefinedTerm"
       },
-      "vann:usageNote": 
+      "skos:scopeNote": 
         {
           "@language": "en-US",
           "@value": "Use a value selected from a controlled vocabulary of occupation categories such as the Standard Occupational Classification (SOC); encode using the jdx:AnnotatedDefinedTerm entity."
@@ -3597,7 +3575,7 @@
       "rdfs:range": {
         "@id": "jdx:QualifyingExperience"
       },
-      "vann:uasgeNote": {
+      "skos:scopeNote": {
         "@language": "en-US",
         "@value": "Specific credential requirements should use jdx:requiredCredential."
       }
@@ -4492,7 +4470,7 @@
         "@language": "en-US",
         "@value": "Annotated Defined Term"
       },
-      "vann:usageNote": 
+      "skos:scopeNote": 
         {
           "@language": "en-US",
           "@value": "Used in the context of JDX to assign terms from occupation, industry and instructional program classifications, skills and abilities, and abstract concepts to JDX entities. Through the class' relationship with the jdx:ScaledAnnotation class, terms can be conditioned through applications of scales for attributes such as importance and frequency."
@@ -4596,7 +4574,7 @@
         "@language": "en-US",
         "@value": "Location Geocoordinates"
       },
-      "vann:usageNote":
+      "skos:scopeNote":
         {
           "@language": "en-US",
           "@value": "Use to identify a place using geo coordinates; preferably includes a URI for the location as well as longitude and latitude from a service such as GeoNames (https://www.geonames.org/)."
