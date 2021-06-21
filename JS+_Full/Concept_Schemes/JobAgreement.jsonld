@@ -100,6 +100,14 @@
             "definition": {"en-us": "Position open to a student volunteer (non-employee)."},
             "inScheme": "https://jobdataexchange.org/jdx/vocabs/jobAgreement/",
             "topConceptOf": "https://jobdataexchange.org/jdx/vocabs/jobAgreement/"
+        },
+        {
+            "@id": "https://jobdataexchange.org/jdx/vocabs/jobAgreement/932cfa7d-8331-4278-8d2c-9355a84c47c0",
+            "@type": "skos:Concept",
+            "prefLabel": {"en-us": "Probationary Employee"},
+            "definition": {"en-us": "An initial employment for a specified period where an employer can consider whether an employee is able to meet its standards and expectations."},
+            "inScheme": "https://jobdataexchange.org/jdx/vocabs/jobAgreement/",
+            "topConceptOf": "https://jobdataexchange.org/jdx/vocabs/jobAgreement/"
         }
      ]
 }
