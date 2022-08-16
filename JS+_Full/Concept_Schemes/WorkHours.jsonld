@@ -25,6 +25,7 @@
             "@id": "https://jobdataexchange.org/jdx/vocabs/workHours/5e3b62b7-b41e-4053-899b-9112e3db4224",
             "@type": "skos:Concept",
             "prefLabel": {"en-us": "Flexible Work Hours"},
+            "definition": {"en-us": "TBD"},
             "inScheme": "https://jobdataexchange.org/jdx/vocabs/workHours/",
             "topConceptOf": "https://jobdataexchange.org/jdx/vocabs/workHours/"
         }
